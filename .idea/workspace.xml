@@ -10,7 +10,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
-    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <pharConfigPath />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -214,7 +214,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="header&#9;FILE&#9;file://C:/Users/Khaled Sayed/online_shopping/online_shopping/resources/views/layout/parts/user/header.blade.php" />
+    <property name="SearchEverywhereHistoryKey" value=".idea&#9;FILE&#9;file://C:/Users/Khaled Sayed/online_shopping/online_shopping/.idea&#10;header&#9;FILE&#9;file://C:/Users/Khaled Sayed/online_shopping/online_shopping/resources/views/layout/parts/user/header.blade.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />

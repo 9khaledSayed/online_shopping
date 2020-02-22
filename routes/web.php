@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('index-shop-layout-1');
+    return view('home');
+});
+
+Route::get('/home3', function () {
+    return view('home3');
 });

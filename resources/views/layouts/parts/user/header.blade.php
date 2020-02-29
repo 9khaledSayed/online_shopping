@@ -263,10 +263,23 @@
                             </ul>
                         </div>
                     </li>
-                    <li><a class="popup-text" href="#login-dialog" data-effect="mfp-move-from-top"><i class="fa fa-sign-in"></i>Sign in</a>
-                    </li>
-                    <li><a class="popup-text" href="#register-dialog" data-effect="mfp-move-from-top"><i class="fa fa-edit"></i>Sign up</a>
-                    </li>
+                    @guest()
+                        <li><a class="" href="{{ route('login') }}" data-effect="mfp-move-from-top"><i class="fa fa-sign-in"></i>Sign in</a>
+                        </li>
+                        <li><a class="" href="{{ route('register') }}" data-effect="mfp-move-from-top"><i class="fa fa-edit"></i>Sign up</a>
+                        </li>
+                    @else
+                        <li><a class="dropdown-item" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </li>
+                    @endguest
                 </ul>
             </div>
         </div>
@@ -274,90 +287,132 @@
 </header>
 
 <!-- LOGIN REGISTER LINKS CONTENT -->
-<div id="login-dialog" class="mfp-with-anim mfp-hide mfp-dialog clearfix">
-    <i class="fa fa-sign-in dialog-icon"></i>
-    <h3>Member Login</h3>
-    <h5>Welcome back, friend. Login to get started</h5>
-    <form class="dialog-form">
-        <div class="form-group">
-            <label>E-mail</label>
-            <input type="text" placeholder="email@domain.com" class="form-control">
-        </div>
-        <div class="form-group">
-            <label>Password</label>
-            <input type="password" placeholder="My secret password" class="form-control">
-        </div>
-        <div class="checkbox">
-            <label>
-                <input type="checkbox">Remember me
-            </label>
-        </div>
-        <input type="submit" value="Sign in" class="btn btn-primary">
-    </form>
-    <ul class="dialog-alt-links">
-        <li><a class="popup-text" href="#register-dialog" data-effect="mfp-zoom-out">Not member yet</a>
-        </li>
-        <li><a class="popup-text" href="#password-recover-dialog" data-effect="mfp-zoom-out">Forgot password</a>
-        </li>
-    </ul>
-</div>
+{{--<div id="login-dialog" class="mfp-with-anim mfp-hide mfp-dialog clearfix">--}}
+{{--    <i class="fa fa-sign-in dialog-icon"></i>--}}
+{{--    <h3>Member Login</h3>--}}
+{{--    <h5>Welcome back, friend. Login to get started</h5>--}}
+{{--    <form class="dialog-form" method="POST" action="{{ route('login') }}" >--}}
+{{--        @csrf--}}
+{{--        <div class="form-group">--}}
+{{--            <label>{{ __('E-Mail Address') }}</label>--}}
+{{--            <input id="email" type="email" name="email" placeholder="email@domain.com" class="form-control">--}}
+{{--            @error('email')--}}
+{{--                <span class="invalid-feedback" role="alert">--}}
+{{--                    <strong>{{ $message }}</strong>--}}
+{{--                </span>--}}
+{{--            @enderror--}}
+{{--        </div>--}}
+{{--        <div class="form-group">--}}
+{{--            <label>{{ __('Password') }}</label>--}}
+{{--            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">--}}
+{{--            @error('password')--}}
+{{--                <span class="invalid-feedback" role="alert">--}}
+{{--                    <strong>{{ $message }}</strong>--}}
+{{--                </span>--}}
+{{--            @enderror--}}
+{{--        </div>--}}
+{{--        <div class="checkbox">--}}
+{{--            <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>--}}
+
+{{--            <label class="form-check-label" for="remember">--}}
+{{--                {{ __('Remember Me') }}--}}
+{{--            </label>--}}
+{{--        </div>--}}
+{{--        <input type="submit" value="Sign in" class="btn btn-primary">--}}
+
+{{--        <div class="form-group row mb-0">--}}
+{{--            <div class="col-md-8 offset-md-4">--}}
+{{--                <button type="submit" class="btn btn-primary">--}}
+{{--                    {{ __('Login') }}--}}
+{{--                </button>--}}
 
 
-<div id="register-dialog" class="mfp-with-anim mfp-hide mfp-dialog clearfix">
-    <i class="fa fa-edit dialog-icon"></i>
-    <h3>Member Register</h3>
-    <h5>Ready to get best offers? Let's get started!</h5>
-    <form class="dialog-form">
-        <div class="form-group">
-            <label>E-mail</label>
-            <input type="text" placeholder="email@domain.com" class="form-control">
-        </div>
-        <div class="form-group">
-            <label>Password</label>
-            <input type="password" placeholder="My secret password" class="form-control">
-        </div>
-        <div class="form-group">
-            <label>Repeat Password</label>
-            <input type="password" placeholder="Type your password again" class="form-control">
-        </div>
-        <div class="row">
-            <div class="col-md-8">
-                <div class="form-group">
-                    <label>Your Area</label>
-                    <input type="password" placeholder="Boston" class="form-control">
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label>Postal/Zip</label>
-                    <input type="password" placeholder="12345" class="form-control">
-                </div>
-            </div>
-        </div>
-        <div class="checkbox">
-            <label>
-                <input type="checkbox">Get hot offers via e-mail
-            </label>
-        </div>
-        <input type="submit" value="Sign up" class="btn btn-primary">
-    </form>
-    <ul class="dialog-alt-links">
-        <li><a class="popup-text" href="#login-dialog" data-effect="mfp-zoom-out">Already member</a>
-        </li>
-    </ul>
-</div>
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </form>--}}
+
+{{--    <ul class="dialog-alt-links">--}}
+{{--        @if (Route::has('password.request'))--}}
+{{--            <a class="popup-text" href="#password-recover-dialog">--}}
+{{--                {{ __('Forgot Your Password?') }}--}}
+{{--            </a>--}}
+{{--        @endif--}}
+{{--    </ul>--}}
+{{--</div>--}}
 
 
-<div id="password-recover-dialog" class="mfp-with-anim mfp-hide mfp-dialog clearfix">
-    <i class="icon-retweet dialog-icon"></i>
-    <h3>Password Recovery</h3>
-    <h5>Fortgot your password? Don't worry we can deal with it</h5>
-    <form class="dialog-form">
-        <label>E-mail</label>
-        <input type="text" placeholder="email@domain.com" class="span12">
-        <input type="submit" value="Request new password" class="btn btn-primary">
-    </form>
-</div>
+{{--<div id="register-dialog" class="mfp-with-anim mfp-hide mfp-dialog clearfix">--}}
+{{--    <i class="fa fa-edit dialog-icon"></i>--}}
+{{--    <h3>Member Register</h3>--}}
+{{--    <h5>Ready to get best offers? Let's get started!</h5>--}}
+{{--    <form class="dialog-form" method="POST" action="{{ route('register') }}">--}}
+{{--        @csrf--}}
+{{--        <div class="form-group">--}}
+{{--            <label>{{ __('Name') }}</label>--}}
+{{--            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>--}}
+
+{{--            @error('name')--}}
+{{--            <span class="invalid-feedback" role="alert">--}}
+{{--                                        <strong>{{ $message }}</strong>--}}
+{{--                                    </span>--}}
+{{--            @enderror--}}
+{{--        </div>--}}
+{{--        <div class="form-group">--}}
+{{--            <label>{{ __('E-Mail Address') }}</label>--}}
+{{--            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">--}}
+
+{{--            @error('email')--}}
+{{--            <span class="invalid-feedback" role="alert">--}}
+{{--                                        <strong>{{ $message }}</strong>--}}
+{{--                                    </span>--}}
+{{--            @enderror--}}
+{{--        </div>--}}
+
+{{--        <div class="form-group">--}}
+{{--            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>--}}
+
+
+{{--            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">--}}
+
+{{--            @error('password')--}}
+{{--            <span class="invalid-feedback" role="alert">--}}
+{{--                <strong>{{ $message }}</strong>--}}
+{{--            </span>--}}
+{{--            @enderror--}}
+
+{{--        </div>--}}
+{{--        <div class="form-group">--}}
+{{--            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>--}}
+
+{{--            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">--}}
+
+{{--        </div>--}}
+
+
+
+{{--        <div class="col-md-6 offset-md-4">--}}
+{{--            <button type="submit" class="btn btn-primary">--}}
+{{--                {{ __('Register') }}--}}
+{{--            </button>--}}
+{{--        </div>--}}
+{{--    </form>--}}
+{{--    <ul class="dialog-alt-links">--}}
+{{--        <li><a class="popup-text" href="#login-dialog" data-effect="mfp-zoom-out">Already member</a>--}}
+{{--        </li>--}}
+{{--    </ul>--}}
+{{--</div>--}}
+
+
+{{--<div id="password-recover-dialog" class="mfp-with-anim mfp-hide mfp-dialog clearfix">--}}
+{{--    <i class="icon-retweet dialog-icon"></i>--}}
+{{--    <h3>Password Recovery</h3>--}}
+{{--    <h5>Fortgot your password? Don't worry we can deal with it</h5>--}}
+{{--    <form class="dialog-form">--}}
+{{--        <label>E-mail</label>--}}
+{{--        <input type="text" placeholder="email@domain.com" class="span12">--}}
+{{--        <input type="submit" value="Request new password" class="btn btn-primary">--}}
+{{--    </form>--}}
+{{--</div>--}}
 <!-- END LOGIN REGISTER LINKS CONTENT -->
 
 

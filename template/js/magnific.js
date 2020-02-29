@@ -340,7 +340,7 @@
                 mfp.wrap.addClass(_wrapClasses);
 
 
-            // this triggers recalculation of layout, so we get it once to not to trigger twice
+            // this triggers recalculation of layouts, so we get it once to not to trigger twice
             var windowHeight = mfp.wH = _window.height();
 
 
@@ -1462,7 +1462,7 @@ console.log('Test #2:', performance.now() - start);
                                     animatedImg.remove();
                                     image = animatedImg = null;
                                     _mfpTrigger('ZoomAnimationEnded');
-                                }, 16); // avoid blink when switching images 
+                                }, 16); // avoid blink when switching images
 
                             }, duration); // this timeout equals animation duration
 
@@ -1537,7 +1537,7 @@ console.log('Test #2:', performance.now() - start);
 
 
                 /*
-			
+
 			Animating left + top + width/height looks glitchy in Firefox, but perfect in Chrome. And vice-versa.
 
 			 */

@@ -1,6 +1,6 @@
 /*!
  * Masonry PACKAGED v3.1.5
- * Cascading grid layout library
+ * Cascading grid layouts library
  * http://masonry.desandro.com
  * MIT License
  * by David DeSandro
@@ -1225,7 +1225,7 @@
             }
 
             this.element = element;
-            // parent layout class, i.e. Masonry, Isotope, or Packery
+            // parent layouts class, i.e. Masonry, Isotope, or Packery
             this.layout = layout;
             this.position = {
                 x: 0,
@@ -1349,7 +1349,7 @@
             // save end position
             this.setPosition(x, y);
 
-            // if did not move and not transitioning, just go to layout
+            // if did not move and not transitioning, just go to layouts
             if (didNotMove && !this.isTransitioning) {
                 this.layoutPosition();
                 return;
@@ -1667,7 +1667,7 @@
 
 /*!
  * Outlayer v1.2.0
- * the brains and guts of a layout library
+ * the brains and guts of a layouts library
  * MIT license
  */
 
@@ -1843,7 +1843,7 @@
         Outlayer.prototype._create = function() {
             // get items from children
             this.reloadItems();
-            // elements that affect layout, but are not laid out
+            // elements that affect layouts, but are not laid out
             this.stamps = [];
             this.stamp(this.options.stamp);
             // set container style
@@ -1863,7 +1863,7 @@
 
 
         /**
-         * turn elements into Outlayer.Items to be used in layout
+         * turn elements into Outlayer.Items to be used in layouts
          * @param {Array or NodeList or HTMLElement} elems
          * @returns {Array} items - collection of new Outlayer Items
          */
@@ -1884,7 +1884,7 @@
         };
 
         /**
-         * get item elements to be used in layout
+         * get item elements to be used in layouts
          * @param {Array or NodeList or HTMLElement} elems
          * @returns {Array} items - item elements
          */
@@ -1932,7 +1932,7 @@
             return elems;
         };
 
-        // ----- init & layout ----- //
+        // ----- init & layouts ----- //
 
         /**
          * lays out all items
@@ -1941,7 +1941,7 @@
             this._resetLayout();
             this._manageStamps();
 
-            // don't animate first layout
+            // don't animate first layouts
             var isInstant = this.options.isLayoutInstant !== undefined ?
                 this.options.isLayoutInstant : !this._isLayoutInited;
             this.layoutItems(this.items, isInstant);
@@ -1950,11 +1950,11 @@
             this._isLayoutInited = true;
         };
 
-        // _init is alias for layout
+        // _init is alias for layouts
         Outlayer.prototype._init = Outlayer.prototype.layout;
 
         /**
-         * logic before any new layout
+         * logic before any new layouts
          */
         Outlayer.prototype._resetLayout = function() {
             this.getSize();
@@ -1994,7 +1994,7 @@
         };
 
         /**
-         * layout a collection of item elements
+         * layouts a collection of item elements
          * @api public
          */
         Outlayer.prototype.layoutItems = function(items, isInstant) {
@@ -2023,7 +2023,7 @@
         };
 
         /**
-         * layout items
+         * layouts items
          * @param {Array} items
          * @param {Boolean} isInstant
          */
@@ -2059,7 +2059,7 @@
         };
 
         /**
-         * get item layout position
+         * get item layouts position
          * @param {Outlayer.Item} item
          * @returns {Object} x and y position
          */
@@ -2072,7 +2072,7 @@
 
         /**
          * iterate over array and position each item
-         * Reason being - separating this logic prevents 'layout invalidation'
+         * Reason being - separating this logic prevents 'layouts invalidation'
          * thx @paul_irish
          * @param {Array} queue
          */
@@ -2100,7 +2100,7 @@
         };
 
         /**
-         * Any logic you want to do after each layout,
+         * Any logic you want to do after each layouts,
          * i.e. size the container
          */
         Outlayer.prototype._postLayout = function() {
@@ -2179,7 +2179,7 @@
 
         /**
          * keep item in collection, but do not lay it out
-         * ignored items do not get skipped in layout
+         * ignored items do not get skipped in layouts
          * @param {Element} elem
          */
         Outlayer.prototype.ignore = function(elem) {
@@ -2190,7 +2190,7 @@
         };
 
         /**
-         * return item to layout collection
+         * return item to layouts collection
          * @param {Element} elem
          */
         Outlayer.prototype.unignore = function(elem) {
@@ -2315,7 +2315,7 @@
         };
 
         /**
-         * Bind layout to window resizing
+         * Bind layouts to window resizing
          */
         Outlayer.prototype.bindResize = function() {
             // bind just one listener
@@ -2327,7 +2327,7 @@
         };
 
         /**
-         * Unbind layout to window resizing
+         * Unbind layouts to window resizing
          */
         Outlayer.prototype.unbindResize = function() {
             if (this.isResizeBound) {
@@ -2355,7 +2355,7 @@
             this.resizeTimeout = setTimeout(delayed, 100);
         };
 
-        // debounced, layout on resize
+        // debounced, layouts on resize
         Outlayer.prototype.resize = function() {
             // don't trigger if size did not change
             // or if resize was unbound. See #9
@@ -2368,7 +2368,7 @@
         };
 
         /**
-         * check if layout is needed post layout
+         * check if layouts is needed post layouts
          * @returns Boolean
          */
         Outlayer.prototype.needsResizeLayout = function() {
@@ -2404,7 +2404,7 @@
             if (!items.length) {
                 return;
             }
-            // layout and reveal just the new items
+            // layouts and reveal just the new items
             this.layoutItems(items, true);
             this.reveal(items);
         };
@@ -2421,13 +2421,13 @@
             // add items to beginning of collection
             var previousItems = this.items.slice(0);
             this.items = items.concat(previousItems);
-            // start new layout
+            // start new layouts
             this._resetLayout();
             this._manageStamps();
-            // layout new stuff without transition
+            // layouts new stuff without transition
             this.layoutItems(items, true);
             this.reveal(items);
-            // layout previous items
+            // layouts previous items
             this.layoutItems(previousItems);
         };
 
@@ -2565,7 +2565,7 @@
         // -------------------------- create Outlayer class -------------------------- //
 
         /**
-         * create a layout class
+         * create a layouts class
          * @param {String} namespace
          */
         Outlayer.create = function(namespace, options) {
@@ -2682,7 +2682,7 @@
 
 /*!
  * Masonry v3.1.5
- * Cascading grid layout library
+ * Cascading grid layouts library
  * http://masonry.desandro.com
  * MIT License
  * by David DeSandro
@@ -2712,7 +2712,7 @@
 
     // used for AMD definition and requires
     function masonryDefinition(Outlayer, getSize) {
-        // create an Outlayer layout class
+        // create an Outlayer layouts class
         var Masonry = Outlayer.create('masonry');
 
         Masonry.prototype._resetLayout = function() {

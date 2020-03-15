@@ -2,7 +2,7 @@
 <html lang="zxx">
 
 <head>
-    @include('layouts.authentication.parts.head')
+    @include('layouts.parts.auth.head')
 </head>
 <body id="top">
 <!-- Google Tag Manager (noscript) -->
@@ -86,7 +86,7 @@
 </div>
 <!-- Login 9 end -->
 
-@include('layouts.authentication.parts.foot')
+@include('layouts.parts.auth.foot')
 
 </body>
 

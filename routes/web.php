@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'userController@index');
+Route::get('/admin', 'adminController@index');
 
 Route::get('/home3', function () {
     return view('home3');

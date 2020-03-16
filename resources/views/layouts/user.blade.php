@@ -25,6 +25,8 @@
 
 
     @include('layouts.parts.user.foot')
+
+
 </div>
 
 </body>

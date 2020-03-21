@@ -1,21 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6c36f8ef-fa19-44e5-aac6-7d971932992e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/adminController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/parts/admin/demo_changer.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/parts/admin/foot.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/parts/admin/footer.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/parts/admin/head.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/parts/admin/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/online_shopping.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/online_shopping.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="6c36f8ef-fa19-44e5-aac6-7d971932992e" name="Default" comment="admin finished">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/user.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/index-shop-layout-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/index-shop-layout-5.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,26 +174,56 @@
       <updated>1582313083696</updated>
       <workItem from="1582313085417" duration="913000" />
       <workItem from="1582333804888" duration="8330000" />
-      <workItem from="1584306972826" duration="5166000" />
+      <workItem from="1584306972826" duration="5869000" />
     </task>
+    <task id="LOCAL-00001" summary="admin finished">
+      <created>1584366313343</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584366313343</updated>
+    </task>
+    <task id="LOCAL-00002" summary="admin finished">
+      <created>1584366347691</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1584366347691</updated>
+    </task>
+    <task id="LOCAL-00003" summary="admin finished">
+      <created>1584366356397</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1584366356397</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="admin finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin finished" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="206" width="559" height="397" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584308700822">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="428" y="206" width="559" height="397" key="#com.intellij.fileTypes.FileTypeChooser/70.27.1296.741@70.27.1296.741" timestamp="1584308700822" />
-    <state x="313" y="27" width="799" height="741" key="CommitChangelistDialog2" timestamp="1584366347569">
+    <state x="313" y="27" width="799" height="741" key="CommitChangelistDialog2" timestamp="1584366356273">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state x="313" y="27" width="799" height="741" key="CommitChangelistDialog2/70.27.1296.741@70.27.1296.741" timestamp="1584366347569" />
+    <state x="313" y="27" width="799" height="741" key="CommitChangelistDialog2/70.27.1296.741@70.27.1296.741" timestamp="1584366356273" />
     <state x="513" y="323" width="399" height="156" key="NewPhpFileDialog" timestamp="1584363377704">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="513" y="323" width="399" height="156" key="NewPhpFileDialog/70.27.1296.741@70.27.1296.741" timestamp="1584363377704" />
+    <state x="374" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1584819059380">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="374" y="225" key="com.intellij.ide.util.TipDialog/70.27.1296.741@70.27.1296.741" timestamp="1584819059380" />
     <state x="381" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1584309728594">
       <screen x="70" y="27" width="1296" height="741" />
     </state>

@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+
     <list default="true" id="6c36f8ef-fa19-44e5-aac6-7d971932992e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/online_shopping.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/online_shopping.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+
+    <list default="true" id="6c36f8ef-fa19-44e5-aac6-7d971932992e" name="Default" comment="admin finished">
+
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,12 +35,23 @@
     <expand />
     <select />
   </component>
+
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpServers">
     <servers />
   </component>
+
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>layout 3</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
@@ -128,7 +143,9 @@
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
     </include_path>
   </component>
+
   <component name="ProjectId" id="1YSB6tJuwlLXV2nhUs5dGXeNuXA" />
+  <component name="ProjectId" id="1ZBKIwbNuHIwauWGQlsURtDh9K5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -139,6 +156,13 @@
     <property name="SearchEverywhereHistoryKey" value=".idea/w&#9;FILE&#9;file://C:/Users/Khaled Sayed/online_shopping/online_shopping/.idea/workspace.xml&#10;.idea&#9;FILE&#9;file://C:/Users/Khaled Sayed/online_shopping/online_shopping/.idea&#10;header&#9;FILE&#9;file://C:/Users/Khaled Sayed/online_shopping/online_shopping/resources/views/layout/parts/user/header.blade.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/project/online_shopping" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -155,6 +179,18 @@
       <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$" />
       <recent name="C:\Users\Khaled Sayed\online_shopping\online_shopping" />
+    </key>
+
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views" />
+      <recent name="$PROJECT_DIR$/resources/views/layouts" />
+      <recent name="$PROJECT_DIR$/resources/views/layouts/parts" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="C:\Users\Khaled Sayed\online_shopping\online_shopping" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/layouts" />
+      <recent name="C:\Users\Khaled Sayed\online_shopping\online_shopping\resources\views\layout" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -179,7 +215,31 @@
       <workItem from="1584308407661" duration="149000" />
       <workItem from="1584539609206" duration="130000" />
       <workItem from="1584539762386" duration="707000" />
+
+      <workItem from="1584306972826" duration="5869000" />
     </task>
+    <task id="LOCAL-00001" summary="admin finished">
+      <created>1584366313343</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584366313343</updated>
+    </task>
+    <task id="LOCAL-00002" summary="admin finished">
+      <created>1584366347691</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1584366347691</updated>
+    </task>
+    <task id="LOCAL-00003" summary="admin finished">
+      <created>1584366356397</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1584366356397</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,5 +266,31 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="381" y="89" width="672" height="678" key="search.everywhere.popup/70.27.1296.741@70.27.1296.741" timestamp="1584540230934" />
+
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="admin finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin finished" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="428" y="206" width="559" height="397" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584308700822">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="428" y="206" width="559" height="397" key="#com.intellij.fileTypes.FileTypeChooser/70.27.1296.741@70.27.1296.741" timestamp="1584308700822" />
+    <state x="313" y="27" width="799" height="741" key="CommitChangelistDialog2" timestamp="1584366356273">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="313" y="27" width="799" height="741" key="CommitChangelistDialog2/70.27.1296.741@70.27.1296.741" timestamp="1584366356273" />
+    <state x="513" y="323" width="399" height="156" key="NewPhpFileDialog" timestamp="1584363377704">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="513" y="323" width="399" height="156" key="NewPhpFileDialog/70.27.1296.741@70.27.1296.741" timestamp="1584363377704" />
+    <state x="374" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1584819059380">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="374" y="225" key="com.intellij.ide.util.TipDialog/70.27.1296.741@70.27.1296.741" timestamp="1584819059380" />
+    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1584309728594">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup/70.27.1296.741@70.27.1296.741" timestamp="1584309728594" />
   </component>
 </project>

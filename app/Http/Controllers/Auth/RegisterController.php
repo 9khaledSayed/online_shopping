@@ -3,11 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 
-
-namespace App\Http\Controllers\Auth;
 use App\User;
 use App\Admin;
 use App\Customer;
+use App\Providers\RouteServiceProvider;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;

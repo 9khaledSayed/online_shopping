@@ -239,6 +239,11 @@
             <div class="col-md-6">
                 <!-- LOGIN REGISTER LINKS -->
                 <ul class="login-register">
+                    @auth()
+                        <li>
+                            <a class="" >Hello! {{auth()->user()->name}}</a>
+                        </li>
+                    @endauth
                     <li class="shopping-cart"><a href="page-cart.html"><i class="fa fa-shopping-cart"></i>My Cart</a>
                         <div class="shopping-cart-box">
                             <ul class="shopping-cart-items">
@@ -264,9 +269,9 @@
                         </div>
                     </li>
                     @guest()
-                        <li><a class="" href="{{ route('login') }}" data-effect="mfp-move-from-top"><i class="fa fa-sign-in"></i>Sign in</a>
+                        <li><a class="" href="/login/customer" data-effect="mfp-move-from-top"><i class="fa fa-sign-in"></i>Sign in</a>
                         </li>
-                        <li><a class="" href="{{ route('register') }}" data-effect="mfp-move-from-top"><i class="fa fa-edit"></i>Sign up</a>
+                        <li><a class="" href="/register/customer" data-effect="mfp-move-from-top"><i class="fa fa-edit"></i>Sign up</a>
                         </li>
                     @else
                         <li><a class="dropdown-item" href="{{ route('logout') }}"
@@ -274,7 +279,6 @@
                                                      document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
-
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>

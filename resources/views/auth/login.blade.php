@@ -23,11 +23,15 @@
                         </a>
                     </div>
                     <div class="btn-section">
-                        <a href="#" class="link-btn active">Login</a>
+                        <a href="#" class="link-btn active">{{ isset($url) ? ucwords($url) : ""}}Login</a>
                         <a href="{{ route('register') }}" class="link-btn">Register</a>
                     </div>
                     <div class="login-inner-form">
-                        <form method="POST" action="{{ route('login') }}">
+                        @isset($url)
+                            <form method="POST" action='{{ url("login/$url") }}' aria-label="{{ __('Login') }}">
+                            @else
+                            <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
+                        @endisset
                             @csrf
 
                             <div class="form-group form-box">

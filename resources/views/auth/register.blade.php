@@ -24,10 +24,14 @@
                     </div>
                     <div class="btn-section">
                         <a href="{{ route('login')}}" class="link-btn">Login</a>
-                        <a href="#" class="link-btn active">Register</a>
+                        <a href="#" class="link-btn active"> {{ isset($url) ? ucwords($url) : ""}} Register</a>
                     </div>
                     <div class="login-inner-form">
-                        <form method="POST" action="{{ route('register') }}">
+                        @isset($url)
+                            <form method="POST" action='{{ url("register/$url") }}' aria-label="{{ __('Register') }}">
+                            @else
+                            <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
+                        @endisset
                             @csrf
                             <div class="form-group form-box">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="Full Name" value="{{ old('name') }}" required autocomplete="name" autofocus>

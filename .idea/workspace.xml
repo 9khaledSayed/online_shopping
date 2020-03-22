@@ -36,6 +36,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -212,10 +213,10 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="428" y="206" width="559" height="397" key="#com.intellij.fileTypes.FileTypeChooser/70.27.1296.741@70.27.1296.741" timestamp="1584308700822" />
-    <state x="313" y="27" width="799" height="741" key="CommitChangelistDialog2" timestamp="1584366356273">
+    <state x="313" y="27" width="799" height="741" key="CommitChangelistDialog2" timestamp="1584839027115">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state x="313" y="27" width="799" height="741" key="CommitChangelistDialog2/70.27.1296.741@70.27.1296.741" timestamp="1584366356273" />
+    <state x="313" y="27" width="799" height="741" key="CommitChangelistDialog2/70.27.1296.741@70.27.1296.741" timestamp="1584839027115" />
     <state x="513" y="323" width="399" height="156" key="NewPhpFileDialog" timestamp="1584363377704">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
@@ -224,6 +225,10 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="374" y="225" key="com.intellij.ide.util.TipDialog/70.27.1296.741@70.27.1296.741" timestamp="1584819059380" />
+    <state x="486" y="317" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584839039645">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="486" y="317" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/70.27.1296.741@70.27.1296.741" timestamp="1584839039645" />
     <state x="381" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1584309728594">
       <screen x="70" y="27" width="1296" height="741" />
     </state>

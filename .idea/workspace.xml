@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6c36f8ef-fa19-44e5-aac6-7d971932992e" name="Default" comment="admin finished">
+    <list default="true" id="6c36f8ef-fa19-44e5-aac6-7d971932992e" name="Default" comment="admin partition">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +36,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -175,6 +176,8 @@
       <workItem from="1582313085417" duration="913000" />
       <workItem from="1582333804888" duration="8330000" />
       <workItem from="1584306972826" duration="5869000" />
+      <workItem from="1584819059811" duration="1663000" />
+      <workItem from="1584837429827" duration="1192000" />
     </task>
     <task id="LOCAL-00001" summary="admin finished">
       <created>1584366313343</created>
@@ -197,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584366356397</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="admin partition">
+      <created>1584819223574</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1584819223574</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,25 +215,30 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="admin finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="admin finished" />
+    <MESSAGE value="admin partition" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin partition" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="206" width="559" height="397" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584308700822">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="428" y="206" width="559" height="397" key="#com.intellij.fileTypes.FileTypeChooser/70.27.1296.741@70.27.1296.741" timestamp="1584308700822" />
-    <state x="313" y="27" width="799" height="741" key="CommitChangelistDialog2" timestamp="1584366356273">
+    <state x="313" y="27" width="799" height="741" key="CommitChangelistDialog2" timestamp="1584819222604">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state x="313" y="27" width="799" height="741" key="CommitChangelistDialog2/70.27.1296.741@70.27.1296.741" timestamp="1584366356273" />
+    <state x="313" y="27" width="799" height="741" key="CommitChangelistDialog2/70.27.1296.741@70.27.1296.741" timestamp="1584819222604" />
     <state x="513" y="323" width="399" height="156" key="NewPhpFileDialog" timestamp="1584363377704">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="513" y="323" width="399" height="156" key="NewPhpFileDialog/70.27.1296.741@70.27.1296.741" timestamp="1584363377704" />
-    <state x="374" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1584819059380">
+    <state x="374" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1584837743608">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state x="374" y="225" key="com.intellij.ide.util.TipDialog/70.27.1296.741@70.27.1296.741" timestamp="1584819059380" />
+    <state x="374" y="225" key="com.intellij.ide.util.TipDialog/70.27.1296.741@70.27.1296.741" timestamp="1584837743608" />
+    <state x="486" y="317" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584819404457">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="486" y="317" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/70.27.1296.741@70.27.1296.741" timestamp="1584819404457" />
     <state x="381" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1584309728594">
       <screen x="70" y="27" width="1296" height="741" />
     </state>

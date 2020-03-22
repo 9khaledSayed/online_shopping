@@ -2,37 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c36f8ef-fa19-44e5-aac6-7d971932992e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CustomerController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/adminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/adminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/userController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/404.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/blog-single.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/blog.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/cart.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/checkout.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/contact-us.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home3.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/parts/admin/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/parts/admin/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/parts/user/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/parts/user/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/login.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/product-details.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/sendemail.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/shop.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_22_034203_create_customers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_22_034203_create_customers_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +172,6 @@
       <updated>1582313083696</updated>
       <workItem from="1582313085417" duration="913000" />
       <workItem from="1582333804888" duration="8330000" />
-
       <workItem from="1584306972826" duration="5166000" />
       <workItem from="1584540473261" duration="676000" />
       <workItem from="1584824094392" duration="228000" />
@@ -209,9 +179,8 @@
       <workItem from="1584839189538" duration="6732000" />
       <workItem from="1584848374994" duration="4652000" />
       <workItem from="1584891733427" duration="6265000" />
-=======
       <workItem from="1584306972826" duration="5869000" />
->>>>>>> 19d18fce9a5930502dcd1afffcccf0e06fc64efc
+      <workItem from="1584906169338" duration="246000" />
     </task>
     <task id="LOCAL-00001" summary="admin finished">
       <created>1584366313343</created>
@@ -249,7 +218,6 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="428" y="206" width="559" height="397" key="#com.intellij.fileTypes.FileTypeChooser/70.27.1296.741@70.27.1296.741" timestamp="1584308700822" />
-
     <state x="70" y="27" width="476" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584897915436">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
@@ -258,44 +226,26 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="451" y="146" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/70.27.1296.741@70.27.1296.741" timestamp="1584844564554" />
-    <state x="313" y="27" width="799" height="741" key="CommitChangelistDialog2" timestamp="1584366347569">
-      <screen x="70" y="27" width="1296" height="741" />
-    </state>
-    <state x="313" y="27" width="799" height="741" key="CommitChangelistDialog2/70.27.1296.741@70.27.1296.741" timestamp="1584366347569" />
-    <state x="501" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1584891743391">
-      <screen x="70" y="27" width="1296" height="741" />
-    </state>
-    <state x="501" y="155" width="424" height="491" key="FileChooserDialogImpl/70.27.1296.741@70.27.1296.741" timestamp="1584891743391" />
-
     <state x="313" y="27" width="799" height="741" key="CommitChangelistDialog2" timestamp="1584839027115">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="313" y="27" width="799" height="741" key="CommitChangelistDialog2/70.27.1296.741@70.27.1296.741" timestamp="1584839027115" />
+    <state x="501" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1584891743391">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="501" y="155" width="424" height="491" key="FileChooserDialogImpl/70.27.1296.741@70.27.1296.741" timestamp="1584891743391" />
     <state x="513" y="323" width="399" height="156" key="NewPhpFileDialog" timestamp="1584363377704">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="513" y="323" width="399" height="156" key="NewPhpFileDialog/70.27.1296.741@70.27.1296.741" timestamp="1584363377704" />
-    <state x="374" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1584848375888">
+    <state x="374" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1584906188338">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state x="374" y="225" key="com.intellij.ide.util.TipDialog/70.27.1296.741@70.27.1296.741" timestamp="1584848375888" />
+    <state x="374" y="225" key="com.intellij.ide.util.TipDialog/70.27.1296.741@70.27.1296.741" timestamp="1584906188338" />
     <state x="382" y="50" width="662" height="702" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1584850810911">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="382" y="50" width="662" height="702" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/70.27.1296.741@70.27.1296.741" timestamp="1584850810911" />
-    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1584898097940">
-
-    <state x="374" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1584819059380">
-      <screen x="70" y="27" width="1296" height="741" />
-    </state>
-    <state x="374" y="225" key="com.intellij.ide.util.TipDialog/70.27.1296.741@70.27.1296.741" timestamp="1584819059380" />
-    <state x="486" y="317" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584839039645">
-      <screen x="70" y="27" width="1296" height="741" />
-    </state>
-    <state x="486" y="317" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/70.27.1296.741@70.27.1296.741" timestamp="1584839039645" />
-    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1584309728594">
-      <screen x="70" y="27" width="1296" height="741" />
-    </state>
-        <state x="381" y="89" width="672" height="678" key="search.everywhere.popup/70.27.1296.741@70.27.1296.741" timestamp="1584898097940" /></state>
+    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1584898097940" />
   </component>
 </project>

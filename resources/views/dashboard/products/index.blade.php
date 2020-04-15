@@ -39,7 +39,7 @@
                             </th>
 
                             <th>
-                                <strong>QUANTITY</strong>
+                                <strong>QUANTITY1</strong>
                             </th>
 
                             <th>

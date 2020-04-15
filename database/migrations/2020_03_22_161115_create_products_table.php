@@ -17,13 +17,21 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table){
             $table->bigIncrements('id');
             $table->string('name');
-            $table->integer('category_child_id')->unsigned();
+            $table->unsignedBigInteger('category_id')->unique();
             $table->string('description');
-            $table->decimal('price',6,1);
+            $table->double('price');
+            $table->double('sale_price');
+            $table->double('quantity');
             $table->string('image');
             $table->timestamps();
 
-            //$table->foreign('category_child_id')->references('id')->on('category_child');
+            $table->foreign('category_id')
+                  ->references('id')
+                  ->on('categories')
+                  ->onDelelte('cascade')
+                  ->onupdate('cascade');
+
+                  
 
     });
 

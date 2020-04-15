@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" @if( App::getLocale() == 'ar' )dir="rtl"@endif>
+    
+<head>
+@include('dashboard.parts.head')
+
+</head>
+<style>
+    * {
+    box-sizing: border-box;
+    }
+
+    body {
+    margin: 0;
+    font-family: Arial;
+    }
+
+    /* The grid: Four equal columns that floats next to each other */
+    .column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    }
+
+    /* Style the images inside the grid */
+    .content {
+        position: relative;
+        bottom: 0;
+        background: transparent;
+        color: #f1f1f1;
+        width: 100%;
+        padding: 20px;]
+    }
+
+
+    .navbar-top-drops img {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        margin-top: 3px;
+    }
+    @media (min-width: 768px){
+    .col-sm-3 {
+        width: 19%;
+    }
+    }
+
+
+</style>
+<body>
+    
+    
+@include('dashboard.parts.header')
+
+    <section class="page">
+
+        @include('dashboard.parts.aside')
+        
+        <div id="wrapper">
+            <div class="content-wrapper container">
+
+                @yield('content')
+
+            </div> 
+        </div>
+        
+        
+    </section>
+
+@include('dashboard.parts.foot')
+@stack('scripts')    
+</body>
+
+</html>

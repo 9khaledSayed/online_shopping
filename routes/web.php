@@ -11,9 +11,13 @@
 |
 */
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', 'CustomerController@index');
 Auth::routes();
 
+/* multi auth routes */
 Route::get('/login/admin', 'Auth\LoginController@showAdminLoginForm');
 Route::get('/login/customer', 'Auth\LoginController@showCustomerLoginForm');
 Route::get('/register/admin', 'Auth\RegisterController@showAdminRegisterForm');
@@ -23,7 +27,15 @@ Route::post('/login/admin', 'Auth\LoginController@adminLogin');
 Route::post('/login/customer', 'Auth\LoginController@customerLogin');
 Route::post('/register/admin', 'Auth\RegisterController@createAdmin');
 Route::post('/register/customer', 'Auth\RegisterController@createCustomer');
+/* end multi auth routes */
+
+Route::prefix('dashboard')->name('dashboard.')->middleware('auth:admin')->group(function () {
+    Route::view('/', 'dashboard');
+    Route::resources([
+        'products' => 'Dashboard\ProductController',
+    ]);
+});
+
 
 Route::view('/home', 'home')->middleware('auth');
-Route::view('/admin', 'admin')->middleware('auth:admin');
 Route::view('/customer', 'customer')->middleware('auth:customer');

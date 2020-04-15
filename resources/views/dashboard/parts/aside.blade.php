@@ -1,0 +1,114 @@
+<nav class="navbar-aside navbar-static-side" role="navigation">
+    <div class="sidebar-collapse nano">
+        <div class="nano-content">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown side-profile text-left">
+                        <span style="display: block;">
+                            <img alt="image" class="img-circle" src="{{ asset('admin_assets/' . App::getLocale() . '/images/avtar-6.jpg') }}" width="40">
+                        </span>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="clear" style="display: block;"> <span class="block m-t-xs"> <strong class="font-bold"> Hi {{auth()->user()->name}}!  <b class="caret"></b></strong>
+                                </span></span> </a>
+                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                            <li><a href="#"><i class="fa fa-user"></i>My Profile</a></li>
+                            <li><a href="#" id="test_swal"><i class="fa fa-calendar"></i>My Calendar</a></li>
+                            <li><a href="#"><i class="fa fa-envelope"></i>My Inbox</a></li>
+                            <li><a href="#"><i class="fa fa-barcode"></i>My Task</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#"><i class="fa fa-lock"></i>Screen lock</a></li>
+                            <li><a href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                              document.getElementById('logout-form').submit();"><i class="fa fa-key"></i>
+                                 {{ __('Logout') }}
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                 @csrf
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="active">
+                    <a href=""><i class="fa fa-th-large"></i> <span class="nav-label"> {{__('Dashboard')}} </span><span class="fa arrow"></span></a>
+                </li>
+
+                <li>
+                    <a href="#"><i class="fa fa-user"></i> <span class="nav-label">{{ __('Admins') }} </span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li><a href="">{{ __('Admins List')}}</a></li>
+                        <li><a href="">{{ __('Add Admin')}}</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#"><i class="fa fa-picture-o" aria-hidden="true"></i> <span class="nav-label"> {{ __('Slides')}}</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li><a href="">{{ __('Slides List')}}</a></li>
+                        <li><a href="">{{ __('Add Slide')}}</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#"><i class="fa fa-users" aria-hidden="true"></i> <span class="nav-label"> {{ __('Customers')}}</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li><a href="">{{__('Customers list')}}</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"> </i><span class="nav-label"> {{ __('Orders')}}</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li><a href="">{{ __('Orders list')}}</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-cubes" aria-hidden="true"></i> <span class="nav-label"> {{ __('Categories')}}</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li><a href="">{{ __('Categories list')}}</a></li>
+                    <li><a href="">{{ __('Add Category')}}</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-cube" aria-hidden="true"></i> <span class="nav-label">{{ __('Products')}}</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li><a href="{{route('dashboard.products.index')}}">{{ __('Products list')}}</a></li>
+                        <li><a href="{{route('dashboard.products.create')}}">{{ __('Add Product')}}</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                                  document.getElementById('logout-form').submit();"><i class="fa fa-key"></i>
+                     {{ __('Logout') }}
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                     @csrf
+                    </form>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+@push('scripts')
+    <script>
+        document.getElementById('test_swal').onclick = function f() {
+            swal({
+                    title: "Are you sure?",
+                    text: "Once deleted, you will not be able to recover this imaginary file!",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                    })
+                    .then((willDelete) => {
+                    if (willDelete) {
+                        swal("Poof! Your imaginary file has been deleted!", {
+                        icon: "success",
+                        });
+                    } else {
+                        swal("Your imaginary file is safe!");
+                    }
+                });
+        }
+    </script>
+@endpush

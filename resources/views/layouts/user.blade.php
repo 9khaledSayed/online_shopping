@@ -3,7 +3,7 @@
 
 
 <head>
-    @include('layouts.parts.user.head')
+    @include('user.parts.head')
 </head>
 
 <body>
@@ -12,19 +12,19 @@
 <div class="global-wrap">
 
 
-    @include('layouts.parts.user.demo_changer')
+    @include('user.parts.demo_changer')
 
 
-    @include('layouts.parts.user.header')
+    @include('user.parts.header')
 
 
     @yield('content')
 
 
-    @include('layouts.parts.user.footer')
+    @include('user.parts.footer')
 
 
-    @include('layouts.parts.user.foot')
+    @include('user.parts.foot')
 
 
 </div>

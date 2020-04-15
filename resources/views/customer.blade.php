@@ -1,5 +1,42 @@
 @extends('layouts.user')
 
+{{-- @section('top-area')
+<div class="top-area">
+    <div class="owl-carousel owl-slider" id="owl-carousel-slider" data-inner-pagination="true" data-white-pagination="true">
+        <div>
+            <div class="bg-holder">
+                <img src="{{asset('assets/img/branding__ipad_interactive_design_1200x480.jpg')}}" alt="Image Alternative text" title="Branding  iPad Interactive Design" />
+                <div class="vert-center text-white text-center slider-caption">
+                    <h2 class="text-uc">New Bloke Collection</h2>
+                    <p class="text-bigger">Enim gravida tempus tincidunt posuere consequat vehicula</p>
+                    <p class="text-hero">Save up to 40%</p><a class="btn btn-lg btn-ghost btn-white" href="#">Shop Now</a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="bg-holder">
+                <img src="{{asset('assets/img/hot_mixer_1200x480.jpg')}}" alt="Image Alternative text" title="Hot mixer" />
+                <div class="vert-center text-white text-center slider-caption">
+                    <h2 class="text-uc">Modern DJ Sets</h2>
+                    <p class="text-bigger">Lorem curae sociis volutpat facilisis varius vehicula</p>
+                    <p class="text-hero">Save up to 50%</p><a class="btn btn-lg btn-ghost btn-white" href="#">Shop Now</a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="bg-holder">
+                <img src="{{asset('assets/img/iphone_5_ipad_mini_ipad_3_1200x480.jpg')}}" alt="Image Alternative text" title="iPhone 5 iPad mini iPad 3" />
+                <div class="vert-center text-white text-center slider-caption">
+                    <h2 class="text-uc">Gatgets Giveaway</h2>
+                    <p class="text-bigger">Commodo natoque tristique laoreet tellus ad id</p>
+                    <p class="text-hero">Save up to 70%</p><a class="btn btn-lg btn-ghost btn-white" href="#">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection --}}
+
 @section('content')
 
     <!-- //////////////////////////////////
@@ -41,7 +78,7 @@
                     <div class="col-md-4">
                         <div class="product-thumb">
                             <header class="product-header">
-                                <img src="img/green_furniture_800x600.jpg" alt="Image Alternative text" title="Green Furniture" />
+                                <img src="{{asset('assets/img/green_furniture_800x600.jpg')}}" alt="Image Alternative text" title="Green Furniture" />
                             </header>
                             <div class="product-inner">
                                 <ul class="icon-group icon-list-rating" title="3.7/5 rating">
@@ -76,7 +113,7 @@
                     <div class="col-md-4">
                         <div class="product-thumb">
                             <header class="product-header">
-                                <img src="img/hot_mixer_800x600.jpg" alt="Image Alternative text" title="Hot mixer" />
+                                <img src="{{asset('assets/img/hot_mixer_800x600.jpg')}}" alt="Image Alternative text" title="Hot mixer" />
                             </header>
                             <div class="product-inner">
                                 <ul class="icon-group icon-list-rating" title="3/5 rating">
@@ -111,7 +148,7 @@
                     <div class="col-md-4">
                         <div class="product-thumb">
                             <header class="product-header">
-                                <img src="img/waipio_valley_800x600.jpg" alt="Image Alternative text" title="waipio valley" />
+                                <img src="{{asset('assets/img/waipio_valley_800x600.jpg')}}" alt="Image Alternative text" title="waipio valley" />
                             </header>
                             <div class="product-inner">
                                 <ul class="icon-group icon-list-rating" title="4.1/5 rating">
@@ -150,7 +187,7 @@
         <div class="row row-wrap">
             <div class="col-md-4">
                 <div class="product-banner">
-                    <img src="img/gamer_chick_800x600.jpg" alt="Image Alternative text" title="Gamer Chick" />
+                    <img src="{{asset('assets/img/gamer_chick_800x600.jpg')}}" alt="Image Alternative text" title="Gamer Chick" />
                     <div class="product-banner-inner">
                         <h5>Playstation Accsories</h5><a class="btn btn-sm btn-white btn-ghost">Explore Now</a>
                     </div>
@@ -158,7 +195,7 @@
             </div>
             <div class="col-md-4">
                 <div class="product-banner">
-                    <img src="img/urbex_esch_lux_with_laney_and_laaaaag_800x600.jpg" alt="Image Alternative text" title="Urbex Esch/Lux with Laney and Laaaaag" />
+                    <img src="{{asset('assets/img/urbex_esch_lux_with_laney_and_laaaaag_800x600.jpg')}}" alt="Image Alternative text" title="Urbex Esch/Lux with Laney and Laaaaag" />
                     <div class="product-banner-inner">
                         <h5>Canon Cameras</h5><a class="btn btn-sm btn-white btn-ghost">Explore Now</a>
                     </div>
@@ -166,7 +203,7 @@
             </div>
             <div class="col-md-4">
                 <div class="product-banner">
-                    <img src="img/amaze_800x600.jpg" alt="Image Alternative text" title="AMaze" />
+                    <img src="{{asset('assets/img/amaze_800x600.jpg')}}" alt="Image Alternative text" title="AMaze" />
                     <div class="product-banner-inner">
                         <h5>New Glass Collections</h5><a class="btn btn-sm btn-white btn-ghost">Explore Now</a>
                     </div>
@@ -179,7 +216,7 @@
             <div class="col-md-3">
                 <div class="product-thumb">
                     <header class="product-header">
-                        <img src="img/gamer_chick_800x600.jpg" alt="Image Alternative text" title="Gamer Chick" />
+                        <img src="{{asset('assets/img/gamer_chick_800x600.jpg')}}" alt="Image Alternative text" title="Gamer Chick" />
                     </header>
                     <div class="product-inner">
                         <ul class="icon-group icon-list-rating" title="4.7/5 rating">
@@ -215,7 +252,7 @@
             <div class="col-md-3">
                 <div class="product-thumb">
                     <header class="product-header"><span class="product-label label label-success">New</span>
-                        <img src="img/food_is_pride_800x600.jpg" alt="Image Alternative text" title="Food is Pride" />
+                        <img src="{{asset('assets/img/food_is_pride_800x600.jpg')}}" alt="Image Alternative text" title="Food is Pride" />
                     </header>
                     <div class="product-inner">
                         <ul class="icon-group icon-list-rating icon-list-non-rated" title="not rated yet">
@@ -251,7 +288,7 @@
             <div class="col-md-3">
                 <div class="product-thumb">
                     <header class="product-header">
-                        <img src="img/the_violin_800x600.jpg" alt="Image Alternative text" title="The Violin" />
+                        <img src="{{asset('assets/img/the_violin_800x600.jpg')}}" alt="Image Alternative text" title="The Violin" />
                     </header>
                     <div class="product-inner">
                         <ul class="icon-group icon-list-rating" title="3.9/5 rating">
@@ -287,7 +324,7 @@
             <div class="col-md-3">
                 <div class="product-thumb">
                     <header class="product-header">
-                        <img src="img/waipio_valley_800x600.jpg" alt="Image Alternative text" title="waipio valley" />
+                        <img src="{{asset('assets/img/waipio_valley_800x600.jpg')}}" alt="Image Alternative text" title="waipio valley" />
                     </header>
                     <div class="product-inner">
                         <ul class="icon-group icon-list-rating" title="4.8/5 rating">
@@ -323,7 +360,7 @@
             <div class="col-md-3">
                 <div class="product-thumb">
                     <header class="product-header"><span class="product-label label label-warning">Best Seller</span>
-                        <img src="img/ana_29_800x600.jpg" alt="Image Alternative text" title="Ana 29" />
+                        <img src="{{asset('assets/img/ana_29_800x600.jpg')}}" alt="Image Alternative text" title="Ana 29" />
                     </header>
                     <div class="product-inner">
                         <ul class="icon-group icon-list-rating" title="4.3/5 rating">
@@ -359,7 +396,7 @@
             <div class="col-md-3">
                 <div class="product-thumb">
                     <header class="product-header">
-                        <img src="img/the_hidden_power_of_the_heart_800x600.jpg" alt="Image Alternative text" title="The Hidden Power of the Heart" />
+                        <img src="{{asset('assets/img/the_hidden_power_of_the_heart_800x600.jpg')}}" alt="Image Alternative text" title="The Hidden Power of the Heart" />
                     </header>
                     <div class="product-inner">
                         <ul class="icon-group icon-list-rating" title="4.2/5 rating">
@@ -395,7 +432,7 @@
             <div class="col-md-3">
                 <div class="product-thumb">
                     <header class="product-header"><span class="product-label label label-danger">Hot</span>
-                        <img src="img/a_turn_800x600.jpg" alt="Image Alternative text" title="a turn" />
+                        <img src="{{asset('assets/img/a_turn_800x600.jpg')}}" alt="Image Alternative text" title="a turn" />
                     </header>
                     <div class="product-inner">
                         <ul class="icon-group icon-list-rating" title="3/5 rating">
@@ -431,7 +468,7 @@
             <div class="col-md-3">
                 <div class="product-thumb">
                     <header class="product-header"><span class="product-label label label-info">Featured</span>
-                        <img src="img/hot_mixer_800x600.jpg" alt="Image Alternative text" title="Hot mixer" />
+                        <img src="{{asset('assets/img/hot_mixer_800x600.jpg')}}" alt="Image Alternative text" title="Hot mixer" />
                     </header>
                     <div class="product-inner">
                         <ul class="icon-group icon-list-rating" title="4.5/5 rating">

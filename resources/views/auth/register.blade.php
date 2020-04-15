@@ -19,11 +19,13 @@
                 <div class="form-section">
                     <div class="logo">
                         <a href="#">
-                            <img src="/img/logos/logo-2.png" alt="logo">
+                            <img src="{{asset('assets/img/logos/logo-2.png')}}" alt="logo">
                         </a>
                     </div>
                     <div class="btn-section">
-                        <a href="{{ route('login')}}" class="link-btn">Login</a>
+                        @isset($url)
+                        <a href='{{ url("login/$url") }}' class="link-btn">Login</a>
+                        @endisset
                         <a href="#" class="link-btn active"> {{ isset($url) ? ucwords($url) : ""}} Register</a>
                     </div>
                     <div class="login-inner-form">

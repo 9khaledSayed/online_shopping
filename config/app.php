@@ -1,4 +1,4 @@
-<?php
+x<?php
 
 return [
 
@@ -79,6 +79,8 @@ return [
     | to any of the locales which will be supported by the application.
     |
     */
+
+    'languages' => ['en' , 'ar'],
 
     'locale' => 'en',
 

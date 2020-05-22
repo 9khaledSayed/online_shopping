@@ -17,6 +17,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'CustomerController@index');
 Auth::routes();
 
+/* Localization */
+
+Route::get('language/{lang}', function ($lang) {
+    Session::put('locale', $lang);
+    return back();
+})->name('langroute');
+
+
 /* multi auth routes */
 Route::get('/login/admin', 'Auth\LoginController@showAdminLoginForm');
 Route::get('/login/customer', 'Auth\LoginController@showCustomerLoginForm');
@@ -29,10 +37,16 @@ Route::post('/register/admin', 'Auth\RegisterController@createAdmin');
 Route::post('/register/customer', 'Auth\RegisterController@createCustomer');
 /* end multi auth routes */
 
-Route::prefix('dashboard')->name('dashboard.')->middleware('auth:admin')->group(function () {
-    Route::view('/', 'dashboard');
+Route::prefix('dashboard')->name('dashboard.')->middleware('auth:admin')->group(function(){
+    Route::view('', 'dashboard')->name('index');
     Route::resources([
-        'products' => 'Dashboard\ProductController',
+        'admins'      => 'Dashboard\AdminController',
+        'categories'  => 'Dashboard\CategoryController',
+        'products'    => 'Dashboard\ProductController',
+        'customers'   => 'Dashboard\CustomerController',
+        'orders'      => 'Dashboard\OrderController',
+        'slides'      => 'Dashboard\SlideController',
+        'user_profile'=> 'Dashboard\UserProfileController'
     ]);
 });
 

@@ -7,10 +7,10 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="page-title">
-                <h1>Products List <small></small></h1>
+                <h1>Admins List <small></small></h1>
                 <ol class="breadcrumb">
                     <li><a href="#"><i class="fa fa-home"></i></a></li>
-                    <li class="active">Products List</li>
+                    <li class="active">ِAdmins List</li>
                 </ol>
             </div>
         </div>
@@ -28,20 +28,12 @@
                                 <strong>NAME</strong>
                             </th>
                             <th>
-                                <strong>CATEGEORY</strong>
+                                <strong>USERNAME</strong>
+                            </th>
                             </th>
                             <th>
-                                <strong>PRICE</strong>
+                                <strong>EMAIL</strong>
                             </th>
-
-                            <th>
-                                <strong>SALE PRICE</strong>
-                            </th>
-
-                            <th>
-                                <strong>QUANTITY1</strong>
-                            </th>
-
                             <th>
                                 <strong>CREATED AT</strong>
                             </th>
@@ -51,15 +43,13 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($products as $product)
+                        @foreach ($admins as $admin)
                         <tr>
-                            <td>{{$product->id}}</td>
-                            <td>{{$product->name}}</td>
-                            <td>{{$product->category->name}}</td>
-                            <td>{{$product->price}}</td>
-                            <td>{{$product->sale_price}}</td>
-                            <td>{{$product->quantity}}</td>
-                            <td>{{$product->created_at}}</td>
+                            <td>{{$admin->id}}</td>
+                            <td>{{$admin->name}}</td>
+                            <td>{{$admin->username}}</td>
+                            <td>{{$admin->email}}</td>
+                            <td>{{$admin->created_at}}</td>
                             <td>
                                 <div class="btn-group">
                                     <button data-toggle="dropdown" class="btn btn-primary btn-xs dropdown-toggle">Action <span class="caret"></span></button>
@@ -69,36 +59,39 @@
                                                           document.getElementById('edit-form').submit();"><i class="fa fa-pencil" aria-hidden="true"></i></i>
                                              {{ __('Edit') }}
                                             </a>
-                                            <form  action="{{route('dashboard.products.edit', $product)}}" method="GET" style="display: none;">
+                                            <form id="edit-form" action="{{route('dashboard.admins.edit', $admin)}}" method="GET" style="display: none;">
                                              @csrf
-                                             
+
                                             </form>
                                         </li>
                                         <li>
-                                        <a  id = '{{$product->id}}' class="deleteBTN" onclick="deleteBTN(this.id)" ><i class="fa fa-trash" aria-hidden="true"></i>
+                                            <a href=""
+                                            onclick="event.preventDefault();
+                                                          document.getElementById('delete-form').submit();"><i class="fa fa-trash" aria-hidden="true"></i>
                                              {{ __('Delete') }}
                                             </a>
-                                            
+                                            <form id="delete-form" action="{{route('dashboard.admins.destroy', $admin)}}" method="POST" style="display: none;">
+                                             @csrf
+                                             @method('DELETE')
+                                            </form>
                                         </li>
                                     </ul>
                                 </div>
                             </td>
                         </tr>
                         @endforeach
+
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
 
-</div> 
+</div>
 
-    
 @endsection
 
-@push('scripts')
-    <script src = "{{asset('admin_assets/forms/products.js')}}"
-@endpush
+
 
 
 

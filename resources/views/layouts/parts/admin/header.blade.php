@@ -17,10 +17,10 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Online Shopping</a>
+                    <a class="navbar-brand" href="#">Herbal-Phama</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
-                    {{-- <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav">
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle button-wave" data-toggle="dropdown" aria-expanded="true">{{__('Menu')}}<span class="caret"></span></a>
                             <ul class="dropdown-menu mega-dropdown-menu" style="width: 900px;">
@@ -66,7 +66,7 @@
                                 </li>
                             </ul>
                         </li>
-                    </ul> --}}
+                    </ul>
 
                     <ul class="nav navbar-nav navbar-right navbar-top-drops">
                         <li class="dropdown"><a href="#" class="dropdown-toggle button-wave" data-toggle="dropdown"><i class="fa fa-envelope"></i> <span class="badge badge-xs badge-info">6</span></a>
@@ -78,7 +78,7 @@
                                 <li class="clearfix">
                                     <a href="#">
                                         <span class="pull-left">
-                                            <img src="{{ asset('admin_assets/'. App::getLocale() .'/images/avtar-1.jpg') }}" alt="" class="img-circle" width="30">
+                                            <img src="{{ asset('admin_assets/light_blue/'. App::getLocale() .'/images/avtar-1.jpg') }}" alt="" class="img-circle" width="30">
                                         </span>
                                         <span class="block">
                                             John Doe
@@ -92,7 +92,7 @@
                                 <li class="clearfix">
                                     <a href="#">
                                         <span class="pull-left">
-                                        <img src="{{ asset('admin_assets/' . App::getLocale() . '/images/avtar-2.jpg') }}" alt="" class="img-circle" width="30">
+                                        <img src="{{ asset('admin_assets/light_blue/' . App::getLocale() . '/images/avtar-2.jpg') }}" alt="" class="img-circle" width="30">
                                         </span>
                                         <span class="block">
                                             John Doe
@@ -106,7 +106,7 @@
                                 <li class="clearfix">
                                     <a href="#">
                                         <span class="pull-left">
-                                        <img src="{{ asset('admin_assets/' . App::getLocale() . '/images/avtar-3.jpg') }}" alt="" class="img-circle" width="30">
+                                        <img src="{{ asset('admin_assets/light_blue/' . App::getLocale() . '/images/avtar-3.jpg') }}" alt="" class="img-circle" width="30">
                                         </span>
                                         <span class="block">
                                             John Doe
@@ -140,7 +140,7 @@
                                 </li>  
                             </ul>
                         </li>
-                        {{-- <li class="dropdown">
+                        <li class="dropdown">
                             <a href="#" class="dropdown-toggle button-wave" data-toggle="dropdown"><img src="{{ asset('assets/img/flags/' . App::getLocale() . '.svg')}}" alt=""/><i class="fa fa-angle-down"></i></a>
                             <ul role="menu" class="dropdown-menu dropdown-lg">
                                 @foreach (Config::get('app.languages') as $language)
@@ -153,7 +153,7 @@
                                 @endif
                                 @endforeach
                             </ul>
-                        </li> --}}
+                        </li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div><!--/.container-fluid -->

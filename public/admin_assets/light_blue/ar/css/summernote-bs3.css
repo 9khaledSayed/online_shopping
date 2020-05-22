@@ -545,10 +545,10 @@
   .note-editor .dl-horizontal dd:after {
     content: " ";
     /* 1 */
-  
+
     display: table;
     /* 2 */
-  
+
   }
   .note-editor .dl-horizontal dd:after {
     clear: both;
@@ -557,10 +557,10 @@
   .note-editor .dl-horizontal dd:after {
     content: " ";
     /* 1 */
-  
+
     display: table;
     /* 2 */
-  
+
   }
   .note-editor .dl-horizontal dd:after {
     clear: both;
@@ -2221,8 +2221,8 @@ fieldset[disabled] .note-editor .btn-link:focus {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('../fonts/glyphicons-halflings-regular.html');
-  src: url('../fonts/glyphicons-halflings-regulard41d.html?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular-2.html') format('woff'), url('../fonts/glyphicons-halflings-regular-3.html') format('truetype'), url('../fonts/glyphicons-halflings-regular-4.html#glyphicons_halflingsregular') format('svg');
+  src: url('public/admin_assets/light_blue/ar/fonts/glyphicons-halflings-regular.html');
+  src: url('public/admin_assets/light_blue/ar/fonts/glyphicons-halflings-regulard41d.html?#iefix') format('embedded-opentype'), url('public/admin_assets/light_blue/ar/fonts/glyphicons-halflings-regular-2.html') format('woff'), url('public/admin_assets/light_blue/ar/fonts/glyphicons-halflings-regular-3.html') format('truetype'), url('public/admin_assets/light_blue/ar/fonts/glyphicons-halflings-regular-4.html#glyphicons_halflingsregular') format('svg');
 }
 .note-editor .glyphicon {
   position: relative;

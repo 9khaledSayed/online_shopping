@@ -37,8 +37,10 @@ Route::post('/register/admin', 'Auth\RegisterController@createAdmin');
 Route::post('/register/customer', 'Auth\RegisterController@createCustomer');
 /* end multi auth routes */
 
+/* Dashboard Routes*/
 Route::prefix('dashboard')->name('dashboard.')->middleware('auth:admin')->group(function(){
     Route::view('', 'dashboard')->name('index');
+    Route::put('profile', 'Dashboard\ProfileController@updateProfilePicture')->name('profile.updateProfilePicture');
     Route::resources([
         'admins'      => 'Dashboard\AdminController',
         'categories'  => 'Dashboard\CategoryController',
@@ -46,7 +48,7 @@ Route::prefix('dashboard')->name('dashboard.')->middleware('auth:admin')->group(
         'customers'   => 'Dashboard\CustomerController',
         'orders'      => 'Dashboard\OrderController',
         'slides'      => 'Dashboard\SlideController',
-        'user_profile'=> 'Dashboard\ProfileController'
+        'profile'     => 'Dashboard\ProfileController'
     ]);
 });
 

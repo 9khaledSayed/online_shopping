@@ -5,6 +5,7 @@ namespace App\Http\Controllers\dashboard;
 use App\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
@@ -37,7 +38,13 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        Admin::create($this->validateAttributes());
+        $this->validateAttributes();
+        Admin::create([
+            'name' => $request->name,
+            'username' => $request->username,
+            'email' => $request->email,
+            'password' => Hash::make($request['password']),
+        ]);
         return redirect(route('dashboard.admins.index'));
     }
 

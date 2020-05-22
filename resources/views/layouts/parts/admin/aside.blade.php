@@ -5,18 +5,13 @@
                 <li class="nav-header">
                     <div class="dropdown side-profile text-left">
                         <span style="display: block;">
-                            <img alt="image" class="img-circle" src="{{ asset('admin_assets/light_blue/' . App::getLocale() . '/images/avtar-6.jpg') }}" width="40">
+                            <img alt="image" class="img-circle" src="{{ asset(auth()->user()->profile_photo) }}" width="40">
                         </span>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="clear" style="display: block;"> <span class="block m-t-xs"> <strong class="font-bold"> Hi {{auth()->user()->name}}!  <b class="caret"></b></strong>
                                 </span></span> </a>
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                            <li><a href="#"><i class="fa fa-user"></i>My Profile</a></li>
-                            <li><a href="#" id="test_swal"><i class="fa fa-calendar"></i>My Calendar</a></li>
-                            <li><a href="#"><i class="fa fa-envelope"></i>My Inbox</a></li>
-                            <li><a href="#"><i class="fa fa-barcode"></i>My Task</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#"><i class="fa fa-lock"></i>Screen lock</a></li>
+                            <li><a href="{{route('dashboard.profile.index')}}"><i class="fa fa-user"></i>My Profile</a></li>
                             <li><a href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                               document.getElementById('logout-form').submit();"><i class="fa fa-key"></i>
@@ -74,6 +69,14 @@
                     </ul>
                 </li>
                 <li>
+                    <a href="{{ route('logout') }}"
+                       onclick="event.preventDefault();
+                                              document.getElementById('logout-form').submit();"><i class="fa fa-key"></i>
+                        {{ __('Logout') }}
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
                 </li>
             </ul>
 

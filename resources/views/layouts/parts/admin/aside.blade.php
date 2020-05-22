@@ -40,15 +40,6 @@
                         <li><a href="{{route('dashboard.admins.create')}}">{{ __('Add Admin')}}</a></li>
                     </ul>
                 </li>
-
-                <li>
-                    <a href="#"><i class="fa fa-picture-o" aria-hidden="true"></i> <span class="nav-label"> {{ __('Slides')}}</span><span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level collapse">
-                        <li><a href="{{route('dashboard.slides.index')}}">{{ __('Slides List')}}</a></li>
-                        <li><a href="{{route('dashboard.slides.create')}}">{{ __('Add Slide')}}</a></li>
-                    </ul>
-                </li>
-
                 <li>
                     <a href="#"><i class="fa fa-users" aria-hidden="true"></i> <span class="nav-label"> {{ __('Customers')}}</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
@@ -56,16 +47,10 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"> </i><span class="nav-label"> {{ __('Orders')}}</span><span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level collapse">
-                        <li><a href="{{ route('dashboard.orders.index') }}">{{ __('Orders list')}}</a></li>
-                    </ul>
-                </li>
-                <li>
                     <a href="#"><i class="fa fa-cubes" aria-hidden="true"></i> <span class="nav-label"> {{ __('Categories')}}</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
                         <li><a href="{{ route('dashboard.categories.index') }}">{{ __('Categories list')}}</a></li>
-                    <li><a href="{{ route('dashboard.categories.create') }}">{{ __('Add Category')}}</a></li>
+                        <li><a href="{{ route('dashboard.categories.create') }}">{{ __('Add Category')}}</a></li>
                     </ul>
                 </li>
                 <li>
@@ -76,7 +61,19 @@
                     </ul>
                 </li>
                 <li>
-
+                    <a href="#"><i class="fa fa-picture-o" aria-hidden="true"></i> <span class="nav-label"> {{ __('Slides')}}</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li><a href="{{route('dashboard.slides.index')}}">{{ __('Slides List')}}</a></li>
+                        <li><a href="{{route('dashboard.slides.create')}}">{{ __('Add Slide')}}</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"> </i><span class="nav-label"> {{ __('Orders')}}</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li><a href="{{ route('dashboard.orders.index') }}">{{ __('Orders list')}}</a></li>
+                    </ul>
+                </li>
+                <li>
                 </li>
             </ul>
 

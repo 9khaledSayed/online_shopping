@@ -22,7 +22,7 @@ Auth::routes();
 Route::get('language/{lang}', function ($lang) {
     Session::put('locale', $lang);
     return back();
-})->name('langroute');
+})->name('change_language');
 
 
 /* multi auth routes */
@@ -46,7 +46,7 @@ Route::prefix('dashboard')->name('dashboard.')->middleware('auth:admin')->group(
         'customers'   => 'Dashboard\CustomerController',
         'orders'      => 'Dashboard\OrderController',
         'slides'      => 'Dashboard\SlideController',
-        'user_profile'=> 'Dashboard\UserProfileController'
+        'user_profile'=> 'Dashboard\ProfileController'
     ]);
 });
 

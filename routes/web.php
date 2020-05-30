@@ -48,7 +48,9 @@ Route::prefix('dashboard')->name('dashboard.')->middleware('auth:admin')->group(
         'customers'   => 'Dashboard\CustomerController',
         'orders'      => 'Dashboard\OrderController',
         'slides'      => 'Dashboard\SlideController',
-        'profile'     => 'Dashboard\ProfileController'
+        'profile'     => 'Dashboard\ProfileController',
+        'governments' => 'Dashboard\GovernmentController',
+        'cities'      => 'Dashboard\CityController'
     ]);
 });
 

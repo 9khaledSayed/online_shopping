@@ -14,7 +14,8 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', 'CustomerController@index');
+
+
 Auth::routes();
 
 /* Localization */
@@ -37,6 +38,44 @@ Route::post('/register/admin', 'Auth\RegisterController@createAdmin');
 Route::post('/register/customer', 'Auth\RegisterController@createCustomer');
 /* end multi auth routes */
 
+
+// Customer Routes //
+
+Route::get('/' ,'customer\HomeController@index');       // the home page with filtering latest and newst products
+
+Route::get('/product/{id}', 'ProductController@index'); // the home page with filtering by categories
+
+Route::view('/about', 'customer.about');                 // the about page
+
+
+Route::GET('profile' ,'customer\CustomerController@index');
+
+Route::PUT('profile/updateInfo' ,'customer\CustomerController@updateInfo');
+
+Route::PUT('profile/updatePw' ,'customer\CustomerController@updatePw');
+
+Route::view('/contact','customer.contact')->middleware('auth:customer');
+
+Route::get('/wishlist', 'customer\WishlistController@index')->middleware('auth:customer');
+
+Route::get('/shopping_cart', 'customer\OrderController@index')->middleware('auth:customer');
+
+Route::post('/wishlist' ,'customer\WishlistController@store')->middleware("auth:customer");
+
+Route::post('/myCart','customer\CartController@store')->middleware("auth:customer");
+
+Route::post('/order','customer\OrderController@store')->middleware("auth:customer");
+
+Route::post('/send_email','customer\EmailController@store');
+
+Route::delete('/wishlist/{id}', 'customer\WishlistController@destroy');
+
+Route::delete('/myCart/{id}', 'customer\CartController@destroy');
+
+// Customer Routes //
+
+
+
 /* Dashboard Routes*/
 Route::prefix('dashboard')->name('dashboard.')->middleware('auth:admin')->group(function(){
     Route::view('', 'dashboard')->name('index');
@@ -55,5 +94,3 @@ Route::prefix('dashboard')->name('dashboard.')->middleware('auth:admin')->group(
 });
 
 
-Route::view('/home', 'home')->middleware('auth');
-Route::view('/customer', 'customer')->middleware('auth:customer');

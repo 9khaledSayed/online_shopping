@@ -1,6 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\customer;
+use App\Http\Controllers\Controller;
+
+use App\Product;
 
 use Illuminate\Http\Request;
 
@@ -11,10 +14,6 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
     /**
      * Show the application dashboard.
@@ -23,6 +22,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('customer');
+        $products = Product::all();
+        $latestProducts = Product::latest()->take(4)->get();
+        return view('customer.home',compact('products','latestProducts',$products,$latestProducts));
     }
 }

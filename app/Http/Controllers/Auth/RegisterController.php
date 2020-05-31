@@ -94,6 +94,8 @@ class RegisterController extends Controller
         $writer = Customer::create([
             'name' => $request['name'],
             'email' => $request['email'],
+            'phone' => $request['phone'],
+            'address' => $request['address'],
             'password' => Hash::make($request['password']),
         ]);
         return redirect()->intended('login/customer');
@@ -101,7 +103,7 @@ class RegisterController extends Controller
 
     public function showAdminRegisterForm()
     {
-        return view('auth.register', ['url' => 'admin']);
+        return view('auth.register_admin', ['url' => 'admin']);
     }
 
     public function showCustomerRegisterForm()

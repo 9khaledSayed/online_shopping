@@ -89,7 +89,8 @@ Route::prefix('dashboard')->name('dashboard.')->middleware('auth:admin')->group(
         'slides'      => 'Dashboard\SlideController',
         'profile'     => 'Dashboard\ProfileController',
         'governments' => 'Dashboard\GovernmentController',
-        'cities'      => 'Dashboard\CityController'
+        'cities'      => 'Dashboard\CityController',
+        'countries'   => 'Dashboard\CountryController'
     ]);
 });
 

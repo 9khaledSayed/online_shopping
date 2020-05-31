@@ -13,10 +13,10 @@ class RedirectIfAuthenticated
             return redirect('/admin');
         }
         if ($guard == "customer" && Auth::guard($guard)->check()) {
-            return redirect('/customer');
+            return redirect('/');
         }
         if (Auth::guard($guard)->check()) {
-            return redirect('/home');
+            return redirect('/');
         }
 
         return $next($request);

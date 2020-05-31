@@ -16,9 +16,16 @@ class CreateOrdersTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('customer_id');
+            $table->string('name');
+            $table->string('country');
+            $table->string('government');
+            $table->string('city');
+            $table->string('address');
+            $table->string('phone');
+            $table->string('email');
             $table->String('product_name');
             $table->String('product_price');
-            $table->String('quantity');
+            $table->integer('quantity')->default(1);
             $table->String('amount');
             $table->String('status')->default('pending');
             $table->foreign('customer_id')

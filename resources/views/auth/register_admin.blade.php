@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="account-col text-center">
-    <h1 class="card-header"> {{ isset($url) ? ucwords($url) : ""}} {{ __('Create New account') }}</h1>
+    <h1 class="card-header"> {{ isset($url) ? ucwords($url) : ""}} {{ __('Register') }}</h1>
 
     @isset($url)
         <form class="m-t" method="POST" action='{{ url("register/$url") }}' aria-label="{{ __('Register') }}">
@@ -41,36 +41,40 @@
                 </span>
             @enderror
         </div>
-        <div class="form-group @error('phone') has-error @enderror">
-            <input
-                id="phone"
-                type="number"
-                placeholder="{{__('Phone')}}"
-                class="form-control"
-                name="phone" value="{{ old('phone') }}"
-                required autocomplete="phone">
+{{--        <div class="form-group @error('phone') has-error @enderror">--}}
+{{--            <input--}}
+{{--                id="phone"--}}
+{{--                type="number"--}}
+{{--                placeholder="{{__('Phone')}}"--}}
+{{--                class="form-control"--}}
+{{--                name="phone" value="{{ old('phone') }}"--}}
+{{--                required autocomplete="phone">--}}
 
-            @error('phone')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
-        </div>
-        <div class="form-group @error('address') has-error @enderror">
-            <input
-                id="address"
-                type="text"
-                placeholder="{{__('address')}}"
-                class="form-control"
-                name="address" value="{{ old('address') }}"
-                required autocomplete="address">
-
-            @error('address')
-            <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
-        </div>
+{{--            @error('phone')--}}
+{{--                <span class="invalid-feedback" role="alert">--}}
+{{--                    <strong>{{ $message }}</strong>--}}
+{{--                </span>--}}
+{{--            @enderror--}}
+{{--        </div>--}}
+{{--        <div class="form-group @error('gender') has-error @enderror">--}}
+{{--                <select--}}
+{{--                    class="form-control"--}}
+{{--                    name="gender"--}}
+{{--                    place->--}}
+{{--                    <option default value="">Choose your gender</option>--}}
+{{--                    <option value="male" >--}}
+{{--                        {{__('Male')}}--}}
+{{--                    </option>--}}
+{{--                    <option value="female" >--}}
+{{--                        {{__('Female')}}--}}
+{{--                    </option>--}}
+{{--                </select>--}}
+{{--            @error('gender')--}}
+{{--            <span class="invalid-feedback" role="alert">--}}
+{{--                <strong>{{ $message }}</strong>--}}
+{{--            </span>--}}
+{{--            @enderror--}}
+{{--        </div>--}}
         <div class="form-group @error('password') has-error @enderror">
             <input
                 id="password"
@@ -97,7 +101,8 @@
         </div>
         <button type="submit" class="btn btn-primary btn-block ">{{ __('Register') }}</button>
         <a href="#"><small></small></a>
-        <a class="btn  btn-default btn-block" href="{{url("login/$url")}}">{{__('Already have an account?')}}</a>
+        <p class=" text-center"><small>{{__('Already have an account?')}}</small></p>
+        <a class="btn  btn-default btn-block" href="{{url("login/$url")}}">{{__('Log into account')}}</a>
         <p>{{__('online shopping')}} &copy; 2020</p>
     </form>
 </div>

@@ -38,22 +38,22 @@
 @endsection
 
 @push('scripts')
-<script type="text/javascript" src="{{ asset('admin_assets/light_blue/js/jquery.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('admin_assets/light_blue/bootstrap/js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('admin_assets/light_blue/js/metisMenu.min.js') }}"></script>
-<script src="{{ asset('admin_assets/light_blue/js/jquery.nanoscroller.min.js') }}"></script>
-<script src="{{ asset('admin_assets/light_blue/js/jquery-jvectormap-1.2.2.min.js') }}"></script>
-<script src="{{ asset('admin_assets/light_blue/js/jquery.bootstrap.wizard.js') }}"></script>
-<script src="{{ asset('admin_assets/light_blue/js/jquery.validate.js') }}"></script>
-<script src="{{ asset('admin_assets/light_blue/js/additional-methods.min.js') }}"></script>
-<script src="{{ asset('admin_assets/light_blue/js/pace.min.js') }}"></script>
-<script src="{{ asset('admin_assets/light_blue/js/waves.min.js') }}"></script>
-<script src="{{ asset('admin_assets/light_blue/js/jquery.sparkline.min.js') }}"></script>
-<script src="{{ asset('admin_assets/light_blue/js/jquery-jvectormap-world-mill-en.js') }}"></script>
-<script src="{{ asset('admin_assets/light_blue/js/select/select2.js')}}"></script>
+<script type="text/javascript" src="{{ asset('admin_assets/light_blue/' . App::getLocale() .  '/js/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('admin_assets/light_blue/'. App::getLocale() . '/bootstrap/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('admin_assets/light_blue/'. App::getLocale() . '/js/metisMenu.min.js') }}"></script>
+<script src="{{ asset('admin_assets/light_blue/'. App::getLocale() . '/js/jquery.nanoscroller.min.js') }}"></script>
+<script src="{{ asset('admin_assets/light_blue/'. App::getLocale() . '/js/jquery-jvectormap-1.2.2.min.js') }}"></script>
+<script src="{{ asset('admin_assets/light_blue/'. App::getLocale() . '/js/jquery.bootstrap.wizard.js') }}"></script>
+<script src="{{ asset('admin_assets/light_blue/'. App::getLocale() . '/js/jquery.validate.js') }}"></script>
+<script src="{{ asset('admin_assets/light_blue/'. App::getLocale() . '/js/additional-methods.min.js') }}"></script>
+<script src="{{ asset('admin_assets/light_blue/'. App::getLocale() . '/js/pace.min.js') }}"></script>
+<script src="{{ asset('admin_assets/light_blue/'. App::getLocale() . '/js/waves.min.js') }}"></script>
+<script src="{{ asset('admin_assets/light_blue/'. App::getLocale() . '/js/jquery.sparkline.min.js') }}"></script>
+<script src="{{ asset('admin_assets/light_blue/'. App::getLocale() . '/js/jquery-jvectormap-world-mill-en.js') }}"></script>
+<script src="{{ asset('admin_assets/light_blue/'. App::getLocale() . '/js/select/select2.js')}}"></script>
 <!--        <script src="js/jquery.nanoscroller.min.js') }}"></script>-->
-<script type="text/javascript" src="{{ asset('admin_assets/light_blue/js/custom.js') }}"></script>
-<script src="{{ asset('admin_assets/light_blue/js/custom-forms-wizard.js') }}"></script>
+<script type="text/javascript" src="{{ asset('admin_assets/light_blue/'. App::getLocale() . '/js/custom.js') }}"></script>
+<script src="{{ asset('admin_assets/light_blue/'. App::getLocale() . '/js/custom-forms-wizard.js') }}"></script>
 
 <!-- Google Analytics:  -->
 <script>

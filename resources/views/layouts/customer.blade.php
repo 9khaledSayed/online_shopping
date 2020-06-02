@@ -159,13 +159,10 @@
                     <nav class="navigation closed clearfix">
                         <a href="#" class="menu-toggle-close btn"><i class="fa fa-times"></i></a>
                         <ul class="nav sf-menu">
-                            <li class="{{Request::path() == 'home' ? 'active' : ''}}" ><a href="/">Home</a></li>
-                            <li class="{{Request::path() == '1' ? 'active' : ''}}"><a href="/product/1">Hair Products</a></li>
-                            <li class="{{Request::path() == '2' ? 'active' : ''}}"><a href="/product/2">Skin Products </a></li>
-                            <li class="{{Request::path() == '3' ? 'active' : ''}}"><a href="/product/3">Cosmoceutics Products</a></li>
-                            <li class="{{Request::path() == '4' ? 'active' : ''}}"><a href="/product/4">Others Products</a></li>
-                            <li class="sale {{Request::path() == 'home' ? 'active' : ''}}"><a href="category.html">Sale</a></li>
-                            <li class="{{Request::path() == 'contact' ? 'active' : ''}}"><a href="{{url('contact')}}">Contact</a></li>
+                            <li class="{{Request::path() == '/' ? 'active' : ''}}" ><a href="/">Home</a></li>
+                            @foreach($categories as $category)
+                            <li class="{{Request::path() == $category->name ? 'active' : ''}}"><a href="/product/{{$category->name}}">{{$category->name}}</a></li>
+                            @endforeach
                         </ul>
                     </nav>
                     <!-- /Navigation -->

@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 
 use App\Product;
 use App\Category;
+use App\Slide;
 
 use Illuminate\Http\Request;
 
@@ -23,10 +24,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
+        $products = Product::get();
         $latestProducts = Product::latest()->take(4)->get();
-        $categories = Category::all();
+        $categories = Category::get();
+        $slides = Slide::get();
 
-        return view('customer.home',compact('products','latestProducts','categories',$products,$latestProducts,$categories  ));
+        return view('customer.home',compact(['products','latestProducts','categories', 'slides']));
     }
 }

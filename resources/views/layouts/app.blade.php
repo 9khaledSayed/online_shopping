@@ -14,17 +14,10 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#" style="font-size: 20px;font-weight: 800;">{{__('Online Shopping')}}</a>
+            <a class="navbar-brand" href="/" style="font-size: 20px;font-weight: 800;">Herbal Pharma</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li class="dropdown">
-                    <a href="{{route('login')}}" class="dropdown-toggle button-wave" aria-expanded="true">{{__('Login')}}</a>
-                </li>
-                <li class="dropdown">
-                    <a href="{{route('register')}}" class="dropdown-toggle button-wave" role="button" aria-haspopup="true" aria-expanded="false">{{__('Register')}}</a>
-                </li>
-            </ul>
+
 
             <ul class="nav navbar-nav navbar-right navbar-top-drops">
                 <li class="dropdown">

@@ -45,6 +45,8 @@ body {
 }
 }
 
+
+
 </style>
 <body>
 @include('layouts.parts.admin.header')

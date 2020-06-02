@@ -41,7 +41,6 @@ class CartController extends Controller
         Cart::create([
             'customer_id' => $customer_id,
             'product_id'  => $request->input('product_id'),
-
         ]);
     }
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\customer;
 use App\Http\Controllers\Controller;
 
 use App\Product;
+use App\Category;
 
 use Illuminate\Http\Request;
 
@@ -24,6 +25,8 @@ class HomeController extends Controller
     {
         $products = Product::all();
         $latestProducts = Product::latest()->take(4)->get();
-        return view('customer.home',compact('products','latestProducts',$products,$latestProducts));
+        $categories = Category::all();
+
+        return view('customer.home',compact('products','latestProducts','categories',$products,$latestProducts,$categories  ));
     }
 }

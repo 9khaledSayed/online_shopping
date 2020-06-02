@@ -43,7 +43,7 @@ Route::post('/register/customer', 'Auth\RegisterController@createCustomer');
 
 Route::get('/' ,'customer\HomeController@index');       // the home page with filtering latest and newst products
 
-Route::get('/product/{id}', 'ProductController@index'); // the home page with filtering by categories
+Route::get('/product/{name}', 'ProductController@index'); // the home page with filtering by categories
 
 Route::view('/about', 'customer.about');                 // the about page
 

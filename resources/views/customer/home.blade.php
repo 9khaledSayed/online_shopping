@@ -17,14 +17,6 @@
                                 <img class="slide-img" src="{{asset($slide->path)}}" alt=""/>
                                 <div class="caption">
                                     <div class="container">
-                                        <div class="div-table">
-                                            <div class="div-cell">
-                                                <div class="caption-content">
-                                                    <h2 class="caption-title">The Biggest</h2>
-                                                    <h3 class="caption-subtitle">Sale</h3>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

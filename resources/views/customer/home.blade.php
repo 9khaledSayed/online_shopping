@@ -11,10 +11,10 @@
                 <div class="col-md-9 slider">
                     <div class="main-slider">
                         <div class="owl-carousel" id="main-slider">
-                            @foreach($slides as $slide)
+
                             <!-- Slide 1 -->
                             <div class="item slide1">
-                                <img class="slide-img" src="{{asset($slide->path)}}" alt=""/>
+                                <img class="slide-img" src="#" alt=""/>
                                 <div class="caption">
                                     <div class="container">
                                         <div class="div-table">
@@ -31,8 +31,54 @@
                                     </div>
                                 </div>
                             </div>
-                            @endforeach
                             <!-- /Slide 1 -->
+
+                            <!-- Slide 2 -->
+                            <div class="item slide2 alt">
+                                <img class="slide-img" src="#" alt=""/>
+                                <div class="caption">
+                                    <div class="container">
+                                        <div class="div-table">
+                                            <div class="div-cell">
+                                                <div class="caption-content">
+                                                    <h2 class="caption-title">New Arrivals On Sale</h2>
+                                                    <h3 class="caption-subtitle"><span>Summer Collection</span></h3>
+                                                    <div class="price">
+                                                        <span>$</span><ins>49</ins>
+                                                        <span>$</span><del>86</del>
+                                                    </div>
+                                                    <p class="caption-text">
+                                                        <a class="btn btn-theme" href="#">Shop this item Now</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Slide 2 -->
+
+                            <!-- Slide 3 -->
+                            <div class="item slide3 dark">
+                                <img class="slide-img" src="#" alt=""/>
+                                <div class="caption">
+                                    <div class="container">
+                                        <div class="div-table">
+                                            <div class="div-cell">
+                                                <div class="caption-content">
+                                                    <h2 class="caption-title">New Arrivals On Sale</h2>
+                                                    <h3 class="caption-subtitle"><span>Summer Collection</span></h3>
+                                                    <p class="caption-text">
+                                                        <a class="btn btn-theme" href="#">Shop this item Now</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Slide 3 -->
+
                         </div>
                     </div>
                 </div>

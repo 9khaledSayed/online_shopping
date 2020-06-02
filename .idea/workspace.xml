@@ -50,6 +50,11 @@
     <list default="true" id="6c36f8ef-fa19-44e5-aac6-7d971932992e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/customer_parts/header_footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer_parts/header_footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/customer/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/customer/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/customer/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/customer_parts/header_footer.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/slides/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/slides/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/customer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/customer.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +185,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SearchEverywhereHistoryKey" value=".idea/w&#9;FILE&#9;file://C:/Users/Khaled Sayed/online_shopping/online_shopping/.idea/workspace.xml&#10;.idea&#9;FILE&#9;file://C:/Users/Khaled Sayed/online_shopping/online_shopping/.idea&#10;header&#9;FILE&#9;file://C:/Users/Khaled Sayed/online_shopping/online_shopping/resources/views/layout/parts/user/header.blade.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/auth" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -192,17 +197,18 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ksaye\gitHub\online_shopping\resources\views\layouts" />
+      <recent name="C:\Users\ahmed\online_shopping\app\Http\Controllers\customer" />
+      <recent name="$PROJECT_DIR$/resources/views/layouts" />
+      <recent name="C:\Users\Khaled Sayed\online_shopping\online_shopping\resources\views\layout" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ksaye\gitHub\online_shopping" />
       <recent name="C:\Users\ahmed\online_shopping\resources\views\auth" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/resources/views/layouts" />
-      <recent name="$PROJECT_DIR$/resources/views/layouts/parts" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ahmed\online_shopping\app\Http\Controllers\customer" />
-      <recent name="$PROJECT_DIR$/resources/views/layouts" />
-      <recent name="C:\Users\Khaled Sayed\online_shopping\online_shopping\resources\views\layout" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -227,6 +233,8 @@
       <workItem from="1584306972826" duration="5869000" />
       <workItem from="1584906169338" duration="246000" />
       <workItem from="1590885892579" duration="5093000" />
+      <workItem from="1591117785807" duration="2317000" />
+      <workItem from="1591132760118" duration="3273000" />
       <workItem from="1591059025382" duration="61000" />
       <workItem from="1591119329962" duration="9533000" />
     </task>

@@ -1,4 +1,4 @@
-@extends('customer_parts.header_footer')
+@extends('layouts.customer')
 
 
 @section('content')
@@ -98,7 +98,7 @@
                                             data-toggle="tooltip" title="Name is required"
                                             class="form-control placeholder"/>
                                             @endif
-                                            
+
                                         </div>
                                     </div>
 
@@ -110,14 +110,14 @@
                                             <input
                                             type="text" name="email" id="email" placeholder="Email" value="{{Auth::guard('customer')->user()->email }}" size="30"
                                             data-toggle="tooltip" title="Email is required"
-                                            class="form-control placeholder"/>                                                
+                                            class="form-control placeholder"/>
                                             @else
                                             <input
                                             type="text" name="email" id="email" placeholder="Email" value="" size="30"
                                             data-toggle="tooltip" title="Email is required"
                                             class="form-control placeholder"/>
                                             @endif
-                                            
+
                                         </div>
                                     </div>
 
@@ -173,7 +173,7 @@
             </div>
             <!-- /CONTENT AREA -->
 
-          
+
             <div id="to-top" class="to-top"><i class="fa fa-angle-up"></i></div>
 
             @endsection
@@ -181,8 +181,8 @@
             <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
             <script type="text/javascript">
-                
-                
+
+
                 $.ajaxSetup({
                          headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}
                     });
@@ -193,7 +193,7 @@
                 $(document).on('submit', 'form', function (event) {
 
                     event.preventDefault();
-                    
+
                     var name = document.getElementById('name').value;
                     var email = document.getElementById('email').value;
                     var subject = document.getElementById('subject').value;
@@ -204,7 +204,7 @@
                     url:'/send_email',
                     data:{
                     "_token": "{{ csrf_token() }}",
-                    name:name , email:email , subject:subject,message:message 
+                    name:name , email:email , subject:subject,message:message
                     },
                     success: function(response)
                     {
@@ -219,6 +219,6 @@
                     });
 
                 });
-            
+
             });
             </script>

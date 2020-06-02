@@ -1,12 +1,7 @@
-@extends('customer_parts.header_footer')
-
-
+@extends('layouts.customer')
 @section('content')
-
-
 <!-- CONTENT AREA -->
  <div class="content-area">
-
     <!-- PAGE -->
     <section class="page-section no-padding-bottom">
         <div class="container">
@@ -16,10 +11,10 @@
                 <div class="col-md-9 slider">
                     <div class="main-slider">
                         <div class="owl-carousel" id="main-slider">
-
+                            @foreach($slides as $slide)
                             <!-- Slide 1 -->
                             <div class="item slide1">
-                                <img class="slide-img" src="assets/img/preview/slider/slide-3-sub.jpg" alt=""/>
+                                <img class="slide-img" src="{{asset($slide->path)}}" alt=""/>
                                 <div class="caption">
                                     <div class="container">
                                         <div class="div-table">
@@ -36,72 +31,26 @@
                                     </div>
                                 </div>
                             </div>
+                            @endforeach
                             <!-- /Slide 1 -->
-
-                            <!-- Slide 2 -->
-                            <div class="item slide2 alt">
-                                <img class="slide-img" src="assets/img/preview/slider/slide-4-sub.jpg" alt=""/>
-                                <div class="caption">
-                                    <div class="container">
-                                        <div class="div-table">
-                                            <div class="div-cell">
-                                                <div class="caption-content">
-                                                    <h2 class="caption-title">New Arrivals On Sale</h2>
-                                                    <h3 class="caption-subtitle"><span>Summer Collection</span></h3>
-                                                    <div class="price">
-                                                        <span>$</span><ins>49</ins>
-                                                        <span>$</span><del>86</del>
-                                                    </div>
-                                                    <p class="caption-text">
-                                                        <a class="btn btn-theme" href="#">Shop this item Now</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /Slide 2 -->
-
-                            <!-- Slide 3 -->
-                            <div class="item slide3 dark">
-                                <img class="slide-img" src="assets/img/preview/slider/slide-3a-sub.jpg" alt=""/>
-                                <div class="caption">
-                                    <div class="container">
-                                        <div class="div-table">
-                                            <div class="div-cell">
-                                                <div class="caption-content">
-                                                    <h2 class="caption-title">New Arrivals On Sale</h2>
-                                                    <h3 class="caption-subtitle"><span>Summer Collection</span></h3>
-                                                    <p class="caption-text">
-                                                        <a class="btn btn-theme" href="#">Shop this item Now</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /Slide 3 -->
-
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-3 sidebar">
                 <!-- widget shop categories -->
-                                <div class="widget shop-categories">
-                                    <h4 class="widget-title">Categories</h4>
-                                    <div class="widget-content">
-                                        <ul>
-                                            @foreach($categories as $category)
-                                                <li>
-                                                    <a  href="/1" >Hair Care</a>
-                                                </li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-                                </div>
+                    <div class="widget shop-categories">
+                        <h4 class="widget-title">Categories</h4>
+                        <div class="widget-content">
+                            <ul>
+                                @foreach($categories as $category)
+                                    <li>
+                                        <a  href="/1" >{{$category->name}}</a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
                 <!-- /widget shop categories -->
                 </div>
 
@@ -195,11 +144,10 @@
 
                     @foreach ($products as $product)
 
-
                     <div class="thumbnail no-border no-padding">
                         <div class="media">
                             <a class="media-link" data-gal="prettyPhoto" href="assets/img/preview/shop/{{$product->image1}}">
-                                <img src="assets/img/preview/shop/{{$product->image1}}" alt=""/>
+                                <img src="{{asset('storage/products/' . $product->image1)}}" alt=""/>
                                 <span class="icon-view"><strong><i class="fa fa-eye"></i></strong></span>
                             </a>
                         </div>

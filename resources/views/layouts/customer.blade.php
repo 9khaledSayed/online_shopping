@@ -125,7 +125,7 @@
 
                     <!-- Logo -->
                     <div class="logo">
-                        <a href="index.html"><img src="{{ asset('assets/img/logo.jpg')}}" alt="Herbal Pharma"/></a>
+                        <a href="/"><img src="{{ asset('assets/img/logo.jpg')}}" alt="Herbal Pharma"/></a>
                     </div>
                     <!-- /Logo -->
 

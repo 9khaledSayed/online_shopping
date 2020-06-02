@@ -4,6 +4,7 @@ namespace App\Http\Controllers\customer;
 use Auth;
 use App\Wishlist;
 use App\Product;
+use App\Category;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -25,7 +26,9 @@ class WishlistController extends Controller
 
         $customer_wishlist = Wishlist::where('customer_id',$customer_id)->get();
 
-        return view('customer.wishlist',compact('customer_wishlist',$customer_wishlist));
+        $categories = Category::get();
+
+        return view('customer.wishlist',compact('customer_wishlist','categories',$customer_wishlist,$categories));
 
     }
 

@@ -22,9 +22,6 @@
                                                 <div class="caption-content">
                                                     <h2 class="caption-title">The Biggest</h2>
                                                     <h3 class="caption-subtitle">Sale</h3>
-                                                    <p class="caption-text">
-                                                        <a class="btn btn-theme" href="#">Shop Now</a>
-                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -91,7 +88,7 @@
                             <ul>
                                 @foreach($categories as $category)
                                     <li>
-                                        <a  href="/1" >{{$category->name}}</a>
+                                        <a  href="/product/{{$category->name}}" >{{$category->name}}</a>
                                     </li>
                                 @endforeach
                             </ul>
@@ -124,8 +121,8 @@
                         <div class="col-md-3 col-sm-6">
                             <div class="thumbnail no-border no-padding">
                                 <div class="media">
-                                    <a class="media-link" data-gal="prettyPhoto" href='public/products/'{{$product->image1}}'>
-                                        <img src='public/products/{{$product->image1}}' alt=""/>
+                                    <a class="media-link" data-gal="prettyPhoto" href='{{asset('storage/products/' . $product->image1)}}'>
+                                        <img src='{{asset('storage/products/' . $product->image1)}}' alt=""/>
                                         <span class="icon-view"><strong><i class="fa fa-eye"></i></strong></span>
                                     </a>
                                 </div>
@@ -192,7 +189,7 @@
 
                     <div class="thumbnail no-border no-padding">
                         <div class="media">
-                            <a class="media-link" data-gal="prettyPhoto" href="assets/img/preview/shop/{{$product->image1}}">
+                            <a class="media-link" data-gal="prettyPhoto" href="{{asset('storage/products/' . $product->image1)}}">
                                 <img src="{{asset('storage/products/' . $product->image1)}}" alt=""/>
                                 <span class="icon-view"><strong><i class="fa fa-eye"></i></strong></span>
                             </a>

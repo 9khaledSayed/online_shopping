@@ -110,7 +110,7 @@
                                             <div class="media">
                                                 <a class="media-link" href="#">
 
-                                                    <img src='{{ asset("assets/img/preview/<?= $product->Image_1?> ")}}' alt=""/>
+                                                    <img src='{{asset('storage/products/' . $product->image1)}}' alt=""/>
 
                                                     <span class="icon-view">
                                                         <strong><i class="fa fa-eye"></i></strong>

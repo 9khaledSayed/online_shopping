@@ -5,6 +5,8 @@ use App\Http\Controllers\Controller;
 use App\Product;
 use App\Cart;
 use App\Order;
+use App\Category;
+
 use Illuminate\Http\Request;
 use Auth;
 
@@ -29,7 +31,9 @@ class OrderController extends Controller
             $sub_total += $product->price;
         }
 
-        return view('customer.order',compact('customer_cart','sub_total',$customer_cart,$sub_total));
+        $categories = Category::get();
+
+        return view('customer.order',compact('customer_cart','sub_total','categories',$customer_cart,$sub_total,$categories));
     }
 
     /**
@@ -59,10 +63,12 @@ class OrderController extends Controller
 
         $carts = Cart::where('customer_id',Auth::guard('customer')->user()->id)->get();
 
+
         foreach ($carts as $cart)
         {
 
             $product = Product::find($cart->product_id);
+
             Order::create([
                 'customer_id' => Auth::guard('customer')->user()->id,
                 'name' => $request['name'],

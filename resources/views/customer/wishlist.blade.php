@@ -30,7 +30,7 @@
                                         <tr>
                                             <th style="text-align:center">Image</th>
                                             <th style="text-align:center">Product Name</th>
-                                            <th style="text-align:center">Unit Price</th>
+                                            <th style="text-align:center">Product Price</th>
                                             <th></th>
                                         </tr>
                                     </thead>
@@ -66,7 +66,7 @@
                                              <td align="center" class="total"><a href="#"><i ></i></a>
                                                 <form data-deleted_id = "{{$wishlist->id}}" name = 'delete_wishlist' style="display:inline">
                                                  @csrf
-                                                <button class="fa fa-close" type="submit" ></button>
+                                                    <button type="submit" style="background-color:transparent;border:0px;margin:10px;color:darkred"><i class="fa fa-close"></i></button>
                                                 </form>
                                             </td>
                                     </tr>

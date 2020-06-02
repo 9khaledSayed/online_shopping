@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\product;
+use App\Category;
+
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -12,11 +14,15 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id)
+    public function index($category)
     {
+        $id = Category::where('name',$category)->pluck('id')->first();
+
         $products = Product::where('category_id',$id)->get();
 
-        return view('customer.products',compact('products',$products));
+        $categories = Category::all();
+
+        return view('customer.products',['products' => $products , 'category' => $category , 'categories' => $categories ]);
     }
 
     /**

@@ -93,21 +93,12 @@
                                 <div class="widget shop-categories">
                                     <h4 class="widget-title">Categories</h4>
                                     <div class="widget-content">
-                                      <ul>
-                                          <li class="{{ Request::path() == '1'  ? 'active'  : '' }}" >
-                                              <a  href="/1" >Hair Care</a>
-                                          </li>
-                                          <li>
-                                              <a href="/2">Skin Care</a>
-                                          </li>
-                                          <li>
-                                              <a href="/3">Cosmoceutics</a>
-                                          </li>
-                                          <li>
-                                              <a href="/4">Others</a>
-                                          </li>
-
-                                          <li><a href="#">Sale Off</a></li>
+                                        <ul>
+                                            @foreach($categories as $category)
+                                                <li>
+                                                    <a  href="/1" >Hair Care</a>
+                                                </li>
+                                            @endforeach
                                         </ul>
                                     </div>
                                 </div>

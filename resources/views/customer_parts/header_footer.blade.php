@@ -58,6 +58,7 @@
         <div class="wrapper">
 
             @php
+            $categories = App\Category::all();
             $myCarts = App\Cart::where('customer_id',1)->get();
             $products = array();
             $total_price = 0 ;
@@ -160,7 +161,6 @@
                         @if (Auth::guard('customer')->check()) <li class="hidden-xs"><a href="{{url('profile')}}">My Account</a></li>
                         <li class="hidden-xs"><a href="/wishlist">My Wishlist</a></li> @endif
                         <li class="hidden-xs"><a href="{{url('about')}}">About</a></li>
-                            <li class="hidden-xs"><a href="{{url('contact')}}">Contact</a></li>
                             <li class="dropdown flags">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="{{ asset('assets/img/flag.gif')}}" alt=""/> Eng<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="dropdown-menu">
@@ -185,7 +185,7 @@
 
                         <!-- Logo -->
                         <div class="logo">
-                            <a href="index.html"><img src="{{ asset('assets/img/logo.jpg')}}" alt="Herbal Pharma"/></a>
+                            <a href="/"><img src="{{ asset('assets/img/logo.jpg')}}" alt="Herbal Pharma"/></a>
                         </div>
                         <!-- /Logo -->
 
@@ -220,12 +220,14 @@
                             <a href="#" class="menu-toggle-close btn"><i class="fa fa-times"></i></a>
                             <ul class="nav sf-menu">
                                 <li class="{{Request::path() == 'home' ? 'active' : ''}}" ><a href="/">Home</a></li>
-                                <li class="{{Request::path() == '1' ? 'active' : ''}}"><a href="/product/1">Hair Products</a></li>
-                                <li class="{{Request::path() == '2' ? 'active' : ''}}"><a href="/product/2">Skin Products </a></li>
-                                <li class="{{Request::path() == '3' ? 'active' : ''}}"><a href="/product/3">Cosmoceutics Products</a></li>
-                                <li class="{{Request::path() == '4' ? 'active' : ''}}"><a href="/product/4">Others Products</a></li>
-                                <li class="sale {{Request::path() == 'home' ? 'active' : ''}}"><a href="category.html">Sale</a></li>
-                                <li class="{{Request::path() == 'contact' ? 'active' : ''}}"><a href="{{url('contact')}}">Contact</a></li>
+                                @foreach($categories as $category)
+                                    <li class="{{Request::path() == $category->name ? 'active' : ''}}"><a href="/product/{{$category->name}}">{{$category->name}} Products</a></li>
+                                @endforeach
+{{--                                <li class="{{Request::path() == 'home' ? 'active' : ''}}" ><a href="/">Home</a></li>--}}
+{{--                                <li class="{{Request::path() == '1' ? 'active' : ''}}"><a href="/product/1">Hair Products</a></li>--}}
+{{--                                <li class="{{Request::path() == '2' ? 'active' : ''}}"><a href="/product/2">Skin Products </a></li>--}}
+{{--                                <li class="{{Request::path() == '3' ? 'active' : ''}}"><a href="/product/3">Cosmoceutics Products</a></li>--}}
+{{--                                <li class="{{Request::path() == '4' ? 'active' : ''}}"><a href="/product/4">Others Products</a></li>--}}
                             </ul>
                         </nav>
                         <!-- /Navigation -->
@@ -277,7 +279,7 @@
                       <div class="row">
 
                           <div class="col-sm-6">
-                              <div class="copyright">Copyright 2020 Herbal Pharma   |   Designed & Developed By <a style="color:#DF0101"target="_blank" title="call us 01007949946"> Ahmed & Hossam</a></div>
+                              <div class="copyright">Copyright 2020 Herbal Pharma   |   Designed & Developed By <a style="color:#DF0101"target="_blank" title="call us 01007949946"> Ahmed, Hossam, Khaled, Hedaya, Hussen, Ali</a></div>
                           </div>
                           <div class="col-sm-6">
                               <div class="payments">
@@ -402,7 +404,11 @@
                                 },
                                 success: function(response)
                                 {
-                                      swal("Deleted !", "", "success");
+                                    if ( Formtype != 'cart')
+                                    {
+                                        swal("Deleted !", "", "success");
+                                    }
+
                                       row.style.display = 'none';
                                 },
                                  error: function(error)

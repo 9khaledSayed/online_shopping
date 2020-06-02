@@ -11,38 +11,14 @@
                     <div class="container">
                         <div class="page-header">
                             <h1>
-                              @php
-                              switch(Request::path())
-                              {
-                              case 'product/1': echo "Hair";
-                              break;
-                              case 'product/2': echo "Skin";
-                              break;
-                              case 'product/3': echo "Cosmoceutics";
-                              break;
-                              case 'product/4': echo "varieties";
-                              break;
-                              }
-                              @endphp
+                                {{$category}}
                             </h1>
                         </div>
                         <ul class="breadcrumb">
                             <li><a href="#">Home</a></li>
                             <li><a href="#">Shop</a></li>
                             <li class="active">
-                              @php
-                              switch(Request::path())
-                              {
-                              case 'product/1': echo "Hair";
-                              break;
-                              case 'product/2': echo "Skin";
-                              break;
-                              case 'product/3': echo "Cosmoceutics";
-                              break;
-                              case 'product/4': echo "varieties";
-                              break;
-                              }
-                              @endphp
+                                {{$category}}
                             </li>
                         </ul>
                     </div>
@@ -68,21 +44,12 @@
                                     <h4 class="widget-title">Categories</h4>
                                     <div class="widget-content">
                                       <ul>
-                                          <li class="{{ Request::path() == '1'  ? 'active'  : '' }}" >
-                                              <a  href="/1" >Hair Care</a>
-                                          </li>
-                                          <li>
-                                              <a href="/2">Skin Care</a>
-                                          </li>
-                                          <li>
-                                              <a href="/3">Cosmoceutics</a>
-                                          </li>
-                                          <li>
-                                              <a href="/4">Others</a>
-                                          </li>
-
-                                          <li><a href="#">Sale Off</a></li>
-                                        </ul>
+                                          @foreach($categories as $category)
+                                              <li>
+                                                  <a  href="/1" >Hair Care</a>
+                                              </li>
+                                          @endforeach
+                                       </ul>
                                     </div>
                                 </div>
                                 <!-- /widget shop categories -->
@@ -161,17 +128,17 @@
                                                 </div>
                                                 <div class="price"><ins>{{$product->price}}</ins> <del>{{$product->sale_price}}</del></div>
                                                 <div class="buttons">
-                                              
+
                                                     <form data-id="{{$product->id}}" name = 'wishlist' style="display:inline">
                                                         @csrf
                                                         <button class="btn btn-theme btn-theme-transparent btn-wish-list" type="submit"><i class="fa fa-heart"></i></button>
                                                         </form>
-        
+
                                                         <form data-id="{{$product->id}}" data-price="{{$product->price}}" name = 'cart' style="display:inline">
                                                         @csrf
                                                         <button class="btn btn-theme btn-theme-dark btn-icon-left" type="submit" ><i class="fa fa-shopping-cart"></i>Add To Cart</button>
                                                         </form><!--
-                                                        
+
                                                     --><a style="visibility: hidden" class="btn btn-theme btn-theme-transparent btn-compare" href="#"><i class="fa fa-exchange"></i></a>
                                                 </div>
                                             </div>

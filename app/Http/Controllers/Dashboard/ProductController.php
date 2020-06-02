@@ -170,7 +170,6 @@ class ProductController extends Controller
     }
 
     public function deleteProduct($id){
-        // dd('kahled');
         $msg = "This is a simple message.";
         return response()->json(array('msg'=> $msg), 200);
         // Product::destroy($id);

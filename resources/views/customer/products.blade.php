@@ -1,4 +1,4 @@
-@extends('customer_parts.header_footer')
+@extends('layouts.customer')
 
 @section('content')
 
@@ -161,17 +161,17 @@
                                                 </div>
                                                 <div class="price"><ins>{{$product->price}}</ins> <del>{{$product->sale_price}}</del></div>
                                                 <div class="buttons">
-                                              
+
                                                     <form data-id="{{$product->id}}" name = 'wishlist' style="display:inline">
                                                         @csrf
                                                         <button class="btn btn-theme btn-theme-transparent btn-wish-list" type="submit"><i class="fa fa-heart"></i></button>
                                                         </form>
-        
+
                                                         <form data-id="{{$product->id}}" data-price="{{$product->price}}" name = 'cart' style="display:inline">
                                                         @csrf
                                                         <button class="btn btn-theme btn-theme-dark btn-icon-left" type="submit" ><i class="fa fa-shopping-cart"></i>Add To Cart</button>
                                                         </form><!--
-                                                        
+
                                                     --><a style="visibility: hidden" class="btn btn-theme btn-theme-transparent btn-compare" href="#"><i class="fa fa-exchange"></i></a>
                                                 </div>
                                             </div>

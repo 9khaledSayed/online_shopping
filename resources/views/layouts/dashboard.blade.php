@@ -45,11 +45,8 @@ body {
 }
 }
 
-
 </style>
 <body>
-
-
 @include('layouts.parts.admin.header')
 
     <section class="page">

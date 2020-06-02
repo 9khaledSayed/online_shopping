@@ -1,11 +1,7 @@
-@extends('customer_parts.header_footer')
-
-
+@extends('layouts.customer')
 @section('content')
-
             <!-- CONTENT AREA -->
             <div class="content-area">
-
                 <!-- BREADCRUMBS -->
                 <section class="page-section breadcrumbs">
                     <div class="container">
@@ -13,7 +9,6 @@
                             <h1>Wishlist</h1>
                         </div>
                         <ul class="breadcrumb">
-
                         </ul>
                     </div>
                 </section>

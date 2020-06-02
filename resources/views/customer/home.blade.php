@@ -1,12 +1,7 @@
-@extends('customer_parts.header_footer')
-
-
+@extends('layouts.customer')
 @section('content')
-
-
 <!-- CONTENT AREA -->
  <div class="content-area">
-
     <!-- PAGE -->
     <section class="page-section no-padding-bottom">
         <div class="container">
@@ -19,7 +14,7 @@
 
                             <!-- Slide 1 -->
                             <div class="item slide1">
-                                <img class="slide-img" src="assets/img/preview/slider/slide-3-sub.jpg" alt=""/>
+                                <img class="slide-img" src="#" alt=""/>
                                 <div class="caption">
                                     <div class="container">
                                         <div class="div-table">
@@ -40,7 +35,7 @@
 
                             <!-- Slide 2 -->
                             <div class="item slide2 alt">
-                                <img class="slide-img" src="assets/img/preview/slider/slide-4-sub.jpg" alt=""/>
+                                <img class="slide-img" src="#" alt=""/>
                                 <div class="caption">
                                     <div class="container">
                                         <div class="div-table">
@@ -65,7 +60,7 @@
 
                             <!-- Slide 3 -->
                             <div class="item slide3 dark">
-                                <img class="slide-img" src="assets/img/preview/slider/slide-3a-sub.jpg" alt=""/>
+                                <img class="slide-img" src="#" alt=""/>
                                 <div class="caption">
                                     <div class="container">
                                         <div class="div-table">
@@ -204,11 +199,10 @@
 
                     @foreach ($products as $product)
 
-
                     <div class="thumbnail no-border no-padding">
                         <div class="media">
                             <a class="media-link" data-gal="prettyPhoto" href="assets/img/preview/shop/{{$product->image1}}">
-                                <img src="assets/img/preview/shop/{{$product->image1}}" alt=""/>
+                                <img src="{{asset('storage/products/' . $product->image1)}}" alt=""/>
                                 <span class="icon-view"><strong><i class="fa fa-eye"></i></strong></span>
                             </a>
                         </div>

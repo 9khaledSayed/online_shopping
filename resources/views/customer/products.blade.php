@@ -3,8 +3,13 @@
 @section('content')
 
 
+
+
+
             <!-- CONTENT AREA -->
             <div class="content-area">
+
+
 
                 <!-- BREADCRUMBS -->
                 <section class="page-section breadcrumbs">
@@ -25,75 +30,64 @@
                 </section>
                 <!-- /BREADCRUMBS -->
 
-                <!-- PAGE WITH SIDEBAR -->
-                <section class="page-section with-sidebar">
+                <section class="page-section no-padding-bottom">
                     <div class="container">
-                        <div class="row">
-                            <!-- SIDEBAR -->
-                            <aside class="col-md-3 sidebar" id="sidebar">
-                                <!-- widget search -->
-                                <div class="widget">
-                                    <div class="widget-search">
-                                        <input class="form-control" type="text" placeholder="Search">
-                                        <button><i class="fa fa-search"></i></button>
+
+                        <div class="row main-slider-row">
+
+                            <div class="col-md-9 slider">
+                                <div class="main-slider">
+                                    <div class="owl-carousel" id="main-slider">
+                                    @foreach($slides as $slide)
+                                        <!-- Slide 1 -->
+                                            <div class="item slide1">
+                                                <img class="slide-img" src="{{asset($slide->path)}}" alt=""/>
+                                                <div class="caption">
+                                                    <div class="container">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    @endforeach
+                                    <!-- /Slide 1 -->
                                     </div>
                                 </div>
-                                <!-- /widget search -->
+                            </div>
+
+                            <div class="col-md-3 sidebar">
                                 <!-- widget shop categories -->
                                 <div class="widget shop-categories">
                                     <h4 class="widget-title">Categories</h4>
                                     <div class="widget-content">
-                                      <ul>
-                                          @foreach($categories as $category)
-                                              <li>
-                                                  <a  href="/1" >Hair Care</a>
-                                              </li>
-                                          @endforeach
-                                       </ul>
+                                        <ul>
+                                            @foreach($categories as $category)
+                                                <li>
+                                                    <a  href="/products/{{$category->name}}" >{{$category->name}}</a>
+                                                </li>
+                                            @endforeach
+                                        </ul>
                                     </div>
                                 </div>
                                 <!-- /widget shop categories -->
-                            </aside>
-                            <!-- /SIDEBAR -->
-                            <!-- CONTENT -->
-                            <div class="col-md-9 content" id="content">
+                            </div>
 
-                                <div class="main-slider sub">
-                                    <div class="owl-carousel" id="main-slider">
-                                        @foreach($slides as $slide)
-                                        <!-- Slide 1 -->
-                                        <div class="item slide1 sub">
-                                            <img class="slide-img" src="{{asset($slide->path)}}" alt=""/>
-                                            <div class="caption">
-                                                <div class="container">
-                                                    <div class="div-table">
-                                                        <div class="div-cell">
-                                                            <div class="caption-content">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- /Slide 1 -->
-                                            @endforeach
+                        </div>
 
-
-                                    </div>
-                                </div>
-
-                                <!-- shop-sorting -->
-                                <br> <br> <br> <hr>
-                                <!-- /shop-sorting -->
-
+                    </div>
+                </section>
+                <!-- /PAGE -->
+                <br><br><br>
+                                <section class="page-section with-sidebar">
+                                    <div class="container">
+                                        <div class="row">
+                                <div class="col-md-12 content" id="content">
                                 <!-- Products grid -->
                                 <div class="row products grid">
 
                                   @foreach( $products as $product)
                                     <div class="col-md-4 col-sm-6">
                                         <div class="thumbnail no-border no-padding">
-                                            <div class="media">
-                                                <a class="media-link" href="#">
+                                            <div class="">
+                                                <a class="media-link" href="/product/{{$product->id}}">
 
                                                     <img src='{{asset('storage/products/' . $product->image1)}}' alt=""/>
 
@@ -114,10 +108,15 @@
                                                 <div class="price"><ins>{{$product->price}}</ins> <del>{{$product->sale_price}}</del></div>
                                                 <div class="buttons">
 
+                                                        <button class="btn" onclick="if (document.getElementById('pro_quntity').value > 1) {document.getElementById('pro_quntity').value -=1;} "><i class="fa fa-minus"></i></button>
+                                                        <input id="pro_quntity" class="form-control qty" style="width:70px;text-align:center" type="number" step="1" min="1" name="quantity" value="1" title="Qty">
+                                                        <button class="btn" onclick="document.getElementById('pro_quntity').value = parseInt(document.getElementById('pro_quntity').value) + 1;"><i class="fa fa-plus"></i></button>
+
                                                     <form data-id="{{$product->id}}" name = 'wishlist' style="display:inline">
                                                         @csrf
                                                         <button class="btn btn-theme btn-theme-transparent btn-wish-list" type="submit"><i class="fa fa-heart"></i></button>
                                                         </form>
+
 
                                                         <form data-id="{{$product->id}}" data-price="{{$product->price}}" name = 'cart' style="display:inline">
                                                         @csrf

@@ -67,7 +67,10 @@
                                 <button class="btn btn-theme btn-cart btn-icon-left" type="submit" ><i class="fa fa-shopping-cart"></i>Add To Cart</button>
                             </form>
 
-
+                            <form data-id="{{$product->id}}" name = 'wishlist' style="display:inline">
+                                @csrf
+                                <button class="btn btn-theme btn-wish-list" type="submit"><i class="fa fa-heart"></i></button>
+                            </form>
 
 
                         </div>

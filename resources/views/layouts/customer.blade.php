@@ -161,7 +161,7 @@
                         <ul class="nav sf-menu">
                             <li class="{{Request::path() == '/' ? 'active' : ''}}" ><a href="/">Home</a></li>
                             @foreach($categories as $category)
-                            <li class="{{Request::path() == $category->name ? 'active' : ''}}"><a href="/product/{{$category->name}}">{{$category->name}}</a></li>
+                            <li class="{{Request::path() == $category->name ? 'active' : ''}}"><a href="/products/{{$category->name}}">{{$category->name}}</a></li>
                             @endforeach
                         </ul>
                     </nav>

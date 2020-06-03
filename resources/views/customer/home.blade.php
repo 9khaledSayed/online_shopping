@@ -70,9 +70,6 @@
                             <div class="thumbnail no-border no-padding">
                                 <div class="">
                                     <a class="media-link" href="/product/{{$product->id}}">
-                                        <img src='{{asset('storage/products/' . $product->image1)}}' alt=""/>
-                                <div class="media">
-                                    <a class="media-link" data-gal="prettyPhoto" href='{{asset('storage/products/' . $product->image1)}}'>
                                         <img src='{{asset('storage/products/' . $product->image1)}}' style="height: 258px;width: 262px;"/>
                                         <span class="icon-view"><strong><i class="fa fa-eye"></i></strong></span>
                                     </a>
@@ -89,6 +86,7 @@
                                     <div class="price"><ins>{{$product->price}} EGP</ins> <del>{{$product->sale_price}} EGP</del></div>
                                     <div class="buttons">
 
+                                            @if(Auth::guard('customer')->check())
                                             <form data-id="{{$product->id}}" name = 'wishlist' style="display:inline">
                                             @csrf
                                             <button class="btn btn-theme btn-theme-transparent btn-wish-list" type="submit"><i class="fa fa-heart"></i></button>
@@ -97,7 +95,20 @@
                                             <form data-id="{{$product->id}}" data-price="{{$product->price}}" name = 'cart' style="display:inline">
                                             @csrf
                                             <button class="btn btn-theme btn-theme-dark btn-icon-left" type="submit" ><i class="fa fa-shopping-cart"></i>Add To Cart</button>
-                                            </form><!--
+                                            </form>
+                                             @else
+                                            <form method="GET" action="/login/customer" style="display:inline">
+                                                @csrf
+                                                <button class="btn btn-theme btn-theme-transparent btn-wish-list" type="submit"><i class="fa fa-heart"></i></button>
+                                            </form>
+
+                                            <form method="GET" action="/login/customer" style="display:inline">
+                                                @csrf
+                                                <button class="btn btn-theme btn-theme-dark btn-icon-left" type="submit" ><i class="fa fa-shopping-cart"></i>Add To Cart</button>
+                                            </form>
+                                             @endif
+
+                                            <!--
 
                                         --><a style="visibility: hidden" class="btn btn-theme btn-theme-transparent btn-compare" href="#"><i class="fa fa-exchange"></i></a>
                                     </div>
@@ -141,9 +152,6 @@
                     <div class="thumbnail no-border no-padding">
                         <div class="">
                             <a class="media-link" href="/product/{{$product->id}}">
-                                <img src="{{asset('storage/products/' . $product->image1)}}" alt=""/>
-                        <div class="media">
-                            <a class="media-link" data-gal="prettyPhoto" href="{{asset('storage/products/' . $product->image1)}}">
                                 <img src="{{asset('storage/products/' . $product->image1)}}" style="height: 228px;"/>
                                 <span class="icon-view"><strong><i class="fa fa-eye"></i></strong></span>
                             </a>
@@ -160,6 +168,7 @@
                             <div class="price"><ins>{{$product->price}}</ins> <del>{{$product->sale_price}}</del></div>
                             <div class="buttons">
 
+                                    @if(Auth::guard('customer')->check())
                                    <form data-id="{{$product->id}}" name = 'wishlist' style="display:inline">
                                     @csrf
                                     <button class="btn btn-theme btn-theme-transparent btn-wish-list" type="submit"><i class="fa fa-heart"></i></button>
@@ -169,6 +178,18 @@
                                     @csrf
                                     <button class="btn btn-theme btn-theme-dark btn-icon-left" type="submit" ><i class="fa fa-shopping-cart"></i>Add To Cart</button>
                                     </form>
+                                    </form>
+                                    @else
+                                    <form method="GET" action="/login/customer" style="display:inline">
+                                        @csrf
+                                        <button class="btn btn-theme btn-theme-transparent btn-wish-list" type="submit"><i class="fa fa-heart"></i></button>
+                                    </form>
+
+                                    <form method="GET" action="/login/customer" style="display:inline">
+                                        @csrf
+                                        <button class="btn btn-theme btn-theme-dark btn-icon-left" type="submit" ><i class="fa fa-shopping-cart"></i>Add To Cart</button>
+                                    </form>
+                                    @endif
                                 <a style="visibility: hidden" class="btn btn-theme btn-theme-transparent btn-compare" href="#"><i class="fa fa-exchange"></i></a>
                             </div>
                         </div>

@@ -62,6 +62,7 @@
                                 <button class="btn" onclick="document.getElementById('pro_quntity').value = parseInt(document.getElementById('pro_quntity').value) + 1;"><i class="fa fa-plus"></i></button>
                             </div>
 
+                            @if(Auth::guard('customer')->check())
                             <form data-id="{{$product->id}}" data-price="{{$product->price}}" name = 'cart' style="display:inline">
                                 @csrf
                                 <button class="btn btn-theme btn-cart btn-icon-left" type="submit" ><i class="fa fa-shopping-cart"></i>Add To Cart</button>
@@ -71,8 +72,17 @@
                                 @csrf
                                 <button class="btn btn-theme btn-wish-list" type="submit"><i class="fa fa-heart"></i></button>
                             </form>
+                            @else
+                            <form  action="/login/customer"  style="display:inline">
+                                @csrf
+                                <button class="btn btn-theme btn-cart btn-icon-left" type="submit" ><i class="fa fa-shopping-cart"></i>Add To Cart</button>
+                            </form>
 
-
+                            <form method="GET" action="/login/customer" style="display:inline">
+                                @csrf
+                                <button class="btn btn-theme btn-wish-list" type="submit"><i class="fa fa-heart"></i></button>
+                            </form>
+                            @endif
                         </div>
 
                         <hr class="page-divider small"/>

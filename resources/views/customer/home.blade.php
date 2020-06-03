@@ -5,9 +5,7 @@
     <!-- PAGE -->
     <section class="page-section no-padding-bottom">
         <div class="container">
-
             <div class="row main-slider-row">
-
                 <div class="col-md-9 slider">
                     <div class="main-slider">
                         <div class="owl-carousel" id="main-slider">
@@ -17,6 +15,10 @@
                                 <img class="slide-img" src="{{asset($slide->path)}}" alt=""/>
                                 <div class="caption">
                                     <div class="container">
+                                        <div class="div-table">
+                                            <div class="div-cell">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -69,6 +71,9 @@
                                 <div class="">
                                     <a class="media-link" href="/product/{{$product->id}}">
                                         <img src='{{asset('storage/products/' . $product->image1)}}' alt=""/>
+                                <div class="media">
+                                    <a class="media-link" data-gal="prettyPhoto" href='{{asset('storage/products/' . $product->image1)}}'>
+                                        <img src='{{asset('storage/products/' . $product->image1)}}' style="height: 258px;width: 262px;"/>
                                         <span class="icon-view"><strong><i class="fa fa-eye"></i></strong></span>
                                     </a>
                                 </div>
@@ -137,6 +142,9 @@
                         <div class="">
                             <a class="media-link" href="/product/{{$product->id}}">
                                 <img src="{{asset('storage/products/' . $product->image1)}}" alt=""/>
+                        <div class="media">
+                            <a class="media-link" data-gal="prettyPhoto" href="{{asset('storage/products/' . $product->image1)}}">
+                                <img src="{{asset('storage/products/' . $product->image1)}}" style="height: 228px;"/>
                                 <span class="icon-view"><strong><i class="fa fa-eye"></i></strong></span>
                             </a>
                         </div>
@@ -198,7 +206,5 @@
 
 </div>
 
-
-<div id="to-top" class="to-top"><i class="fa fa-angle-up"></i></div>
 
 @endsection

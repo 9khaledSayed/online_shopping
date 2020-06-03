@@ -8,7 +8,6 @@
 <script src="{{ asset('assets/plugins/jquery.sticky.min.js')}}"></script>
 <script src="{{ asset('assets/plugins/jquery.easing.min.js')}}"></script>
 <script src="{{ asset('assets/plugins/jquery.smoothscroll.min.js')}}"></script>
-<script src="{{ asset('assets/plugins/smooth-scrollbar.min.js')}}"></script>
 
 <!-- JS Page Level -->
 <script src="{{ asset('assets/js/theme.js')}}"></script>

@@ -49,9 +49,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6c36f8ef-fa19-44e5-aac6-7d971932992e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/SlideController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/SlideController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/customer/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/customer/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/customer/products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/products.blade.php" afterDir="false" />
     </list>
@@ -196,18 +193,18 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ksaye\gitHub\online_shopping\resources\views\layouts" />
+      <recent name="C:\Users\ahmed\online_shopping\app\Http\Controllers\customer" />
+      <recent name="$PROJECT_DIR$/resources/views/layouts" />
+      <recent name="C:\Users\Khaled Sayed\online_shopping\online_shopping\resources\views\layout" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ksaye\gitHub\online_shopping" />
       <recent name="C:\Users\ahmed\online_shopping\resources\views\auth" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/resources/views/layouts" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ksaye\gitHub\online_shopping\resources\views\layouts" />
-      <recent name="C:\Users\ahmed\online_shopping\app\Http\Controllers\customer" />
-      <recent name="$PROJECT_DIR$/resources/views/layouts" />
-      <recent name="C:\Users\Khaled Sayed\online_shopping\online_shopping\resources\views\layout" />
     </key>
   </component>
   <component name="SvnConfiguration">

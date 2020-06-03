@@ -5,9 +5,7 @@
     <!-- PAGE -->
     <section class="page-section no-padding-bottom">
         <div class="container">
-
             <div class="row main-slider-row">
-
                 <div class="col-md-9 slider">
                     <div class="main-slider">
                         <div class="owl-carousel" id="main-slider">
@@ -72,7 +70,7 @@
                             <div class="thumbnail no-border no-padding">
                                 <div class="media">
                                     <a class="media-link" data-gal="prettyPhoto" href='{{asset('storage/products/' . $product->image1)}}'>
-                                        <img src='{{asset('storage/products/' . $product->image1)}}' alt=""/>
+                                        <img src='{{asset('storage/products/' . $product->image1)}}' style="height: 258px;width: 262px;"/>
                                         <span class="icon-view"><strong><i class="fa fa-eye"></i></strong></span>
                                     </a>
                                 </div>
@@ -140,7 +138,7 @@
                     <div class="thumbnail no-border no-padding">
                         <div class="media">
                             <a class="media-link" data-gal="prettyPhoto" href="{{asset('storage/products/' . $product->image1)}}">
-                                <img src="{{asset('storage/products/' . $product->image1)}}" alt=""/>
+                                <img src="{{asset('storage/products/' . $product->image1)}}" style="height: 228px;"/>
                                 <span class="icon-view"><strong><i class="fa fa-eye"></i></strong></span>
                             </a>
                         </div>

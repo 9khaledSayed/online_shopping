@@ -60,10 +60,10 @@
 
                                 <div class="main-slider sub">
                                     <div class="owl-carousel" id="main-slider">
-
+                                        @foreach($slides as $slide)
                                         <!-- Slide 1 -->
                                         <div class="item slide1 sub">
-                                            <img class="slide-img" src="{{ asset('assets/img/preview/slider/slide-2-sub.jpg')}}" alt=""/>
+                                            <img class="slide-img" src="{{asset($slide->path)}}" alt=""/>
                                             <div class="caption">
                                                 <div class="container">
                                                     <div class="div-table">
@@ -76,23 +76,8 @@
                                             </div>
                                         </div>
                                         <!-- /Slide 1 -->
+                                            @endforeach
 
-                                        <!-- Slide 2 -->
-                                        <div class="item slide2 sub">
-                                            <img class="slide-img" src="{{ asset('assets/img/preview/slider/slide-2-sub.jpg')}}" alt=""/>
-                                            <div class="caption">
-                                                <div class="container">
-                                                    <div class="div-table">
-                                                        <div class="div-cell">
-                                                            <div class="caption-content">
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- /Slide 2 -->
 
                                     </div>
                                 </div>

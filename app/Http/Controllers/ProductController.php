@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\product;
 use App\Category;
-
+use App\Slide;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -22,7 +22,9 @@ class ProductController extends Controller
 
         $categories = Category::all();
 
-        return view('customer.products',['products' => $products , 'category' => $category , 'categories' => $categories ]);
+        $slides = Slide::all();
+
+        return view('customer.products',['products' => $products , 'category' => $category , 'categories' => $categories ,'slides' => $slides]);
     }
 
     /**

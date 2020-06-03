@@ -51,6 +51,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/SlideController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/SlideController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/customer/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/customer/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/customer/products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/products.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,6 +236,7 @@
       <workItem from="1591132760118" duration="3273000" />
       <workItem from="1591059025382" duration="61000" />
       <workItem from="1591119329962" duration="9533000" />
+      <workItem from="1591134967070" duration="322000" />
     </task>
     <task id="LOCAL-00001" summary="admin finished">
       <created>1584366313343</created>

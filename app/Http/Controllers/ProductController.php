@@ -56,7 +56,9 @@ class ProductController extends Controller
      */
     public function show(product $product)
     {
-        //
+        $categories = Category::all();
+
+        return view('customer.product_details',compact('product','categories',$product,$categories));
     }
 
     /**

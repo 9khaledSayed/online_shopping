@@ -55,7 +55,17 @@
                         <hr class="page-divider small"/>
 
 
+                        <div class="buttons">
+                            <div class="quantity">
+                                <button class="btn" onclick="if (document.getElementById('pro_quntity').value > 1) {document.getElementById('pro_quntity').value -=1;} "><i class="fa fa-minus"></i></button>
+                                <input id="pro_quntity" class="form-control qty" style="width:70px;text-align:center" type="number" step="1" min="1" name="quantity" value="1" title="Qty">
+                                <button class="btn" onclick="document.getElementById('pro_quntity').value = parseInt(document.getElementById('pro_quntity').value) + 1;"><i class="fa fa-plus"></i></button>
+                            </div>
 
+
+
+
+                        </div>
 
                         <hr class="page-divider small"/>
 

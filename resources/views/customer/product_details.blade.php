@@ -62,6 +62,11 @@
                                 <button class="btn" onclick="document.getElementById('pro_quntity').value = parseInt(document.getElementById('pro_quntity').value) + 1;"><i class="fa fa-plus"></i></button>
                             </div>
 
+                            <form data-id="{{$product->id}}" data-price="{{$product->price}}" name = 'cart' style="display:inline">
+                                @csrf
+                                <button class="btn btn-theme btn-cart btn-icon-left" type="submit" ><i class="fa fa-shopping-cart"></i>Add To Cart</button>
+                            </form>
+
 
 
 

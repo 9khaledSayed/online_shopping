@@ -46,7 +46,7 @@
                                       <ul>
                                           @foreach($categories as $category)
                                               <li>
-                                                  <a  href="/1" >Hair Care</a>
+                                                  <a  href="/product/{{$category->name}}" >{{$category->name}}</a>
                                               </li>
                                           @endforeach
                                        </ul>

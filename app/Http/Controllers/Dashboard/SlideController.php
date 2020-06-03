@@ -38,15 +38,14 @@ class SlideController extends Controller
     public function store(Request $request)
     {
         //validate
-        
+
         $this->validate($request, [
-            'slide' => 'required|image|mimes:jpeg,png,jpg|max:2048'
+            'slide' => 'required|image|mimes:jpeg,png,jpg'
         ]);
-        
         //process
-        $slideName = 
-            $request->file('slide')->getClientOriginalName() 
-            . '.' . 
+        $slideName =
+            $request->file('slide')->getClientOriginalName()
+            . '.' .
             $request->file('slide')->extension();
         $request->file('slide')->storeAs('public/slides', $slideName);
         //store
@@ -55,7 +54,7 @@ class SlideController extends Controller
         ]);
         //redirect
         return redirect(route('dashboard.slides.index'));
-        
+
     }
 
     /**

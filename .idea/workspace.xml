@@ -49,16 +49,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6c36f8ef-fa19-44e5-aac6-7d971932992e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login_admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login_admin.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register_admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register_admin.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/slides/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/slides/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/auth.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/auth.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/customer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/customer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/parts/auth/foot.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/parts/auth/foot.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/parts/auth/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/parts/auth/head.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,7 +236,7 @@
       <workItem from="1591224011289" duration="2317000" />
       <workItem from="1591248400053" duration="20626000" />
       <workItem from="1591276658825" duration="1609000" />
-      <workItem from="1591298989356" duration="832000" />
+      <workItem from="1591298989356" duration="2775000" />
     </task>
     <task id="LOCAL-00001" summary="admin finished">
       <created>1584366313343</created>

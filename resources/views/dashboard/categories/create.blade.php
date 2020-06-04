@@ -8,7 +8,7 @@
                 <h1>{{__('New Category')}} <small></small></h1>
                 <ol class="breadcrumb">
                     <li><a href="#"><i class="fa fa-home"></i></a></li>
-                    <li class="active">{{__('New Category')}}</li>
+{{--                    <li class="active">{{__('New Category')}}</li>--}}
                 </ol>
             </div>
         </div>

@@ -1,4 +1,4 @@
-        
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="{{asset('admin_assets/light_blue/' . App::getLocale() . '/js/jquery.min.js')}}" type="text/javascript"></script>
 @if(App::getLocale()=='ar')
@@ -31,39 +31,4 @@
 <script src="{{ asset('admin_assets/light_blue/' . App::getLocale() . '/js/waves.min.js')}}"></script>
 <script src="{{ asset('admin_assets/light_blue/' . App::getLocale() . '/js/data-tables/tables-data.js')}}"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<!--page js-->  
-<script>
-
-    $("#sparkline8").sparkline([5, 6, 7, 2, 0, 4, 2, 4, 5, 7, 2, 4, 12, 14, 4, 2, 14, 12, 7], {
-        type: 'bar',
-        barWidth: 4,
-        height: '40px',
-        barColor: '#01a8fe',
-        negBarColor: '#c6c6c6'});
-    $(".sparkline8").sparkline([4, 2], {
-        type: 'pie',
-        sliceColors: ['#01a8fe', '#ddd']
-    });
-    $(".sparkline9").sparkline([3, 2], {
-        type: 'pie',
-        sliceColors: ['#01a8fe', '#ddd']
-    });
-    $(".sparkline10").sparkline([4, 1], {
-        type: 'pie',
-        sliceColors: ['#01a8fe', '#ddd']
-    });
-    $(".sparkline11").sparkline([1, 3], {
-        type: 'pie',
-        sliceColors: ['#01a8fe', '#ddd']
-    });
-    $(".sparkline12").sparkline([3, 5], {
-        type: 'pie',
-        sliceColors: ['#01a8fe', '#ddd']
-    });
-    $(".sparkline13").sparkline([6, 2], {
-        type: 'pie',
-        sliceColors: ['#01a8fe', '#ddd']
-    });
-
-    
-</script>
+<!--page js-->

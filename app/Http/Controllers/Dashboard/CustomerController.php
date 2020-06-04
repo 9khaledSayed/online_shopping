@@ -14,4 +14,10 @@ class CustomerController extends Controller
         $customers = Customer::get();
         return view('dashboard.customers.index', compact('customers'));
     }
+
+    public function destroy(Customer $customer)
+    {
+        $customer->delete();
+        return redirect(route('dashboard.customer.index'));
+    }
 }

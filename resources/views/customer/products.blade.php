@@ -1,8 +1,31 @@
 @extends('layouts.customer')
 
 @section('content')
+<!-- CONTENT AREA -->
+<div class="content-area">
+    <!-- BREADCRUMBS -->
+    <section class="page-section breadcrumbs">
+        <div class="container">
+            <div class="page-header">
+                <h1>
+                    {{$category}}
+                </h1>
+            </div>
+            <ul class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li class="active">
+                    {{$category}}
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- /BREADCRUMBS -->
 
-
+    <!-- PAGE WITH SIDEBAR -->
+    <section class="page-section with-sidebar">
+        <div class="container">
+            <div class="row">
             <!-- CONTENT AREA -->
             <div class="content-area">
                 <!-- PAGE WITH SIDEBAR -->
@@ -46,10 +69,8 @@
                                 </div>
                                 <!-- /widget shop categories -->
                             </div>
-
                         </div>
                     </div>
-
                 </section>
                 <!-- /PAGE -->
 
@@ -71,7 +92,6 @@
                     <!-- shop-sorting -->
                     <br> <br> <br> <hr>
                     <!-- /shop-sorting -->
-
                     <!-- Products grid -->
                     <div class="row products grid">
 
@@ -138,7 +158,6 @@
                         @endforeach
                     </div>
                     <!-- /Products grid -->
-
                     <!-- Pagination -->
                     <div class="pagination-wrapper" style="text-align:center">
                         <h4 style="visibility:hidden">a</h4>
@@ -152,17 +171,14 @@
                         </ul>
                     </div>
                     <!-- /Pagination -->
-
                 </div>
                 <!-- /CONTENT -->
-
             </div>
           </div>
         </div>
        </div>
     </section>
     <!-- /PAGE WITH SIDEBAR -->
-
     <!-- PAGE -->
     <section class="page-section no-padding-top">
         <div class="container">
@@ -184,12 +200,7 @@
         </div>
     </section>
     <!-- /PAGE -->
-
 </div>
 <!-- /CONTENT AREA -->
-
-
-
-<div id="to-top" class="to-top"><i class="fa fa-angle-up"></i></div>
 
 @endsection

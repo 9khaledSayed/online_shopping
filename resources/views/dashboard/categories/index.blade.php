@@ -9,7 +9,7 @@
                 <h1>{{__('Categories List')}} <small></small></h1>
                 <ol class="breadcrumb">
                     <li><a href="#"><i class="fa fa-home"></i></a></li>
-{{--                    <li class="active">{{__('Categories List')}}</li>--}}
+                    <li class="active">{{__('Categories List')}}</li>
                 </ol>
             </div>
         </div>

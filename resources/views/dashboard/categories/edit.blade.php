@@ -18,7 +18,7 @@
             <div class="panel panel-card margin-b-30">
                 <!-- Start .panel -->
                 <div class="panel-heading">
-{{--                    <h4 class="panel-title"> {{__('New Category')}}</h4>--}}
+                    <h4 class="panel-title"> {{__('New Category')}}</h4>
                 </div>
 
                 <div class="panel-body">

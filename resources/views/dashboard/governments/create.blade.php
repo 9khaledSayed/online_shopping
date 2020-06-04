@@ -17,18 +17,18 @@
             <div class="panel panel-card margin-b-30">
                 <!-- Start .panel -->
                 <div class="panel-heading">
-                    <h4 class="panel-title"> Add New Government</h4>
+                    <h4 class="panel-title">{{__('New Government')}}</h4>
                 </div>
 
                 <div class="panel-body">
                     <form role="form" method="POST" action="{{route('dashboard.governments.store')}}">
                         @csrf
                         <div class="form-group @error('name') has-error @enderror">  <!-- form-group has-error -->
-                            <label>Name</label>
+                            <label>{{__('Name')}}</label>
                             <input
                                 type="text"
                                 name="name"
-                                placeholder="Enter Government Name"
+                                placeholder="{{__('Enter Government Name')}}""
                                 class="form-control"
                                 value="{{old('name')}}">
                             @error('name')
@@ -36,7 +36,7 @@
                             @enderror
                         </div>
 
-                        <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>submit</strong></button>
+                        <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>{{__('Confirm')}}</strong></button>
                     </form>
                 </div>
             </div>

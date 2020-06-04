@@ -7,10 +7,10 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="page-title">
-                <h1>Slides <small></small></h1>
+                <h1>{{ __('Slides')}} <small></small></h1>
                 <ol class="breadcrumb">
                     <li><a href="#"><i class="fa fa-home"></i></a></li>
-                    <li class="active">Slides</li>
+                    <li class="active">{{ __('Slides')}}</li>
                 </ol>
             </div>
         </div>
@@ -33,7 +33,7 @@
                             <form action="{{route('dashboard.slides.destroy', $slide)}}" method="POST" style="text-align: center;">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-danger">Remove <i class="fa fa-trash" aria-hidden="true"></i></button>
+                                <button type="submit" class="btn btn-danger">{{__('Delete')}} <i class="fa fa-trash" aria-hidden="true"></i></button>
                             </form>
                         </div>
                     </div>

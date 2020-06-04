@@ -43,7 +43,7 @@
             @if(count($slides)>0)
               <div class="container" style="width: 949px;">
                 <span id="closeBtn1" style='display:none' onclick="this.parentElement.style.display='none'" class="closebtn"><i class="fa fa-times-circle" aria-hidden="true"></i></span>
-                <img id="expandedImg" src="{{asset($slides->firstOrFail()->path)}}" style="width:100%">
+                <img id="expandedImg" src="{{asset($slides->first()->path)}}" style="width:100%">
                 <div id="imgtext"></div>
               </div>
             @endif

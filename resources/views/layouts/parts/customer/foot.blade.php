@@ -34,6 +34,13 @@
             e.preventDefault();
 
             var product_id = $(this).attr('data-id');
+            if ( document.getElementById('pro_quntity'+product_id))
+            {
+                var quantity   = parseInt(document.getElementById('pro_quntity'+product_id).value);
+            }else{
+                var quantity_form = $(this).attr('data-deleted_id');
+                var quantity      = parseInt(document.getElementById('pro_quntity'+quantity_form).value);
+            }
             var product_price = $(this).attr('data-price');
             var Formtype = $(this).attr('name');
             var myCartNo = document.getElementById('mycart_number');
@@ -42,7 +49,6 @@
 
             if ( Formtype == 'cart')
             {
-
                 URL = "/myCart";
                 myCartNo.innerHTML           = parseInt(myCartNo.innerHTML) + 1;
                 myCart_total_price.innerHTML = parseInt(myCart_total_price.innerHTML) + parseInt(product_price) + " EGP";
@@ -55,6 +61,7 @@
                 data:{
                     "_token": "{{ csrf_token() }}",
                     product_id:product_id,
+                    quantity:quantity
                 },
                 success: function(response)
                 {
@@ -99,7 +106,11 @@
                 },
                 success: function(response)
                 {
-                    swal("Deleted !", "", "success");
+                    if( Formtype != "cart")
+                    {
+                        swal("Deleted !", "", "success");
+                    }
+
                     row.style.display = 'none';
                 },
                 error: function(error)

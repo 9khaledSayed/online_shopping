@@ -52,7 +52,7 @@
                                             <td align="center">
 
                                                     <div style="margin-bottom:20px" >
-                                                        <img style="width:150px;height:170px;border-radius:10px;" src="assets/img/preview/shop/{{$product->image1}}" alt=""/>
+                                                        <img style="width:150px;height:170px;border-radius:10px;"  src="{{asset('storage/products/' . $product->image1)}}" alt=""/>
                                                     </div>
 
                                             </td>

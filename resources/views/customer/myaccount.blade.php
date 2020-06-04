@@ -87,49 +87,32 @@
                                         <table class="table">
                                             <thead>
                                                 <tr>
-                                                    <th>Image</th>
-                                                    <th>Qty</th>
-                                                    <th>Product Name</th>
-                                                    <th>Price</th>
-                                                    <th>Order ID</th>
-                                                    <th>Delivered on</th>
+                                                    <th style="text-align:center">Order ID</th>
+                                                    <th style="text-align:center">Image</th>
+                                                    <th style="text-align:center">Qty</th>
+                                                    <th style="text-align:center">Product Name</th>
+                                                    <th style="text-align:center">Price</th>
+                                                    <th style="text-align:center">Status</th>
 
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                @foreach( $orders as $order)
                                                 <tr>
-                                                    <td class="image"><a href="#" class="media-link"><i class="fa fa-plus"></i><img alt="" src="assets/img/preview/shop/order-1.jpg"></a></td>
-                                                    <td class="quantity">x3</td>
-                                                    <td class="description">
-                                                        <h4><a href="#">Standard Product Name Header Here</a></h4>
-                                                        by Category Name
+                                                    <td align="center" class="order-id"> {{$order->id}} </td>
+                                                    <td align="center">
+                                                    <div style="margin-bottom:20px" >
+                                                        <img style="width:150px;height:170px;border-radius:10px;" src="{{asset('storage/products/' . $order->product_image)}}" alt=""/>
+                                                    </div>
                                                     </td>
-                                                    <td class="total">$150 </td>
-                                                    <td class="order-id"> OD31207 </td>
-                                                    <td class="diliver-date"> 12th Dec'13 </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="image"><a href="#" class="media-link"><i class="fa fa-plus"></i><img alt="" src="assets/img/preview/shop/order-1.jpg"></a></td>
-                                                    <td class="quantity">x3</td>
-                                                    <td class="description">
-                                                        <h4><a href="#">Standard Product Name Header Here</a></h4>
-                                                        by Category Name
+                                                    <td align="center" class="quantity">x{{$order->quantity}}</td>
+                                                    <td align="center" class="description">
+                                                        <h4><a href="#">{{$order->product_name}}</a></h4>
                                                     </td>
-                                                    <td class="total">$250 </td>
-                                                    <td class="order-id"> OD31207 </td>
-                                                    <td class="diliver-date"> 12th Dec'13 </td>
+                                                    <td align="center" class="total">{{$order->product_price}}</td>
+                                                    <td align="center" class="diliver-date">{{$order->status}}</td>
                                                 </tr>
-                                                <tr>
-                                                    <td class="image"><a href="#" class="media-link"><i class="fa fa-plus"></i><img alt="" src="assets/img/preview/shop/order-1.jpg"></a></td>
-                                                    <td class="quantity">x3</td>
-                                                    <td class="description">
-                                                        <h4><a href="#">Standard Product Name Header Here</a></h4>
-                                                        by Category Name
-                                                    </td>
-                                                    <td class="total">$350 </td>
-                                                    <td class="order-id"> OD31207 </td>
-                                                    <td class="diliver-date"> 12th Dec'13 </td>
-                                                </tr>
+                                                @endforeach
                                             </tbody>
                                         </table>
 

@@ -78,7 +78,12 @@ Route::delete('/myCart/{id}', 'customer\CartController@destroy');
 
 /* Dashboard Routes*/
 Route::prefix('dashboard')->name('dashboard.')->middleware('auth:admin')->group(function(){
-    Route::view('', 'dashboard')->name('index');
+    Route::view('', 'dashboard.index', [
+        'orders' => App\Order::get(),
+        'recent_orders' => App\Order::take(8)->get()    ,
+        'products' => App\Product::get(),
+        'customers' => App\Customer::get(),
+    ])->name('index');
     Route::put('profile', 'Dashboard\ProfileController@updateProfilePicture')->name('profile.updateProfilePicture');
     Route::resources([
         'admins'      => 'Dashboard\AdminController',

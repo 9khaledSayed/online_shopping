@@ -1,6 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('content')
+<div class="content-wrapper container">
     <div class="row">
         <div class="col-sm-12">
             <div class="page-title">
@@ -17,18 +18,18 @@
             <div class="panel panel-card margin-b-30">
                 <!-- Start .panel -->
                 <div class="panel-heading">
-                    <h4 class="panel-title"> Add New Admin</h4>
+                    <h4 class="panel-title">{{__('New Admin')}}</h4>
                 </div>
 
                 <div class="panel-body">
                     <form role="form" method="POST" action="{{route('dashboard.admins.store')}}">
                         @csrf
                         <div class="form-group @error('name') has-error @enderror">  <!-- form-group has-error -->
-                            <label>Name</label>
+                            <label>{{__('Name')}}</label>
                             <input
                                 type="text"
                                 name="name"
-                                placeholder="Enter admin Name"
+                                placeholder="{{__('Enter Name')}}"
                                 class="form-control"
                                 value="{{old('name')}}">
                             @error('name')
@@ -36,11 +37,11 @@
                             @enderror
                         </div>
                         <div class="form-group @error('username') has-error @enderror">  <!-- form-group has-error -->
-                            <label>UserName</label>
+                            <label>{{__('Username')}}</label>
                             <input
                                 type="text"
                                 name="username"
-                                placeholder="username"
+                                placeholder="{{__('Enter username')}}"
                                 class="form-control"
                                 value="{{old('username')}}">
                             @error('username')
@@ -48,13 +49,13 @@
                             @enderror
                         </div>
                         <div class="form-group @error('email') has-error @enderror">  <!-- form-group has-error -->
-                            <label>Email</label>
+                            <label>{{__('Email')}}</label>
                             <div class="input-group m-b">
                                 <span class="input-group-addon">@</span>
                                 <input
                                     type="email"
                                     name="email"
-                                    placeholder="Enter Email"
+                                    placeholder="{{__('Enter email address')}}"
                                     value="{{old('email')}}"
                                     class="form-control">
                             </div>
@@ -63,11 +64,11 @@
                             @enderror
                         </div>
                         <div class="form-group @error('password') has-error @enderror">  <!-- form-group has-error -->
-                            <label>Password</label>
+                            <label>{{__('Password')}}</label>
                             <input
                                 type="password"
                                 name="password"
-                                placeholder="Enter password"
+                                placeholder="{{__('Enter password')}}"
                                 class="form-control"
                                 value="{{old('password')}}">
                             @error('password')
@@ -75,20 +76,21 @@
                             @enderror
                         </div>
                         <div class="form-group">  <!-- form-group has-error -->
-                            <label>Confirm Password</label>
+                            <label>{{__('Confirm Password')}}</label>
                             <input
                                 type="password"
                                 class="form-control"
                                 name="password_confirmation"
-                                placeholder="Retype password"
+                                placeholder="{{__('Retype password')}}"
                                 required autocomplete="new-password">
                         </div>
-                        <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>submit</strong></button>
+                        <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>{{__('Confirm')}}</strong></button>
+                        <a href="{{route('dashboard.admins.index')}}" class="btn btn-sm btn-default">{{__('Back')}}</a>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-
+</div>
 @endsection
 

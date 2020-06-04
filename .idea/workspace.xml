@@ -48,7 +48,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c36f8ef-fa19-44e5-aac6-7d971932992e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/customer/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/home.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/customers/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/CustomerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/CustomerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/customer/products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/products.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/admins/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/admins/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/admins/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/admins/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/admins/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/admins/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/categories/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/categories/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/categories/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/cities/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/cities/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/countries/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/countries/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/governments/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/governments/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/orders/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/orders/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/products/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/products/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/products/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/products/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/products/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/products/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/slides/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/slides/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/slides/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/slides/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/parts/admin/aside.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/parts/admin/aside.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/parts/admin/foot.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/parts/admin/foot.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/parts/admin/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/parts/admin/head.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/parts/admin/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/parts/admin/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +205,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SearchEverywhereHistoryKey" value=".idea/w&#9;FILE&#9;file://C:/Users/Khaled Sayed/online_shopping/online_shopping/.idea/workspace.xml&#10;.idea&#9;FILE&#9;file://C:/Users/Khaled Sayed/online_shopping/online_shopping/.idea&#10;header&#9;FILE&#9;file://C:/Users/Khaled Sayed/online_shopping/online_shopping/resources/views/layout/parts/user/header.blade.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/layouts" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -191,17 +217,18 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ksaye\gitHub\online_shopping\resources\views\layouts" />
-      <recent name="C:\Users\ahmed\online_shopping\app\Http\Controllers\customer" />
-      <recent name="$PROJECT_DIR$/resources/views/layouts" />
-      <recent name="C:\Users\Khaled Sayed\online_shopping\online_shopping\resources\views\layout" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ksaye\gitHub\online_shopping\resources\views\layouts" />
       <recent name="C:\Users\ksaye\gitHub\online_shopping" />
       <recent name="C:\Users\ahmed\online_shopping\resources\views\auth" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/resources/views" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ksaye\gitHub\online_shopping\resources\views\dashboard\customers" />
+      <recent name="C:\Users\ksaye\gitHub\online_shopping\resources\views\dashboard" />
+      <recent name="C:\Users\ksaye\gitHub\online_shopping\resources\views\layouts" />
+      <recent name="C:\Users\ahmed\online_shopping\app\Http\Controllers\customer" />
       <recent name="$PROJECT_DIR$/resources/views/layouts" />
     </key>
   </component>
@@ -232,7 +259,8 @@
       <workItem from="1591059025382" duration="61000" />
       <workItem from="1591119329962" duration="9533000" />
       <workItem from="1591134967070" duration="322000" />
-      <workItem from="1591224011289" duration="305000" />
+      <workItem from="1591224011289" duration="2317000" />
+      <workItem from="1591248400053" duration="17797000" />
     </task>
     <task id="LOCAL-00001" summary="admin finished">
       <created>1584366313343</created>
@@ -310,6 +338,13 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="382" y="50" width="662" height="702" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/70.27.1296.741@70.27.1296.741" timestamp="1584850810911" />
-    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1584898097940" />
+    <state x="339" y="164" key="run.anything.popup" timestamp="1591264463718">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="164" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1591264463718" />
+    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1591249548992">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1591249548992" />
   </component>
 </project>

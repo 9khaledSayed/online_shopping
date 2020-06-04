@@ -2,7 +2,6 @@
 
 @section('content')
 
-
 <!-- CONTENT AREA -->
 <div class="content-area">
     <!-- BREADCRUMBS -->
@@ -128,7 +127,6 @@
                         @endforeach
                     </div>
                     <!-- /Products grid -->
-
                     <!-- Pagination -->
                     <div class="pagination-wrapper">
                         <h4 style="visibility:hidden">a</h4>
@@ -142,15 +140,12 @@
                         </ul>
                     </div>
                     <!-- /Pagination -->
-
                 </div>
                 <!-- /CONTENT -->
-
             </div>
         </div>
     </section>
     <!-- /PAGE WITH SIDEBAR -->
-
     <!-- PAGE -->
     <section class="page-section no-padding-top">
         <div class="container">
@@ -172,12 +167,7 @@
         </div>
     </section>
     <!-- /PAGE -->
-
 </div>
 <!-- /CONTENT AREA -->
-
-
-
-<div id="to-top" class="to-top"><i class="fa fa-angle-up"></i></div>
 
 @endsection

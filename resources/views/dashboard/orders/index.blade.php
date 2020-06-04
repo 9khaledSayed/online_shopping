@@ -17,26 +17,34 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="table-responsive table-commerce">
+                    <div class="row" style="padding: 15px">
+                        <div class="buttons-column" style="padding: 0; margin-bottom:15px">
+                            <a href="{{route('dashboard.index')}}" class="btn btn-sm btn-default">{{__('Back')}}</a>
+                        </div>
+                    </div>
                     <table id="basic-datatables" class="table table-striped table-hover">
                         <thead>
                         <tr>
                             <th style="width:80px">
-                                <strong>Id</strong>
+                                <strong>#</strong>
                             </th>
                             <th>
-                                <strong>Product Name</strong>
+                                <strong>{{__('Product Name')}}</strong>
                             </th>
                             <th>
-                                <strong>Product Price</strong>
+                                <strong>{{__('Price')}}</strong>
                             </th>
                             <th>
-                                <strong>Quantity</strong>
+                                <strong>{{__('Quantity')}}</strong>
                             </th>
                             <th>
-                                <strong>Amount</strong>
+                                <strong>{{__('Amount')}}</strong>
                             </th>
                             <th>
-                                <strong>Status</strong>
+                                <strong>{{__('Created')}}</strong>
+                            </th>
+                            <th>
+                                <strong>{{__('Status')}}</strong>
                             </th>
                         </tr>
                         </thead>
@@ -48,6 +56,7 @@
                                 <td>{{$order->product_price}}</td>
                                 <td>{{$order->quantity}}</td>
                                 <td>{{$order->amount}}</td>
+                                <td>{{$order->created_at->toFormattedDateString()}}</td>
                                 <td class="text-center">
                                     <span class="label label-purple">
                                         {{$order->status}}
@@ -57,7 +66,7 @@
                                     <form method="POST" action="{{route('dashboard.orders.update', $order->id)}}" style="display: inline">
                                         @csrf
                                         @method('PUT')
-                                        <button type="submit" class="btn btn-success">Confirm</button>
+                                        <button type="submit" class="btn btn-success">{{__('Confirm')}}</button>
                                     </form>
                                 </td>
                             </tr>

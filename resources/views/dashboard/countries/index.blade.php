@@ -18,20 +18,26 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="table-responsive table-commerce">
+                    <div class="row" style="padding: 15px">
+                        <div class="buttons-column" style="padding: 0; margin-bottom:15px">
+                            <a href="{{route('dashboard.index')}}" class="btn btn-sm btn-default">{{__('Back')}}</a>
+                            <a href="{{route('dashboard.countries.create')}}" class="btn btn-sm btn-primary">{{__('New Country')}}</a>
+                        </div>
+                    </div>
                     <table id="basic-datatables" class="table table-striped table-hover">
                         <thead>
                         <tr>
                             <th style="width:80px">
-                                <strong>ID</strong>
+                                <strong>#</strong>
                             </th>
                             <th>
-                                <strong>NAME</strong>
+                                <strong>{{__('Name')}}</strong>
                             </th>
                             <th>
-                                <strong>CREATED AT</strong>
+                                <strong>{{__('Created')}}</strong>
                             </th>
                             <th>
-                                <strong>ACTIONS</strong>
+                                <strong>{{__('Actions')}}</strong>
                             </th>
                         </tr>
                         </thead>
@@ -40,17 +46,18 @@
                             <tr>
                                 <td>{{$country->id}}</td>
                                 <td>{{$country->name}}</td>
+                                <td>{{$country->created_at->toFormattedDateString()}}</td>
                                 <td>
                                     <div class="btn-group">
-                                        <button data-toggle="dropdown" class="btn btn-primary btn-xs dropdown-toggle">Action <span class="caret"></span></button>
+                                        <button data-toggle="dropdown" class="btn btn-primary btn-xs dropdown-toggle">  <span style="padding: 5px;"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i></span></button>
                                         <ul class="dropdown-menu">
                                             <li>
                                                 <a href=""
                                                    onclick="event.preventDefault();
                                                               document.getElementById('delete-form').submit();"><i class="fa fa-trash" aria-hidden="true"></i>
-                                                    {{ __('Delete') }}
+                                                    {{__('Delete') }}
                                                 </a>
-                                                <form id="delete-form" action="{{route('dashboard.countries.destroy', $country)}}" method="POST" style="display: none;">
+                                                <form id="delete-form{{$country->id}}" action="{{route('dashboard.countries.destroy', $country)}}" method="POST" style="display: none;">
                                                     @csrf
                                                     @method('DELETE')
                                                 </form>

@@ -22,6 +22,7 @@
 <link href="{{ asset('admin_assets/light_blue/' . App::getLocale() . '/css/menu-light.css') }}" type="text/css" rel="stylesheet">
 <link href="{{ asset('admin_assets/light_blue/' . App::getLocale() . '/css/style.css') }}" type="text/css" rel="stylesheet">
 <link href="{{ asset('admin_assets/light_blue/' . App::getLocale() . '/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+<link href="{{ asset('admin_assets/light_blue/' . App::getLocale() . '/style.css') }}" rel="stylesheet">
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>

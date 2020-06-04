@@ -29,83 +29,42 @@
                 @enderror
                 </div>
             </div>
-
                 <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>Add</strong></button>
             </form>
         </div>
     </div>
 </div>
 @endsection
-
 @push('scripts')
-<script type="text/javascript" src="{{ asset('admin_assets/light_blue/' . App::getLocale() .  '/js/jquery.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('admin_assets/light_blue/'. App::getLocale() . '/bootstrap/js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('admin_assets/light_blue/'. App::getLocale() . '/js/metisMenu.min.js') }}"></script>
-<script src="{{ asset('admin_assets/light_blue/'. App::getLocale() . '/js/jquery.nanoscroller.min.js') }}"></script>
-<script src="{{ asset('admin_assets/light_blue/'. App::getLocale() . '/js/jquery-jvectormap-1.2.2.min.js') }}"></script>
-<script src="{{ asset('admin_assets/light_blue/'. App::getLocale() . '/js/jquery.bootstrap.wizard.js') }}"></script>
-<script src="{{ asset('admin_assets/light_blue/'. App::getLocale() . '/js/jquery.validate.js') }}"></script>
-<script src="{{ asset('admin_assets/light_blue/'. App::getLocale() . '/js/additional-methods.min.js') }}"></script>
-<script src="{{ asset('admin_assets/light_blue/'. App::getLocale() . '/js/pace.min.js') }}"></script>
-<script src="{{ asset('admin_assets/light_blue/'. App::getLocale() . '/js/waves.min.js') }}"></script>
-<script src="{{ asset('admin_assets/light_blue/'. App::getLocale() . '/js/jquery.sparkline.min.js') }}"></script>
-<script src="{{ asset('admin_assets/light_blue/'. App::getLocale() . '/js/jquery-jvectormap-world-mill-en.js') }}"></script>
-<script src="{{ asset('admin_assets/light_blue/'. App::getLocale() . '/js/select/select2.js')}}"></script>
-<!--        <script src="js/jquery.nanoscroller.min.js') }}"></script>-->
-<script type="text/javascript" src="{{ asset('admin_assets/light_blue/'. App::getLocale() . '/js/custom.js') }}"></script>
-<script src="{{ asset('admin_assets/light_blue/'. App::getLocale() . '/js/custom-forms-wizard.js') }}"></script>
-
-<!-- Google Analytics:  -->
 <script>
-    (function (i, s, o, g, r, a, m)
-    {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function ()
-        {
-            (i[r].q = i[r].q || []).push(arguments);
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '../../../../../www.google-analytics.com/analytics.js', 'ga');
-    ga('create', 'UA-3560057-28', 'auto');
-    ga('send', 'pageview');
+    function bs_input_file() {
+        $(".input-file").before(
+            function() {
+                if ( ! $(this).prev().hasClass('input-ghost') ) {
+                    var element = $("<input type='file' class='input-ghost' style='visibility:hidden; height:0'>");
+                    element.attr("name",$(this).attr("name"));
+                    element.change(function(){
+                        element.next(element).find('input').val((element.val()).split('\\').pop());
+                    });
+                    $(this).find("button.btn-choose").click(function(){
+                        element.click();
+                    });
+                    $(this).find("button.btn-reset").click(function(){
+                        element.val(null);
+                        $(this).parents(".input-file").find('input').val('');
+                    });
+                    $(this).find('input').css("cursor","pointer");
+                    $(this).find('input').mousedown(function() {
+                        $(this).parents('.input-file').prev().click();
+                        return false;
+                    });
+                    return element;
+                }
+            }
+        );
+    }
+    $(function() {
+        bs_input_file();
+    });
 </script>
-<script>
-
-function bs_input_file() {
-	$(".input-file").before(
-		function() {
-			if ( ! $(this).prev().hasClass('input-ghost') ) {
-				var element = $("<input type='file' class='input-ghost' style='visibility:hidden; height:0'>");
-				element.attr("name",$(this).attr("name"));
-				element.change(function(){
-					element.next(element).find('input').val((element.val()).split('\\').pop());
-				});
-				$(this).find("button.btn-choose").click(function(){
-					element.click();
-				});
-				$(this).find("button.btn-reset").click(function(){
-					element.val(null);
-					$(this).parents(".input-file").find('input').val('');
-				});
-				$(this).find('input').css("cursor","pointer");
-				$(this).find('input').mousedown(function() {
-					$(this).parents('.input-file').prev().click();
-					return false;
-				});
-				return element;
-			}
-		}
-	);
-}
-$(function() {
-	bs_input_file();
-});
-
-</script>
-
-
 @endpush

@@ -9,7 +9,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{route('dashboard.index')}}" style="font-size: 30px;font-weight: 800;">{{__('Online Shopping')}}</a>
+            <a class="navbar-brand" href="{{route('dashboard.index')}}" style="font-size: 20px;font-weight: 800;">{{__('Online Shopping')}}</a>
 
         </div>
         <div id="navbar" class="navbar-collapse collapse">

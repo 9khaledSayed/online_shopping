@@ -7,6 +7,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Auth;
+use App\Category;
 
 class LoginController extends Controller
 {
@@ -65,7 +66,9 @@ class LoginController extends Controller
 
     public function showCustomerLoginForm()
     {
-        return view('auth.login', ['url' => 'customer']);
+        $categories = Category::all();
+
+        return view('auth.login', ['url' => 'customer','categories'=>$categories]);
     }
 
     public function customerLogin(Request $request)
@@ -77,7 +80,7 @@ class LoginController extends Controller
 
         if (Auth::guard('customer')->attempt(['email' => $request->email, 'password' => $request->password], $request->get('remember'))) {
 
-            return redirect()->intended('/');
+            return redirect()->back();
         }
         return back()->withInput($request->only('email', 'remember'));
     }

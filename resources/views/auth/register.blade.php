@@ -1,106 +1,96 @@
-@extends('layouts.app')
-
+@extends('layouts.customer')
 @section('content')
-<div class="account-col text-center">
-    <h1 class="card-header"> {{ isset($url) ? ucwords($url) : ""}} {{ __('Create New account') }}</h1>
 
-    @isset($url)
-        <form class="m-t" method="POST" action='{{ url("register/$url") }}' aria-label="{{ __('Register') }}">
-    @else
-{{--        <form class="m-t" method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">--}}
-    @endisset
-       @csrf
-        <div class="form-group @error('name') has-error @enderror">
-            <input
-                id="name"
-                type="text"
-                placeholder="{{__('Name')}}"
-                class="form-control "
-                name="name"
-                value="{{ old('name') }}" required
-                autocomplete="name" autofocus>
+    <!-- CONTENT AREA -->
+    <div class="content-area">
 
-            @error('name')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
-        </div>
-        <div class="form-group @error('email') has-error @enderror">
-            <input
-                id="email"
-                type="email"
-                placeholder="{{__('Email')}}"
-                class="form-control"
-                name="email" value="{{ old('email') }}"
-                required autocomplete="email">
+        <!-- PAGE -->
+        <section class="page-section color">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 align-items-lg-center" >
+                        <h3 class="block-title"><span>Sign Up</span></h3>
+                        <form method="POST" action="/register/customer" class="form-login">
+                            @csrf
+                            <div class="row">
+                                <div class="col-md-12 hello-text-wrap">
+                                    <span class="hello-text text-thin">Hello, welcome to Herbal Pharma </span>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group"><input class="form-control  @error('name') is-invalid @enderror" type="text" name="name" value="{{old('name')}}" required placeholder="Your Name"></div>
+                                    @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
 
-            @error('email')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
-        </div>
-        <div class="form-group @error('phone') has-error @enderror">
-            <input
-                id="phone"
-                type="number"
-                placeholder="{{__('Phone')}}"
-                class="form-control"
-                name="phone" value="{{ old('phone') }}"
-                required autocomplete="phone">
+                                </div>
 
-            @error('phone')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
-        </div>
-        <div class="form-group @error('address') has-error @enderror">
-            <input
-                id="address"
-                type="text"
-                placeholder="{{__('address')}}"
-                class="form-control"
-                name="address" value="{{ old('address') }}"
-                required autocomplete="address">
 
-            @error('address')
-            <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
-        </div>
-        <div class="form-group @error('password') has-error @enderror">
-            <input
-                id="password"
-                type="password"
-                placeholder="{{__('Password')}}"
-                class="form-control"
-                name="password" required
-                autocomplete="new-password">
+                                <div class="col-md-6">
+                                    <div class="form-group"><input class="form-control  @error('email') is-invalid @enderror" type="email" name="email"  value="{{old('email')}}" required placeholder="Your email"></div>
 
-            @error('password')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
-        </div>
-        <div class="form-group">
-            <input
-                id="password-confirm"
-                type="password"
-                placeholder="{{__('Retype Password')}}"
-                class="form-control"
-                name="password_confirmation" required
-                autocomplete="new-password">
-        </div>
-        <button type="submit" class="btn btn-primary btn-block ">{{ __('Register') }}</button>
-        <a href="#"><small></small></a>
-        <a class="btn  btn-default btn-block" href="{{url("login/$url")}}">{{__('Already have an account?')}}</a>
-        <p>{{__('online shopping')}} &copy; 2020</p>
-    </form>
-</div>
+                                    @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group"><input class="form-control  @error('address') is-invalid @enderror" type="text" name="address" required  value="{{old('address')}}" placeholder="Your address"></div>
+
+                                    @error('address')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group"><input class="form-control  @error('phone') is-invalid @enderror" type="text" name="phone" required value="{{old('phone')}}" placeholder="Your phone"></div>
+
+                                    @error('phone')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group"><input class="form-control  @error('password') is-invalid @enderror" type="password" name="password" required placeholder="Your password"></div>
+
+                                    @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group"><input class="form-control  @error('password_confirmation') is-invalid @enderror" type="password" name="password_confirmation" required placeholder="Confirm Password"></div>
+
+                                    @error('password_confirmation')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                                <div class="col-md-12">
+                                    <button class="btn btn-theme btn-block btn-theme-dark" type="submit">Sign Up</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <!-- /PAGE -->
+    </div>
+    <!-- /CONTENT AREA -->
+
+    <div id="to-top" class="to-top"><i class="fa fa-angle-up"></i></div>
+
 @endsection
-
-

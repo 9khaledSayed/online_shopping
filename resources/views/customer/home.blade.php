@@ -36,7 +36,7 @@
                             <ul>
                                 @foreach($categories as $category)
                                     <li>
-                                        <a  href="/product/{{$category->name}}" >{{$category->name}}</a>
+                                        <a  href="/products/{{$category->name}}" >{{$category->name}}</a>
                                     </li>
                                 @endforeach
                             </ul>
@@ -68,8 +68,8 @@
 
                         <div class="col-md-3 col-sm-6">
                             <div class="thumbnail no-border no-padding">
-                                <div class="media">
-                                    <a class="media-link" data-gal="prettyPhoto" href='{{asset('storage/products/' . $product->image1)}}'>
+                                <div class="">
+                                    <a class="media-link" href="/product/{{$product->id}}">
                                         <img src='{{asset('storage/products/' . $product->image1)}}' style="height: 258px;width: 262px;"/>
                                         <span class="icon-view"><strong><i class="fa fa-eye"></i></strong></span>
                                     </a>
@@ -86,6 +86,7 @@
                                     <div class="price"><ins>{{$product->price}} EGP</ins> <del>{{$product->sale_price}} EGP</del></div>
                                     <div class="buttons">
 
+                                            @if(Auth::guard('customer')->check())
                                             <form data-id="{{$product->id}}" name = 'wishlist' style="display:inline">
                                             @csrf
                                             <button class="btn btn-theme btn-theme-transparent btn-wish-list" type="submit"><i class="fa fa-heart"></i></button>
@@ -94,7 +95,20 @@
                                             <form data-id="{{$product->id}}" data-price="{{$product->price}}" name = 'cart' style="display:inline">
                                             @csrf
                                             <button class="btn btn-theme btn-theme-dark btn-icon-left" type="submit" ><i class="fa fa-shopping-cart"></i>Add To Cart</button>
-                                            </form><!--
+                                            </form>
+                                             @else
+                                            <form method="GET" action="/login/customer" style="display:inline">
+                                                @csrf
+                                                <button class="btn btn-theme btn-theme-transparent btn-wish-list" type="submit"><i class="fa fa-heart"></i></button>
+                                            </form>
+
+                                            <form method="GET" action="/login/customer" style="display:inline">
+                                                @csrf
+                                                <button class="btn btn-theme btn-theme-dark btn-icon-left" type="submit" ><i class="fa fa-shopping-cart"></i>Add To Cart</button>
+                                            </form>
+                                             @endif
+
+                                            <!--
 
                                         --><a style="visibility: hidden" class="btn btn-theme btn-theme-transparent btn-compare" href="#"><i class="fa fa-exchange"></i></a>
                                     </div>
@@ -136,8 +150,8 @@
                     @foreach ($products as $product)
 
                     <div class="thumbnail no-border no-padding">
-                        <div class="media">
-                            <a class="media-link" data-gal="prettyPhoto" href="{{asset('storage/products/' . $product->image1)}}">
+                        <div class="">
+                            <a class="media-link" href="/product/{{$product->id}}">
                                 <img src="{{asset('storage/products/' . $product->image1)}}" style="height: 228px;"/>
                                 <span class="icon-view"><strong><i class="fa fa-eye"></i></strong></span>
                             </a>
@@ -154,7 +168,8 @@
                             <div class="price"><ins>{{$product->price}}</ins> <del>{{$product->sale_price}}</del></div>
                             <div class="buttons">
 
-                                <form data-id="{{$product->id}}" name = 'wishlist' style="display:inline">
+                                    @if(Auth::guard('customer')->check())
+                                   <form data-id="{{$product->id}}" name = 'wishlist' style="display:inline">
                                     @csrf
                                     <button class="btn btn-theme btn-theme-transparent btn-wish-list" type="submit"><i class="fa fa-heart"></i></button>
                                     </form>
@@ -162,9 +177,20 @@
                                     <form data-id="{{$product->id}}" data-price="{{$product->price}}" name = 'cart' style="display:inline">
                                     @csrf
                                     <button class="btn btn-theme btn-theme-dark btn-icon-left" type="submit" ><i class="fa fa-shopping-cart"></i>Add To Cart</button>
-                                    </form><!--
+                                    </form>
+                                    </form>
+                                    @else
+                                    <form method="GET" action="/login/customer" style="display:inline">
+                                        @csrf
+                                        <button class="btn btn-theme btn-theme-transparent btn-wish-list" type="submit"><i class="fa fa-heart"></i></button>
+                                    </form>
 
-                                --><a style="visibility: hidden" class="btn btn-theme btn-theme-transparent btn-compare" href="#"><i class="fa fa-exchange"></i></a>
+                                    <form method="GET" action="/login/customer" style="display:inline">
+                                        @csrf
+                                        <button class="btn btn-theme btn-theme-dark btn-icon-left" type="submit" ><i class="fa fa-shopping-cart"></i>Add To Cart</button>
+                                    </form>
+                                    @endif
+                                <a style="visibility: hidden" class="btn btn-theme btn-theme-transparent btn-compare" href="#"><i class="fa fa-exchange"></i></a>
                             </div>
                         </div>
                     </div>

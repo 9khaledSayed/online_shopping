@@ -103,8 +103,7 @@
                         <ul class="list-inline">
                         @if (Auth::guard('customer')->check()) <li class="hidden-xs"><a href="{{url('profile')}}">My Account</a></li>
                         <li class="hidden-xs"><a href="/wishlist">My Wishlist</a></li> @endif
-                        <li class="hidden-xs"><a href="{{url('about')}}">About</a></li>
-                            <li class="hidden-xs"><a href="{{url('contact')}}">Contact</a></li>
+                        <li class="hidden-xs"><a href="{{url('about')}}">About US</a></li>
                             <li class="dropdown flags">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="{{ asset('assets/img/flag.gif')}}" alt=""/> Eng<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="dropdown-menu">
@@ -161,7 +160,7 @@
                         <ul class="nav sf-menu">
                             <li class="{{Request::path() == '/' ? 'active' : ''}}" ><a href="/">Home</a></li>
                             @foreach($categories as $category)
-                            <li class="{{Request::path() == $category->name ? 'active' : ''}}"><a href="/product/{{$category->name}}">{{$category->name}}</a></li>
+                            <li class="{{Request::path() == $category->name ? 'active' : ''}}"><a href="/products/{{$category->name}}">{{$category->name}}</a></li>
                             @endforeach
                         </ul>
                     </nav>

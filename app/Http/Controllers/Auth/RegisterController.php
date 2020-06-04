@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Auth;
 
-
+use Auth;
 use App\User;
 use App\Admin;
 use App\Customer;
+use App\Category;
 use App\Providers\RouteServiceProvider;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
@@ -85,20 +86,26 @@ class RegisterController extends Controller
             'email' => $request['email'],
             'password' => Hash::make($request['password']),
         ]);
-        return redirect()->intended('login/admin');
+
+        Auth::guard('admin')->login($admin);
+
+        return redirect()->intended('dashboard');
     }
 
     protected function createCustomer(Request $request)
     {
         $this->validator($request->all())->validate();
-        $writer = Customer::create([
+        $user = Customer::create([
             'name' => $request['name'],
             'email' => $request['email'],
             'phone' => $request['phone'],
             'address' => $request['address'],
             'password' => Hash::make($request['password']),
         ]);
-        return redirect()->intended('login/customer');
+
+        Auth::guard('customer')->login($user);
+
+        return redirect()->intended('/');
     }
 
     public function showAdminRegisterForm()
@@ -108,6 +115,7 @@ class RegisterController extends Controller
 
     public function showCustomerRegisterForm()
     {
-        return view('auth.register', ['url' => 'customer']);
+        $categories = Category::all();
+        return view('auth.register', ['url' => 'customer' , 'categories' => $categories]);
     }
 }

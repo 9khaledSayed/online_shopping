@@ -25,6 +25,7 @@ class CreateOrdersTable extends Migration
             $table->string('email');
             $table->String('product_name');
             $table->String('product_price');
+            $table->String('product_image');
             $table->integer('quantity')->default(1);
             $table->String('amount');
             $table->String('status')->default('pending');

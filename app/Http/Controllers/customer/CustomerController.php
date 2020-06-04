@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Category;
-
+use App\Order;
 class CustomerController extends Controller
 {
 
@@ -14,8 +14,8 @@ class CustomerController extends Controller
     public function index()
     {
         $categories = Category::all();
-
-        return view('customer.myaccount',compact('categories',$categories));
+        $orders = Order::where('customer_id',Auth::guard('customer')->user()->id)->get();
+        return view('customer.myaccount',compact('categories','orders',$categories,$orders));
     }
 
     public function updateInfo(Request $request)

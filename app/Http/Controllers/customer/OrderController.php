@@ -28,7 +28,7 @@ class OrderController extends Controller
         foreach($customer_cart as $cart)
         {
             $product = Product::find($cart->product_id);
-            $sub_total += $product->price;
+            $sub_total += $product->price * $cart->quantity;
         }
 
         $categories = Category::get();
@@ -68,6 +68,8 @@ class OrderController extends Controller
         {
 
             $product = Product::find($cart->product_id);
+            $product->quantity -=  $cart->quantity;
+            $product->save();
 
             Order::create([
                 'customer_id' => Auth::guard('customer')->user()->id,
@@ -80,6 +82,7 @@ class OrderController extends Controller
                 'address' => $request['address'],
                 'product_name' =>  $product->name,
                 'product_price' =>  $product->price,
+                'product_image' =>  $product->image1,
                 'quantity' =>  $cart->quantity,
                 'amount' =>  $cart->quantity * $product->price,
             ]);

@@ -55,6 +55,7 @@ class WishlistController extends Controller
         $wishlist = new Wishlist();
         $wishlist->customer_id = $customer_id;
         $wishlist->product_id = $request->input('product_id');
+        $wishlist->quantity   = $request->input('quantity');
         $wishlist->save();
 
     }

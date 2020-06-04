@@ -8,57 +8,58 @@
     @else
         <form method="POST" action="{{ url("login/customer") }}" aria-label="{{ __('Login ') }}">
     @endisset
-        @csrf
-        <div class="form-group @error('email') has-error @enderror">
-            <input
-                id="email"
-                type="email"
-                placeholder="{{__('Email')}}"
-                class="form-control"
-                name="email"
-                value="{{ old('email') }}" required
-                autocomplete="email" autofocus>
-                @error('email')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
-        </div>
-        <div class="form-group @error('password') has-error @enderror">
-            <input
-                id="password"
-                type="password"
-                placeholder="{{__('Password')}}"
-                class="form-control"
-                name="password" required
-                autocomplete="current-password">
+            @csrf
+            <div class="form-group @error('email') has-error @enderror">
+                <input
+                    id="email"
+                    type="email"
+                    placeholder="{{__('Email')}}"
+                    class="form-control"
+                    name="email"
+                    value="{{ old('email') }}" required
+                    autocomplete="email" autofocus>
+                    @error('email')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+            </div>
+            <div class="form-group @error('password') has-error @enderror">
+                <input
+                    id="password"
+                    type="password"
+                    placeholder="{{__('Password')}}"
+                    class="form-control"
+                    name="password" required
+                    autocomplete="current-password">
 
-                @error('password')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
-        </div>
-        <div class="form-check">
-            <input
-                class="form-check-input"
-                type="checkbox"
-                name="remember"
-                id="remember" {{ old('remember') ? 'checked' : '' }}>
+                    @error('password')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+            </div>
+            <div class="form-check">
+                <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="remember"
+                    id="remember" {{ old('remember') ? 'checked' : '' }}>
 
-            <label class="form-check-label" for="remember">
-                {{ __('Remember Me') }}
-            </label>
-        </div>
-        <button type="submit" class="btn btn-primary btn-block ">{{ __('Login') }}</button>
-        @if (Route::has('password.request'))
-            <a class="btn btn-link" href="{{ route('password.request') }}">
-                <small>{{ __('Forgot Your Password?') }}</small>
-            </a>
-        @endif
-        <a class="btn  btn-default btn-block" href="{{url("register/$url")}}">{{__('Create an account')}}</a>
-        <p>online shopping &copy; 2020</p>
-    </form>
+                <label class="form-check-label" for="remember">
+                    {{ __('Remember Me') }}
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block ">{{ __('Login') }}</button>
+            @if (Route::has('password.request'))
+                <a class="btn btn-link" href="{{ route('password.request') }}">
+                    <small>{{ __('Forgot Your Password?') }}</small>
+                </a>
+            @endif
+{{--            <a class="btn  btn-default btn-block" href="{{url("register/$url")}}">{{__('Create an account')}}</a>--}}
+            <p>online shopping &copy; 2020</p>
+        </form>
+        </form>
 </div>
 @endsection
 

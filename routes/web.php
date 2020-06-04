@@ -14,8 +14,6 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-
-
 Auth::routes();
 
 /* Localization */
@@ -48,7 +46,6 @@ Route::get('/products/{name}', 'ProductController@index'); // the home page with
 Route::get('/product/{product}', 'ProductController@show'); // the home page with filtering by categories
 
 Route::view('/about', 'customer.about');                 // the about page
-
 
 Route::GET('profile' ,'customer\CustomerController@index');
 

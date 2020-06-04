@@ -26,46 +26,6 @@
     <section class="page-section with-sidebar">
         <div class="container">
             <div class="row">
-                <!-- SIDEBAR -->
-                <aside class="col-md-3 sidebar" id="sidebar">
-                    <!-- widget search -->
-                    <div class="widget">
-                        <div class="widget-search">
-                            <input class="form-control" type="text" placeholder="Search">
-                            <button><i class="fa fa-search"></i></button>
-                        </div>
-                    </div>
-                    <!-- /widget search -->
-                    <!-- widget shop categories -->
-                    <div class="widget shop-categories">
-                        <h4 class="widget-title">Categories</h4>
-                        <div class="widget-content">
-                          <ul>
-                              @foreach($categories as $category)
-                                  <li>
-                                      <a  href="/product/{{$category->name}}" >{{$category->name}}</a>
-                                  </li>
-                              @endforeach
-                           </ul>
-                        </div>
-                    </div>
-                    <!-- /widget shop categories -->
-                </aside>
-                <!-- /SIDEBAR -->
-                <!-- CONTENT -->
-                <div class="col-md-9 content" id="content">
-                    <div class="main-slider sub">
-                        <div class="owl-carousel" id="main-slider">
-                            @foreach($slides as $slide)
-                            <!-- Slide 1 -->
-                            <div class="item slide1 sub">
-                                <img class="slide-img" src="{{asset($slide->path)}}" alt=""/>
-                                <div class="caption">
-                                    <div class="container">
-                                        <div class="div-table">
-                                            <div class="div-cell">
-                                                <div class="caption-content">
-
             <!-- CONTENT AREA -->
             <div class="content-area">
                 <!-- PAGE WITH SIDEBAR -->
@@ -109,10 +69,8 @@
                                 </div>
                                 <!-- /widget shop categories -->
                             </div>
-
                         </div>
                     </div>
-
                 </section>
                 <!-- /PAGE -->
 
@@ -134,7 +92,6 @@
                     <!-- shop-sorting -->
                     <br> <br> <br> <hr>
                     <!-- /shop-sorting -->
-
                     <!-- Products grid -->
                     <div class="row products grid">
 

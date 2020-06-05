@@ -6,10 +6,10 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="page-title">
-                    <h1>Cities List <small></small></h1>
+                    <h1>{{__('Cities List')}}<small></small></h1>
                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-home"></i></a></li>
-                        <li class="active">Cities List</li>
+                        <li class="active">{{__('Cities List')}}</li>
                     </ol>
                 </div>
             </div>

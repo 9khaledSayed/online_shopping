@@ -18,25 +18,24 @@
             <div class="panel panel-card margin-b-30">
                 <!-- Start .panel -->
                 <div class="panel-heading">
-                    <h4 class="panel-title"> Add New City</h4>
+                    <h4 class="panel-title">{{__('New City')}}</h4>
                 </div>
-
                 <div class="panel-body">
                     <form role="form" method="POST" action="{{route('dashboard.cities.store')}}">
                         @csrf
                         <div class="form-group @error('name') has-error @enderror">  <!-- form-group has-error -->
-                            <label>Name</label>
+                            <label>{{__('Name')}}</label>
                             <input
                                 type="text"
                                 name="name"
-                                placeholder="Enter City Name"
+                                placeholder="{{__('Enter City Name')}}"
                                 class="form-control"
                                 value="{{old('name')}}">
                             @error('name')
                             <p style="color:#a94442" >{{$errors->first('name')}}</p>
                             @enderror
                         </div>
-                        <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>confirm</strong></button>
+                        <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>{{__('Confirm')}}</strong></button>
                         <a href="{{route('dashboard.cities.index')}}" class="btn btn-sm btn-default">{{__('Back')}}</a>
                     </form>
                 </div>

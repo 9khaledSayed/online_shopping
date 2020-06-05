@@ -6,14 +6,14 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="page-title">
-                <h1>Countries List <small></small></h1>
+                <h1>{{ __('Countries List')}}<small></small></h1>
                 <ol class="breadcrumb">
                     <li><a href="#"><i class="fa fa-home"></i></a></li>
-                    <li class="active">ِCountries List</li>
+                    <li class="active">ِ{{ __('Countries List')}}</li>
                 </ol>
             </div>
         </div>
-    </div><!-- end .page title-->
+    </div>
     <div class="row">
         <div class="col-md-12">
             <div class="table-responsive table-commerce">
@@ -66,14 +66,12 @@
                             </td>
                         </tr>
                     @endforeach
-
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
 </div>
-
 @endsection
 
 

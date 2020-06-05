@@ -65,7 +65,7 @@
                 <li>
                     <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"> </i><span class="nav-label"> {{ __('Orders')}}</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
-                        <li><a href="{{ route('dashboard.orders.index') }}">{{ __('Orders list')}}</a></li>
+                        <li><a href="{{ route('dashboard.orders.index') }}">{{ __('Orders List')}}</a></li>
                     </ul>
                 </li>
                 <li>
@@ -76,7 +76,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-picture-o" aria-hidden="true"></i> <span class="nav-label"> {{ __('countries')}}</span><span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-picture-o" aria-hidden="true"></i> <span class="nav-label"> {{ __('Countries')}}</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
                         <li><a href="{{route('dashboard.countries.index')}}">{{ __('Countries List')}}</a></li>
                         <li><a href="{{route('dashboard.countries.create')}}">{{ __('New Country')}}</a></li>

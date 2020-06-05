@@ -6,7 +6,9 @@ use App\Product;
 use App\Cart;
 use App\Order;
 use App\Category;
-
+use App\Country;
+use App\Government;
+use App\City;
 use Illuminate\Http\Request;
 use Auth;
 
@@ -28,12 +30,16 @@ class OrderController extends Controller
         foreach($customer_cart as $cart)
         {
             $product = Product::find($cart->product_id);
-            $sub_total += $product->price;
+            $sub_total += $product->price * $cart->quantity;
         }
 
-        $categories = Category::get();
+        $categories  = Category::get();
+        $countries    = Country::all();
+        $governments = Government::all();
+        $cities      = City::all();
 
-        return view('customer.order',compact('customer_cart','sub_total','categories',$customer_cart,$sub_total,$categories));
+
+        return view('customer.order',compact('customer_cart','sub_total','categories','countries','governments','cities',$customer_cart,$sub_total,$categories,$countries,$governments,$cities));
     }
 
     /**
@@ -68,6 +74,8 @@ class OrderController extends Controller
         {
 
             $product = Product::find($cart->product_id);
+            $product->quantity -=  $cart->quantity;
+            $product->save();
 
             Order::create([
                 'customer_id' => Auth::guard('customer')->user()->id,
@@ -80,6 +88,7 @@ class OrderController extends Controller
                 'address' => $request['address'],
                 'product_name' =>  $product->name,
                 'product_price' =>  $product->price,
+                'product_image' =>  $product->image1,
                 'quantity' =>  $cart->quantity,
                 'amount' =>  $cart->quantity * $product->price,
             ]);

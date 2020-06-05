@@ -15,37 +15,33 @@
         </div>
     </div><!-- end .page title-->
     <div class="row">
-        <div class="col-md-12">
-            <div class="panel panel-card margin-b-30">
-                <!-- Start .panel -->
-                <div class="panel-heading">
-                    <h4 class="panel-title">New slide</h4>
-                </div>
-
-                <div class="panel-body">
-                <form role="form" method="POST" action="{{route('dashboard.slides.store')}}" enctype="multipart/form-data">
-                    @csrf
-                    <div class="form-group @error('slide') has-error @enderror">
-                        <label class="col-md-2 control-label">Slide</label>
-                        <div class="col-md-9">
-                            <div class="input-group input-file" name="slide">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default btn-choose" type="button">Choose</button>
-                                </span>
-                                <input type="text" class="form-control" placeholder='Choose a file...' />
-                                <span class="input-group-btn">
-                                        <button class="btn btn-warning btn-reset" type="button">Reset</button>
-                                </span>
-                            </div>
-                        @error('slide')
-                            <p style="color:#a94442" >{{$errors->first('slide')}}</p>
-                        @enderror
+    <div class="col-md-12">
+        <div class="panel panel-card margin-b-30">
+            <!-- Start .panel -->
+            <div class="panel-heading">
+                <h4 class="panel-title"> {{ __('New Slide')}}</h4>
+            </div>
+        </div>
+        <div class="panel-body">
+            <form role="form" method="POST" action="{{route('dashboard.slides.store')}}" enctype="multipart/form-data">
+                @csrf
+                <div class="form-group @error('slide') has-error @enderror">
+                    <label class="col-md-2 control-label">{{ __('Slide')}}</label>
+                    <div class="col-md-9">
+                        <div class="input-group input-file" name="slide">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default btn-choose" type="button">{{ __('Choose')}}</button>
+                            </span>
+                            <input type="text" class="form-control" placeholder="{{ __('Choose a file...')}}" />
+                            <span class="input-group-btn">
+                                    <button class="btn btn-warning btn-reset" type="button">{{ __('Reset')}}</button>
+                            </span>
                         </div>
                     </div>
-                        <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>Add</strong></button>
-                    </form>
                 </div>
-            </div>
+                    <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>{{ __('Add')}}</strong></button>
+            </form>
+        </div>
         </div>
     </div>
 </div>

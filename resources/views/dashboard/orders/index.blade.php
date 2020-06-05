@@ -2,17 +2,17 @@
 
 @section('content')
 <div class="content-wrapper container">
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="page-title">
-                <h1>Orders List<small></small></h1>
-                <ol class="breadcrumb">
-                    <li><a href="#"><i class="fa fa-home"></i></a></li>
-                    <li class="active">Orders List</li>
-                </ol>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="page-title">
+                    <h1>{{__('Orders List')}}<small></small></h1>
+                    <ol class="breadcrumb">
+                        <li><a href="#"><i class="fa fa-home"></i></a></li>
+                        <li class="active">{{__('Orders List')}}</li>
+                    </ol>
+                </div>
             </div>
         </div>
-    </div><!-- end .page title-->
     <div class="row">
         <div class="col-md-12">
             <div class="table-responsive table-commerce">

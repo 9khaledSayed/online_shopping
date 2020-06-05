@@ -45,6 +45,9 @@
                         <th>
                             <strong>{{__('Status')}}</strong>
                         </th>
+                        <th>
+                            <strong>{{__('Actions')}}</strong>
+                        </th>
                     </tr>
                     </thead>
                     <tbody>
@@ -57,16 +60,20 @@
                             <td>{{$order->amount}}</td>
                             <td>{{$order->created_at->toFormattedDateString()}}</td>
                             <td class="text-center">
-                                <span class="label label-purple">
+                                <span class=@if($order->status == 'pending')"label label-danger"@else"label label-success"@endif>
                                     {{$order->status}}
                                 </span>
                             </td>
                             <td>
-                                <form method="POST" action="{{route('dashboard.orders.update', $order->id)}}" style="display: inline">
-                                    @csrf
-                                    @method('PUT')
-                                    <button type="submit" class="btn btn-success">{{__('Confirm')}}</button>
-                                </form>
+                                @if($order->status == 'pending')
+                                    <form method="POST" action="{{route('dashboard.orders.update', $order->id)}}" style="display: inline">
+                                        @csrf
+                                        @method('PUT')
+                                        <button type="submit" class="btn btn-primary" style="padding: 0px 12px;">{{__('Confirm')}}</button>
+                                    </form>
+                                @else
+                                    <button type="submit" class="btn btn-success" style="padding: 0px 12px;"><i class="fa fa-check"></i></button>
+                                @endif
                             </td>
                         </tr>
                     @endforeach

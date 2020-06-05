@@ -64,7 +64,7 @@
                                         <li>
                                             <a href=""
                                                onclick="event.preventDefault();
-                                                      document.getElementById('delete-form').submit();"><i class="fa fa-trash" aria-hidden="true"></i>
+                                                      document.getElementById('delete-form{{$customer->id}}').submit();"><i class="fa fa-trash" aria-hidden="true"></i>
                                                 {{ __('Delete') }}
                                             </a>
                                             <form id="delete-form{{$customer->id}}" action="{{route('dashboard.customers.destroy', $customer)}}" method="POST" style="display: none;">

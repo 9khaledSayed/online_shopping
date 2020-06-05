@@ -52,7 +52,7 @@
                                     <ul class="dropdown-menu">
                                         <li><a href=""
                                             onclick="event.preventDefault();
-                                                          document.getElementById('edit-form').submit();"><i class="fa fa-pencil" aria-hidden="true"></i></i>
+                                                          document.getElementById('edit-form{{$category->id}}').submit();"><i class="fa fa-pencil" aria-hidden="true"></i></i>
                                              {{ __('Edit') }}
                                             </a>
                                             <form id="edit-form{{$category->id}}" action="{{route('dashboard.categories.edit', $category)}}" method="GET" style="display: none;">
@@ -63,7 +63,7 @@
                                         <li>
                                             <a href=""
                                             onclick="event.preventDefault();
-                                                          document.getElementById('delete-form').submit();"><i class="fa fa-trash" aria-hidden="true"></i>
+                                                          document.getElementById('delete-form{{$category->id}}').submit();"><i class="fa fa-trash" aria-hidden="true"></i>
                                              {{ __('Delete') }}
                                             </a>
                                             <form id="delete-form{{$category->id}}" action="{{route('dashboard.categories.destroy', $category)}}" method="POST" style="display: none;">

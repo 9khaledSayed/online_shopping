@@ -27,10 +27,18 @@ class CityController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validateAttributes();
-        City::create([
-            'name' => $request->name
-        ]);
+        City::create($this->validateAttributes());
+        return redirect(route('dashboard.cities.index'));
+    }
+
+    public function edit(City $city)
+    {
+        return view('dashboard.cities.edit', compact('city'));
+    }
+
+    public function update(Request $request, City $city)
+    {
+        $city->update($this->validateAttributes());
         return redirect(route('dashboard.cities.index'));
     }
 

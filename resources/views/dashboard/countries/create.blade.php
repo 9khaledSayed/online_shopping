@@ -1,6 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('content')
+<div class="content-wrapper container">
     <div class="row">
         <div class="col-sm-12">
             <div class="page-title">
@@ -42,6 +43,6 @@
             </div>
         </div>
     </div>
-
+</div>
 @endsection
 

@@ -50,6 +50,16 @@
                                     <div class="btn-group">
                                         <button data-toggle="dropdown" class="btn btn-primary btn-xs dropdown-toggle">  <span style="padding: 5px;"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i></span></button>
                                         <ul class="dropdown-menu">
+                                            <li><a href=""
+                                                   onclick="event.preventDefault();
+                                                          document.getElementById('edit-form{{$city->id}}').submit();"><i class="fa fa-pencil" aria-hidden="true"></i></i>
+                                                    {{ __('Edit') }}
+                                                </a>
+                                                <form id="edit-form{{$city->id}}" action="{{route('dashboard.cities.edit', $city)}}" method="GET" style="display: none;">
+                                                    @csrf
+
+                                                </form>
+                                            </li>
                                             <li>
                                                 <a href=""
                                                    onclick="event.preventDefault();

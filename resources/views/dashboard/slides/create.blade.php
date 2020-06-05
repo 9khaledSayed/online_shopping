@@ -2,35 +2,50 @@
 @extends('layouts.dashboard')
 
 @section('content')
-<div class="col-md-12">
-    <div class="panel panel-card margin-b-30">
-        <!-- Start .panel -->
-        <div class="panel-heading">
-            <h4 class="panel-title"> Add New slide</h4>
+<div class="content-wrapper container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="page-title">
+                <h1>{{__('New Slide')}} <small></small></h1>
+                <ol class="breadcrumb">
+                    <li><a href="#"><i class="fa fa-home"></i></a></li>
+                    <li class="active">{{__('New Slide')}}</li>
+                </ol>
+            </div>
         </div>
+    </div><!-- end .page title-->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-card margin-b-30">
+                <!-- Start .panel -->
+                <div class="panel-heading">
+                    <h4 class="panel-title">New slide</h4>
+                </div>
 
-        <div class="panel-body">
-        <form role="form" method="POST" action="{{route('dashboard.slides.store')}}" enctype="multipart/form-data">
-            @csrf
-            <div class="form-group @error('slide') has-error @enderror">
-                <label class="col-md-2 control-label">Slide</label>
-                <div class="col-md-9">
-                    <div class="input-group input-file" name="slide">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default btn-choose" type="button">Choose</button>
-                        </span>
-                        <input type="text" class="form-control" placeholder='Choose a file...' />
-                        <span class="input-group-btn">
-                                <button class="btn btn-warning btn-reset" type="button">Reset</button>
-                        </span>
+                <div class="panel-body">
+                <form role="form" method="POST" action="{{route('dashboard.slides.store')}}" enctype="multipart/form-data">
+                    @csrf
+                    <div class="form-group @error('slide') has-error @enderror">
+                        <label class="col-md-2 control-label">Slide</label>
+                        <div class="col-md-9">
+                            <div class="input-group input-file" name="slide">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default btn-choose" type="button">Choose</button>
+                                </span>
+                                <input type="text" class="form-control" placeholder='Choose a file...' />
+                                <span class="input-group-btn">
+                                        <button class="btn btn-warning btn-reset" type="button">Reset</button>
+                                </span>
+                            </div>
+                        @error('slide')
+                            <p style="color:#a94442" >{{$errors->first('slide')}}</p>
+                        @enderror
+                        </div>
                     </div>
-                @error('slide')
-                    <p style="color:#a94442" >{{$errors->first('slide')}}</p>
-                @enderror
+                        <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>Add</strong></button>
+                    </form>
                 </div>
             </div>
-                <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>Add</strong></button>
-            </form>
         </div>
     </div>
 </div>

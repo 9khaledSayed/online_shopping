@@ -17,13 +17,13 @@
                         <div class="owl-carousel img-carousel">
                             <div class="item">
                                 <a class="btn btn-theme btn-theme-transparent btn-zoom" href="assets/img/preview/shop/product-1-big.jpg" data-gal="prettyPhoto"><i class="fa fa-plus"></i></a>
-                                <a  data-gal="prettyPhoto"><img class="img-responsive" src='{{asset('storage/products/' . $product->image1)}}' alt=""/></a></div>
+                                <a  data-gal="prettyPhoto"><img class="img-responsive"  src="{{asset('storage/products/' . $product->image1)}}" alt=""/></a></div>
                             <div class="item">
                                 <a class="btn btn-theme btn-theme-transparent btn-zoom" href="assets/img/preview/shop/product-1-big.jpg" data-gal="prettyPhoto"><i class="fa fa-plus"></i></a>
-                                <a  data-gal="prettyPhoto"><img class="img-responsive" src='{{asset('storage/products/' . $product->image2)}}' alt=""/></a ></div>
+                                <a  data-gal="prettyPhoto"><img class="img-responsive"src="{{asset('storage/products/' . $product->image2)}}" alt=""/></a ></div>
                             <div class="item">
                                 <a class="btn btn-theme btn-theme-transparent btn-zoom" href="assets/img/preview/shop/product-1-big.jpg" data-gal="prettyPhoto"><i class="fa fa-plus"></i></a>
-                                <a data-gal="prettyPhoto"><img class="img-responsive" src='{{asset('storage/products/' . $product->image3)}}' alt=""/></a></div>
+                                <a data-gal="prettyPhoto"><img class="img-responsive" src="{{asset('storage/products/' . $product->image3)}}" alt=""/></a></div>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -57,9 +57,9 @@
 
                         <div class="buttons">
                             <div class="quantity">
-                                <button class="btn" onclick="if (document.getElementById('pro_quntity').value > 1) {document.getElementById('pro_quntity').value -=1;} "><i class="fa fa-minus"></i></button>
-                                <input id="pro_quntity" class="form-control qty" style="width:70px;text-align:center" type="number" step="1" min="1" name="quantity" value="1" title="Qty">
-                                <button class="btn" onclick="document.getElementById('pro_quntity').value = parseInt(document.getElementById('pro_quntity').value) + 1;"><i class="fa fa-plus"></i></button>
+                                <button class="btn" onclick="if (document.getElementById('pro_quntity{{$product->id}}').value > 1) {document.getElementById('pro_quntity{{$product->id}}').value -=1;} "><i class="fa fa-minus"></i></button>
+                                <input id="pro_quntity{{$product->id}}" class="form-control qty" style="width:70px;text-align:center" type="number" step="1" min="1" name="quantity" value="1" title="Qty">
+                                <button class="btn" onclick="document.getElementById('pro_quntity{{$product->id}}').value = parseInt(document.getElementById('pro_quntity{{$product->id}}').value) + 1;"><i class="fa fa-plus"></i></button>
                             </div>
 
                             @if(Auth::guard('customer')->check())
@@ -120,18 +120,12 @@
 
                             <div class="comments">
                                 <div class="media comment">
-                                    <a href="#" class="pull-left comment-avatar">
-                                        <img alt="" src="assets/img/preview/avatars/avatar-1.jpg" class="media-object">
-                                    </a>
                                     <div class="media-body">
                                         <p class="comment-meta"><span class="comment-author"><a href="#">User Name Here</a> <span class="comment-date"> 26 days ago <i class="fa fa-flag"></i></span></span></p>
                                         <p class="comment-text">Donec ullamcorper nulla non metus auctor fringilla. Etiam porta sem malesuada magna mollis euismd. Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere.</p>
                                     </div>
                                 </div>
                                 <div class="media comment">
-                                    <a href="#" class="pull-left comment-avatar">
-                                        <img alt="" src="assets/img/preview/avatars/avatar-3.jpg" class="media-object">
-                                    </a>
                                     <div class="media-body">
                                         <p class="comment-meta"><span class="comment-author"><a href="#">User Name Here</a> <span class="comment-date"> 26 days ago <i class="fa fa-flag"></i></span></span></p>
                                         <p class="comment-text">Donec ullamcorper nulla non metus auctor fringilla. Etiam porta sem malesuada magna mollis euismd. Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere.</p>

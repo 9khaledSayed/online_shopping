@@ -1,6 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('content')
+<div class="content-wrapper container">
     <div class="row">
         <div class="col-sm-12">
             <div class="page-title">
@@ -35,13 +36,13 @@
                             <p style="color:#a94442" >{{$errors->first('name')}}</p>
                             @enderror
                         </div>
-
-                        <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>submit</strong></button>
+                        <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>confirm</strong></button>
+                        <a href="{{route('dashboard.cities.index')}}" class="btn btn-sm btn-default">{{__('Back')}}</a>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-
+</div>
 @endsection
 

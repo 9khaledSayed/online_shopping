@@ -107,7 +107,13 @@
                                                 <button class="btn btn-theme btn-theme-dark btn-icon-left" type="submit" ><i class="fa fa-shopping-cart"></i>Add To Cart</button>
                                             </form>
                                              @endif
+                                                <br><br>
+                                                <div>
+                                                    <button class="btn btn-theme btn-theme-dark btn-icon-left"  onclick="document.getElementById('pro_quntity{{$product->id}}').value = parseInt(document.getElementById('pro_quntity{{$product->id}}').value) + 1;" type="submit"><i class="fa fa-plus"></i></button>
+                                                    <input id="pro_quntity{{$product->id}}" class="btn btn-theme btn-theme-dark btn-icon-left" style="width:70px;text-align:center" type="number" step="1" min="1" name="quantity" value="1" title="Qty">
+                                                    <button class="btn btn-theme btn-theme-dark btn-icon-left"  onclick="if ( parseInt(document.getElementById('pro_quntity{{$product->id}}').value) > 1) {document.getElementById('pro_quntity{{$product->id}}').value -=1;}" type="submit" ><i class="fa fa-minus"></i></button>
 
+                                                </div>
                                             <!--
 
                                         --><a style="visibility: hidden" class="btn btn-theme btn-theme-transparent btn-compare" href="#"><i class="fa fa-exchange"></i></a>
@@ -168,29 +174,17 @@
                             <div class="price"><ins>{{$product->price}}</ins> <del>{{$product->sale_price}}</del></div>
                             <div class="buttons">
 
-                                    @if(Auth::guard('customer')->check())
-                                   <form data-id="{{$product->id}}" name = 'wishlist' style="display:inline">
-                                    @csrf
-                                    <button class="btn btn-theme btn-theme-transparent btn-wish-list" type="submit"><i class="fa fa-heart"></i></button>
-                                    </form>
+                                    <form method="GET" action="/product/{{$product->id}}" style="display:inline">
 
-                                    <form data-id="{{$product->id}}" data-price="{{$product->price}}" name = 'cart' style="display:inline">
-                                    @csrf
-                                    <button class="btn btn-theme btn-theme-dark btn-icon-left" type="submit" ><i class="fa fa-shopping-cart"></i>Add To Cart</button>
-                                    </form>
-                                    </form>
-                                    @else
-                                    <form method="GET" action="/login/customer" style="display:inline">
-                                        @csrf
                                         <button class="btn btn-theme btn-theme-transparent btn-wish-list" type="submit"><i class="fa fa-heart"></i></button>
                                     </form>
 
-                                    <form method="GET" action="/login/customer" style="display:inline">
-                                        @csrf
+                                    <form method="GET" action="/product/{{$product->id}}" style="display:inline">
+
                                         <button class="btn btn-theme btn-theme-dark btn-icon-left" type="submit" ><i class="fa fa-shopping-cart"></i>Add To Cart</button>
                                     </form>
-                                    @endif
-                                <a style="visibility: hidden" class="btn btn-theme btn-theme-transparent btn-compare" href="#"><i class="fa fa-exchange"></i></a>
+
+
                             </div>
                         </div>
                     </div>

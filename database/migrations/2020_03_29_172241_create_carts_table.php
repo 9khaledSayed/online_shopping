@@ -20,8 +20,14 @@ class CreateCartsTable extends Migration
             $table->integer('quantity')->default(1);
             $table->timestamps();
 
-            //$table->foreign('customer_id')->references('id')->on('customers');
-            //$table->foreign('product_id')->references('id')->on('products');
+            $table->foreign('customer_id')
+                  ->references('id')
+                  ->on('customers')
+                  ->onDelete('cascade');
+            $table->foreign('product_id')
+                  ->references('id')
+                  ->on('products')
+                  ->onDelete('cascade');
 
         });
     }

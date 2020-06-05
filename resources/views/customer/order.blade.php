@@ -52,7 +52,7 @@
                                             <td align="center">
 
                                                     <div style="margin-bottom:20px" >
-                                                        <img style="width:150px;height:170px;border-radius:10px;" src="assets/img/preview/shop/{{$product->image1}}" alt=""/>
+                                                        <img style="width:150px;height:170px;border-radius:10px;"  src="{{asset('storage/products/' . $product->image1)}}" alt=""/>
                                                     </div>
 
                                             </td>
@@ -130,7 +130,9 @@
                                         <select
                                             class="selectpicker input-price" data-live-search="true" data-width="100%"
                                             data-toggle="tooltip" title="Select" name="country">
-                                            <option>Egypt</option>
+                                            @foreach( $countries as $country)
+                                            <option>{{$country->name}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
@@ -139,7 +141,9 @@
                                         <select
                                             class="selectpicker input-price" data-live-search="true" data-width="100%"
                                             data-toggle="tooltip" title="Select" name="government">
-                                            <option>Giza</option>
+                                            @foreach( $governments as $government)
+                                                <option>{{$government->name}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
@@ -148,7 +152,9 @@
                                         <select
                                             class="selectpicker input-price" data-live-search="true" data-width="100%"
                                             data-toggle="tooltip" title="Select" name="city">
-                                            <option>el-haram</option>
+                                            @foreach( $cities as $citie)
+                                                <option>{{$citie->name}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>

@@ -61,7 +61,7 @@
                                     <ul class="dropdown-menu">
                                         <li><a href=""
                                             onclick="event.preventDefault();
-                                                          document.getElementById('edit-form').submit();"><i class="fa fa-pencil" aria-hidden="true"></i></i>
+                                                          document.getElementById('edit-form{{$admin->id}}').submit();"><i class="fa fa-pencil" aria-hidden="true"></i></i>
                                              {{ __('Edit') }}
                                             </a>
                                             <form id="edit-form{{$admin->id}}" action="{{route('dashboard.admins.edit', $admin)}}" method="GET" style="display: none;">
@@ -72,7 +72,7 @@
                                         <li>
                                             <a href=""
                                             onclick="event.preventDefault();
-                                                          document.getElementById('delete-form').submit();"><i class="fa fa-trash" aria-hidden="true"></i>
+                                                          document.getElementById('delete-form{{$admin->id}}').submit();"><i class="fa fa-trash" aria-hidden="true"></i>
                                              {{ __('Delete') }}
                                             </a>
                                             <form id="delete-form{{$admin->id}}" action="{{route('dashboard.admins.destroy', $admin)}}" method="POST" style="display: none;">

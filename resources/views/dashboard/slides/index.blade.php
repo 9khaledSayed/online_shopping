@@ -22,7 +22,6 @@
     </div>
     <div class="row">
         <div class="col-md-12 gallery-col">
-
               <!-- The four columns -->
               <div class="row">
                   @forelse ($slides as $slide)

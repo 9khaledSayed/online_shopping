@@ -6,7 +6,9 @@ use App\Product;
 use App\Cart;
 use App\Order;
 use App\Category;
-
+use App\Country;
+use App\Government;
+use App\City;
 use Illuminate\Http\Request;
 use Auth;
 
@@ -31,9 +33,13 @@ class OrderController extends Controller
             $sub_total += $product->price * $cart->quantity;
         }
 
-        $categories = Category::get();
+        $categories  = Category::get();
+        $countries    = Country::all();
+        $governments = Government::all();
+        $cities      = City::all();
 
-        return view('customer.order',compact('customer_cart','sub_total','categories',$customer_cart,$sub_total,$categories));
+
+        return view('customer.order',compact('customer_cart','sub_total','categories','countries','governments','cities',$customer_cart,$sub_total,$categories,$countries,$governments,$cities));
     }
 
     /**

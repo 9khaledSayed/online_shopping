@@ -47,7 +47,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c36f8ef-fa19-44e5-aac6-7d971932992e" name="Default" comment="" />
+    <list default="true" id="6c36f8ef-fa19-44e5-aac6-7d971932992e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/slides/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/slides/index.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -235,7 +238,7 @@
       <workItem from="1591248400053" duration="20626000" />
       <workItem from="1591276658825" duration="1609000" />
       <workItem from="1591298989356" duration="17818000" />
-      <workItem from="1591362681554" duration="408000" />
+      <workItem from="1591362681554" duration="1565000" />
     </task>
     <task id="LOCAL-00001" summary="admin finished">
       <created>1584366313343</created>

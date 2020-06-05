@@ -22,31 +22,34 @@
     </div>
     <div class="row">
         <div class="col-md-12 gallery-col">
+            <div class="panel panel-card recent-activites">
               <!-- The four columns -->
-              <div class="row">
-                  @forelse ($slides as $slide)
-                    <div class="column">
-                        <img src="{{asset($slide->path)}}" alt="Nature" style="width:100%; height: 135px" onclick="myFunction(this);">
-                        <div class="content">
-                            <form action="{{route('dashboard.slides.destroy', $slide)}}" method="POST" style="text-align: center;">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-danger">{{__('Delete')}} <i class="fa fa-trash" aria-hidden="true"></i></button>
-                            </form>
+                  <div class="row">
+                      @forelse ($slides as $slide)
+                        <div class="column">
+                            <img src="{{asset($slide->path)}}" alt="Nature" style="width:100%; height: 135px" onclick="myFunction(this);">
+                            <div class="content">
+                                <form action="{{route('dashboard.slides.destroy', $slide)}}" method="POST" style="text-align: center;">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger">{{__('Delete')}} <i class="fa fa-trash" aria-hidden="true"></i></button>
+                                </form>
+                            </div>
                         </div>
+                      @empty
+                          <h2 style="text-align: center">There Is No Slides Yet !!</h2>
+                      @endforelse
+                  </div>
+                @if(count($slides)>0)
+                    <div class="container" style="width: 949px;">
+                        <span id="closeBtn1" style='display:none' onclick="this.parentElement.style.display='none'" class="closebtn"><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+                        <img id="expandedImg" src="{{asset($slides->first()->path)}}" style="width:100%">
+                        <div id="imgtext"></div>
                     </div>
-                  @empty
-                      <h2 style="text-align: center">There Is No Slides Yet !!</h2>
-                  @endforelse
-              </div>
-            @if(count($slides)>0)
-              <div class="container" style="width: 949px;">
-                <span id="closeBtn1" style='display:none' onclick="this.parentElement.style.display='none'" class="closebtn"><i class="fa fa-times-circle" aria-hidden="true"></i></span>
-                <img id="expandedImg" src="{{asset($slides->first()->path)}}" style="width:100%">
-                <div id="imgtext"></div>
-              </div>
-            @endif
-            <div class="clearfix"></div>
+                @endif
+                <div class="clearfix"></div>
+            </div>
+
         </div>
     </div>
 

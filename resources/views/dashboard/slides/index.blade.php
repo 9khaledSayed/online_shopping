@@ -3,7 +3,6 @@
 
 @section('content')
 <div class="content-wrapper container">
-
     <div class="row">
         <div class="col-sm-12">
             <div class="page-title">
@@ -38,17 +37,16 @@
                         </div>
                     </div>
                   @empty
-                      <h2>There Is No Slides Yet !!</h2>
+                      <h2 style="text-align: center">There Is No Slides Yet !!</h2>
                   @endforelse
-
               </div>
-
+            @if(count($slides)>0)
               <div class="container" style="width: 949px;">
                 <span id="closeBtn1" style='display:none' onclick="this.parentElement.style.display='none'" class="closebtn"><i class="fa fa-times-circle" aria-hidden="true"></i></span>
                 <img id="expandedImg" src="{{asset($slides->first()->path)}}" style="width:100%">
                 <div id="imgtext"></div>
               </div>
-
+            @endif
             <div class="clearfix"></div>
         </div>
     </div>

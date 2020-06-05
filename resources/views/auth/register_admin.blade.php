@@ -1,46 +1,46 @@
-@extends('layouts.app')
+{{--@extends('layouts.app')--}}
 
-@section('content')
-<div class="account-col text-center">
-    <h1 class="card-header"> {{ isset($url) ? ucwords($url) : ""}} {{ __('Register') }}</h1>
+{{--@section('content')--}}
+{{--<div class="account-col text-center">--}}
+{{--    <h1 class="card-header"> {{ isset($url) ? ucwords($url) : ""}} {{ __('Register') }}</h1>--}}
 
-    @isset($url)
-        <form class="m-t" method="POST" action='{{ url("register/$url") }}' aria-label="{{ __('Register') }}">
-    @else
+{{--    @isset($url)--}}
+{{--        <form class="m-t" method="POST" action='{{ url("register/$url") }}' aria-label="{{ __('Register') }}">--}}
+{{--    @else--}}
 {{--        <form class="m-t" method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">--}}
-    @endisset
-       @csrf
-        <div class="form-group @error('name') has-error @enderror">
-            <input
-                id="name"
-                type="text"
-                placeholder="{{__('Name')}}"
-                class="form-control "
-                name="name"
-                value="{{ old('name') }}" required
-                autocomplete="name" autofocus>
+{{--    @endisset--}}
+{{--       @csrf--}}
+{{--        <div class="form-group @error('name') has-error @enderror">--}}
+{{--            <input--}}
+{{--                id="name"--}}
+{{--                type="text"--}}
+{{--                placeholder="{{__('Name')}}"--}}
+{{--                class="form-control "--}}
+{{--                name="name"--}}
+{{--                value="{{ old('name') }}" required--}}
+{{--                autocomplete="name" autofocus>--}}
 
-            @error('name')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
-        </div>
-        <div class="form-group @error('email') has-error @enderror">
-            <input
-                id="email"
-                type="email"
-                placeholder="{{__('Email')}}"
-                class="form-control"
-                name="email" value="{{ old('email') }}"
-                required autocomplete="email">
+{{--            @error('name')--}}
+{{--                <span class="invalid-feedback" role="alert">--}}
+{{--                    <strong>{{ $message }}</strong>--}}
+{{--                </span>--}}
+{{--            @enderror--}}
+{{--        </div>--}}
+{{--        <div class="form-group @error('email') has-error @enderror">--}}
+{{--            <input--}}
+{{--                id="email"--}}
+{{--                type="email"--}}
+{{--                placeholder="{{__('Email')}}"--}}
+{{--                class="form-control"--}}
+{{--                name="email" value="{{ old('email') }}"--}}
+{{--                required autocomplete="email">--}}
 
-            @error('email')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
-        </div>
+{{--            @error('email')--}}
+{{--                <span class="invalid-feedback" role="alert">--}}
+{{--                    <strong>{{ $message }}</strong>--}}
+{{--                </span>--}}
+{{--            @enderror--}}
+{{--        </div>--}}
 {{--        <div class="form-group @error('phone') has-error @enderror">--}}
 {{--            <input--}}
 {{--                id="phone"--}}
@@ -75,37 +75,37 @@
 {{--            </span>--}}
 {{--            @enderror--}}
 {{--        </div>--}}
-        <div class="form-group @error('password') has-error @enderror">
-            <input
-                id="password"
-                type="password"
-                placeholder="{{__('Password')}}"
-                class="form-control"
-                name="password" required
-                autocomplete="new-password">
+{{--        <div class="form-group @error('password') has-error @enderror">--}}
+{{--            <input--}}
+{{--                id="password"--}}
+{{--                type="password"--}}
+{{--                placeholder="{{__('Password')}}"--}}
+{{--                class="form-control"--}}
+{{--                name="password" required--}}
+{{--                autocomplete="new-password">--}}
 
-            @error('password')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
-        </div>
-        <div class="form-group">
-            <input
-                id="password-confirm"
-                type="password"
-                placeholder="{{__('Retype Password')}}"
-                class="form-control"
-                name="password_confirmation" required
-                autocomplete="new-password">
-        </div>
-        <button type="submit" class="btn btn-primary btn-block ">{{ __('Register') }}</button>
-        <a href="#"><small></small></a>
-        <p class=" text-center"><small>{{__('Already have an account?')}}</small></p>
-        <a class="btn  btn-default btn-block" href="{{url("login/$url")}}">{{__('Log into account')}}</a>
-        <p>{{__('online shopping')}} &copy; 2020</p>
-    </form>
-</div>
-@endsection
+{{--            @error('password')--}}
+{{--                <span class="invalid-feedback" role="alert">--}}
+{{--                    <strong>{{ $message }}</strong>--}}
+{{--                </span>--}}
+{{--            @enderror--}}
+{{--        </div>--}}
+{{--        <div class="form-group">--}}
+{{--            <input--}}
+{{--                id="password-confirm"--}}
+{{--                type="password"--}}
+{{--                placeholder="{{__('Retype Password')}}"--}}
+{{--                class="form-control"--}}
+{{--                name="password_confirmation" required--}}
+{{--                autocomplete="new-password">--}}
+{{--        </div>--}}
+{{--        <button type="submit" class="btn btn-primary btn-block ">{{ __('Register') }}</button>--}}
+{{--        <a href="#"><small></small></a>--}}
+{{--        <p class=" text-center"><small>{{__('Already have an account?')}}</small></p>--}}
+{{--        <a class="btn  btn-default btn-block" href="{{url("login/$url")}}">{{__('Log into account')}}</a>--}}
+{{--        <p>{{__('online shopping')}} &copy; 2020</p>--}}
+{{--    </form>--}}
+{{--</div>--}}
+{{--@endsection--}}
 
 

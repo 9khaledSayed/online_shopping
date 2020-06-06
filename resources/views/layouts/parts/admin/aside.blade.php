@@ -69,21 +69,21 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-picture-o" aria-hidden="true"></i> <span class="nav-label"> {{ __('Governments')}}</span><span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-flag" aria-hidden="true"></i> <span class="nav-label"> {{ __('Governments')}}</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
                         <li><a href="{{route('dashboard.governments.index')}}">{{ __('Governments List')}}</a></li>
                         <li><a href="{{route('dashboard.governments.create')}}">{{ __('New Government')}}</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-picture-o" aria-hidden="true"></i> <span class="nav-label"> {{ __('Countries')}}</span><span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-home" aria-hidden="true"></i> <span class="nav-label"> {{ __('Countries')}}</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
                         <li><a href="{{route('dashboard.countries.index')}}">{{ __('Countries List')}}</a></li>
                         <li><a href="{{route('dashboard.countries.create')}}">{{ __('New Country')}}</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-picture-o" aria-hidden="true"></i> <span class="nav-label"> {{ __('cities')}}</span><span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-car" aria-hidden="true"></i> <span class="nav-label"> {{ __('cities')}}</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
                         <li><a href="{{route('dashboard.cities.index')}}">{{ __('Cities List')}}</a></li>
                         <li><a href="{{route('dashboard.cities.create')}}">{{ __('New City')}}</a></li>

@@ -10,7 +10,7 @@ HEADER STYLE
 /*!
  * Yamm!3 - Yet another megamenu for Bootstrap 3
  * http://geedmo.github.com/yamm3
- * 
+ *
  * @geedmo - Licensed under the MIT license
  */
 .yamm .nav,
@@ -43,7 +43,7 @@ HEADER STYLE
     display: inline-block;
 }
 .yamm-content ul li a:hover{
-    color:#01a8fe;
+    color:#1fa721;
 }
 .yamm-content ul li:before{
         content: "\f105";
@@ -54,7 +54,7 @@ HEADER STYLE
     border: 0px;
     border-bottom: 0px;
     margin-bottom: 0px;
-    background-color:#01a8fe;
+    background-color:#1fa721;
 }
 navbar-default .navbar-nav>li>a {
     color: #848c94 !important;
@@ -139,7 +139,7 @@ navbar-default .navbar-nav>.open>a, navbar-default .navbar-nav>.open>a:focus, na
     border-left: 3px solid transparent;
 }
 .navbar-aside  .nav > li.active {
-    border-left: 3px solid #01a8fe;
+    border-left: 3px solid #1fa721;
     background: transparent;
 }
 .navbar-aside .nav-second-level.nav > li.active {
@@ -152,13 +152,13 @@ navbar-default .navbar-nav>.open>a, navbar-default .navbar-nav>.open>a:focus, na
 .navbar-static-side{
     position: fixed;
     height: 100%;
-   
+
 /*    padding-bottom:9999px;
     margin-bottom: -9999px;  */
 
 }
 .dropdown-menu .divider{
- background-color: rgba(255,255,255,0.2)!important;    
+ background-color: rgba(255,255,255,0.2)!important;
 }
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
     color: #fff !important;
@@ -175,7 +175,7 @@ navbar-default .navbar-nav>.open>a, navbar-default .navbar-nav>.open>a:focus, na
     color:   #666;
 }
 .dropdown-menu>li>a:hover{
-    color:  #01a8fe;
+    color:  #1fa721;
     background-color: transparent;
 }
 
@@ -214,7 +214,7 @@ navbar-default .navbar-nav>.open>a, navbar-default .navbar-nav>.open>a:focus, na
 .nav-header{
     padding: 20px 30px;
     position: relative;
- 
+
 }
 .nav-header img{
     width: 90px;
@@ -233,7 +233,7 @@ navbar-default .navbar-nav>.open>a, navbar-default .navbar-nav>.open>a:focus, na
     font-size: 13px;
 }
 .nav-header .dropdown-menu li a:hover{
-    color:  #01a8fe;
+    color:  #1fa721;
 }
 .nav-header .dropdown-menu{
     background: #fff;
@@ -380,7 +380,7 @@ body.body-small.mini-navbar #wrapper {
 }
 .nano > .nano-pane > .nano-slider {
     background: rgba(255,255,255,.1);
-      
+
 }
 .search{
    position: absolute;
@@ -404,7 +404,7 @@ body.body-small.mini-navbar #wrapper {
 }
 .search .fa-times{
       font-size: 18px;
-    color: #01a8fe;
+    color: #1fa721;
     position: absolute;
     right: 22px;
     top: 16px;
@@ -458,7 +458,7 @@ navbar-default .navbar-toggle {
 }
 .dropdown-lg li.notify-title{
     padding: 4px 20px;
-    color: #01a8fe;
+    color: #1fa721;
     padding-top:15px;
 }
 .dropdown-header{
@@ -532,10 +532,10 @@ navbar-default .navbar-toggle {
     body.body-small.mini-navbar .navbar-static-side{
         display: block;
     }
-    
+
     .mega-dropdown-menu{
-      width: auto !important;  
-    } 
+      width: auto !important;
+    }
     navbar-default .navbar-collapse, navbar-default .navbar-form{
         border-color: rgba(255,255,255,0.4);
     }
@@ -553,7 +553,7 @@ navbar-default .navbar-toggle {
     color:#fff;
 }
 .yamm-content ul li a:hover {
-    color: #01a8fe;
+    color: #1fa721;
 }
 .yamm-content p{
     color: #fff;

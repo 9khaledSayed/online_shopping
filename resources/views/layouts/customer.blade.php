@@ -199,7 +199,7 @@
                           </div>
                           <div class="col-md-3">
                             <h1 style="color:#FFF">a</h1>
-                            <img src="{{ asset('assets/img/logo_2.jpg')}}" style="border-radius:20px;;border:solid 2px #EC005F;padding:5px"/>
+                            <img src="{{ asset('assets/img/logo_2.jpg')}}" style="border-radius:20px;;border:solid 2px #1fa721;padding:5px"/>
                           </div>
                       </div>
                   </div>
@@ -209,7 +209,7 @@
                       <div class="row">
 
                           <div class="col-sm-6">
-                              <div class="copyright">Copyright 2020 Herbal Pharma   |   Designed & Developed By <a style="color:#DF0101"target="_blank" title="call us 01007949946"> Ahmed & Hossam</a></div>
+                              <div class="copyright">Copyright 2020 Herbal Pharma   |   Designed & Developed By <a style="color:#1fa721"target="_blank" title="call us 01007949946"> Ahmed & Hossam</a></div>
                           </div>
                           <div class="col-sm-6">
                               <div class="payments">

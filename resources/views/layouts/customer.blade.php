@@ -209,6 +209,7 @@
                       <div class="row">
 
                           <div class="col-sm-6">
+                              <div class="copyright">Copyright 2020 Herbal Pharma   |   Designed & Developed By <a style="color:#DF0101"target="_blank" title="call us 01007949946"> Ahmed, Hossam, Khaled, Hussen, Hedaya, Ali</a></div>
                               <div class="copyright">Copyright 2020 Herbal Pharma   |   Designed & Developed By <a style="color:#1fa721"target="_blank" title="call us 01007949946"> Ahmed & Hossam</a></div>
                           </div>
                           <div class="col-sm-6">

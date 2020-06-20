@@ -22,108 +22,50 @@
                 <section class="page-section color">
                     <div class="container">
 
-                        <p class="text-center lead"><strong>Lorem ipsum</strong> dolor sit amet, consectetur adipiscing elit. Morbi fermentum justo vitae convallis varius. Nulla tristique risus ut justo pulvinar mattis. Phasellus aliquet egestas mauris in venenatis. Nulla tristique risus ut justo pulvinar mattis. Phasellus aliquet egestas mauris in venenatis.</p>
+                        <p class="text-center lead">Herbal Pharma  our company is an Egyptian company started production of cosmetics and cosmoceutical products for local market and export since 2014 . We  introduce for you all information you need about the company, its products and also our medical advice for your health.
+                            We are producing variety of Skin Care, Hair Care, Body care and cosmoceutical  products. All our products are professionally formulated from 100% natural ingredients and completely free from chemicals. Herbalpharma products are Registered in Egyptian Ministry of Health .
+                            We Grant The Best from Nature.</p>
                         <hr class="page-divider"/>
                         <div class="row">
-                            <div class="col-md-2">
+                            <div class="col-md-4">
                                 <div class="thumbnail thumbnail-team no-border no-padding">
                                     <div class="media">
-                                        <img class="img-circle" src="assets/img/hussen.jpg" alt=""/>
+                                        <img class="img-circle" src="assets/img/gamal.jpeg" alt=""/>
                                     </div>
                                     <div class="caption">
-                                        <h4 class="caption-title">Hussen  <small>Support team</small></h4>
+                                        <h4 class="caption-title"><b>Dr. Gamal Nosair</b><small> <br>General Manager</small></h4>
                                         <ul class="social-icons">
-                                            <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
-                                            <li><a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a></li>
+                                            <li><a href="https://www.facebook.com/drgamal.nosair.18" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a></li>
                                         </ul>
-                                        <div class="caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper, quam vel viverra laoreet, nibh libero adipiscing diam, sit amet dictum sem nisi ut sapien.</div>
+                                        <div class="caption-text">Pharmacist - Cairo University 1977</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-4">
                                 <div class="thumbnail thumbnail-team no-border no-padding">
                                     <div class="media">
-                                        <img class="img-circle" src="assets/img/ahmad.jpg" alt=""/>
+                                        <img class="img-circle" src="assets/img/ahmed.png" alt=""/>
                                     </div>
                                     <div class="caption">
-                                        <h4 class="caption-title">Ahmed  <small>Support team</small></h4>
+                                        <h4 class="caption-title"><b>Dr. Ahmed Nosair</b><small><br>CEO and Marketing Manager</small></h4>
                                         <ul class="social-icons">
                                             <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
-                                            <li><a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a></li>
                                         </ul>
-                                        <div class="caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper, quam vel viverra laoreet, nibh libero adipiscing diam, sit amet dictum sem nisi ut sapien.</div>
+                                        <div class="caption-text"></div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-4">
                                 <div class="thumbnail thumbnail-team no-border no-padding">
                                     <div class="media">
-                                        <img class="img-circle" src="assets/img/ali.jpg" alt=""/>
+                                        <img class="img-circle" src="{{asset('assets/img/muhamad.jpeg')}}" alt=""/>
                                     </div>
                                     <div class="caption">
-                                        <h4 class="caption-title">Ali  <small>Support team</small></h4>
+                                        <h4 class="caption-title"><b>Mr. Mohamed Mahmoud</b><small><br></small>Sales Manager</h4>
                                         <ul class="social-icons">
-                                            <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
-                                            <li><a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a></li>
+                                            <li><a href="https://www.facebook.com/mohamed.zaghloul.9047" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a></li>
                                         </ul>
-                                        <div class="caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper, quam vel viverra laoreet, nibh libero adipiscing diam, sit amet dictum sem nisi ut sapien.</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="thumbnail thumbnail-team no-border no-padding">
-                                    <div class="media">
-                                        <img class="img-circle" src="assets/img/hossam.jpg" alt=""/>
-                                    </div>
-                                    <div class="caption">
-                                        <h4 class="caption-title">Hossam  <small>Support team</small></h4>
-                                        <ul class="social-icons">
-                                            <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
-                                            <li><a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a></li>
-                                        </ul>
-                                        <div class="caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper, quam vel viverra laoreet, nibh libero adipiscing diam, sit amet dictum sem nisi ut sapien.</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="thumbnail thumbnail-team no-border no-padding">
-                                    <div class="media">
-                                        <img class="img-circle" src="assets/img/sayed.jpg" alt=""/>
-                                    </div>
-                                    <div class="caption">
-                                        <h4 class="caption-title">Khaled  <small>Support team</small></h4>
-                                        <ul class="social-icons">
-                                            <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
-                                            <li><a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a></li>
-                                        </ul>
-                                        <div class="caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper, quam vel viverra laoreet, nibh libero adipiscing diam, sit amet dictum sem nisi ut sapien.</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="thumbnail thumbnail-team no-border no-padding">
-                                    <div class="media">
-                                        <img class="img-circle" src="{{asset('assets/img/hedaya.jpg')}}" alt=""/>
-                                    </div>
-                                    <div class="caption">
-                                        <h4 class="caption-title"> Hedaya <small>Support team</small></h4>
-                                        <ul class="social-icons">
-                                            <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
-                                            <li><a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a></li>
-                                        </ul>
-                                        <div class="caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper, quam vel viverra laoreet, nibh libero adipiscing diam, sit amet dictum sem nisi ut sapien.</div>
+                                        <div class="caption-text"></div>
                                     </div>
                                 </div>
                             </div>

@@ -42,7 +42,7 @@
 
                                 @foreach ($products as $product)
                                 <div class="media">
-                                    <a class="pull-left" href="#"><img class="media-object item-image" src="{{ asset('assets/img/preview/shop/order-1s.jpg')}}" alt=""></a>
+                                    <a class="pull-left" href="#"><img class="media-object item-image" src='{{asset('storage/products/' . $product->image1)}}' alt=""></a>
                                     <p class="pull-right item-price">{{ $product->price }} EGP</p>
                                     <div class="media-body">
                                         <h4 class="media-heading item-title"><a href="#">{{ $product->name}}</a></h4>
@@ -128,12 +128,7 @@
                     </div>
                     <!-- /Logo -->
 
-                    <!-- Header search -->
-                    <div class="header-search">
-                        <input class="form-control" type="text" placeholder="What are you looking?"/>
-                        <button><i class="fa fa-search"></i></button>
-                    </div>
-                    <!-- /Header search -->
+
 
                     @if (Auth::guard('customer')->check())
 
@@ -179,11 +174,10 @@
                           <div class="col-md-3">
                               <div class="widget">
                                   <h4 class="widget-title">About Us</h4>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sollicitudin ultrices suscipit. Sed commodo vel mauris vel dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                  <p>Herbal Pharma our company is an Egyptian company started production of cosmetics and cosmoceutical products for local market and export since 2014 .</p>
                                   <ul class="social-icons">
-                                      <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                                      <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                                      <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                                      <li><a href="https://www.facebook.com/anemon.herbalpharma/" target="_blank"  class="facebook"><i class="fa fa-facebook"></i></a></li>
+                                      <li><a href="https://www.instagram.com/herbalpharma2014/" target="_blank" class="instagram"><i class="fa fa-instagram"></i></a></li>
                                   </ul>
                               </div>
                           </div>
@@ -192,8 +186,8 @@
                                 <h4 class="widget-title">Information</h4>
                                 <ul>
                                     <li><a href="/about">About Us</a></li>
-                                    <li><a href="#">Delivery Information</a></li>
-                                    <li><a href="/contact">Contact Us</a></li>
+{{--                                    <li><a href="#">Delivery Information</a></li>--}}
+{{--                                    <li><a href="/contact">Contact Us</a></li>--}}
                                 </ul>
                             </div>
                           </div>
@@ -209,20 +203,9 @@
                       <div class="row">
 
                           <div class="col-sm-6">
-                              <div class="copyright">Copyright 2020 Herbal Pharma   |   Designed & Developed By <a style="color:#1fa721"target="_blank" title="call us 01007949946"> Ahmed & Hossam & Khaled</a></div>
+                              <div class="copyright">Copyright 2020 Herbal Pharma   | Developed By <a style="color:#1fa721"target="_blank" > 01007949946</a></div>
                           </div>
-                          <div class="col-sm-6">
-                              <div class="payments">
-                                  <ul>
-                                      <li><img src="{{ asset('assets/img/preview/payments/visa.jpg')}}" alt=""/></li>
-                                      <li><img src="{{ asset('assets/img/preview/payments/mastercard.jpg')}}" alt=""/></li>
-                                      <li><img src="{{ asset('assets/img/preview/payments/paypal.jpg')}}" alt=""/></li>
-                                      <li><img src="{{ asset('assets/img/preview/payments/american-express.jpg')}}" alt=""/></li>
-                                      <li><img src="{{ asset('assets/img/preview/payments/visa-electron.jpg')}}" alt=""/></li>
-                                      <li><img src="{{ asset('assets/img/preview/payments/maestro.jpg')}}" alt=""/></li>
-                                  </ul>
-                              </div>
-                          </div>
+
 
                       </div>
                   </div>

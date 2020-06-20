@@ -52,7 +52,7 @@
                                     </div>
 
                                     <div class="form-group @error('price') has-error @enderror">
-                                        <label class="col-md-2 control-label">{{__('Product Price')}}</label>
+                                        <label class="col-md-2 control-label">{{__('Sale Price')}}</label>
                                         <div class="col-md-9">
                                             <div class="input-group m-b">
                                                 <span class="input-group-addon">$</span>
@@ -60,7 +60,7 @@
                                                     type="number"
                                                     class="form-control"
                                                     name="price"
-                                                    placeholder="{{__('Enter price')}}"
+                                                    placeholder="{{__('Enter sale price')}}"
                                                     value="{{old('price')}}">
                                             </div>
                                             @error('price')
@@ -70,14 +70,14 @@
 
                                     </div>
                                     <div class="form-group @error('sale_price') has-error @enderror">
-                                        <label class="col-md-2 control-label">{{__('Sale Price')}}</label>
+                                        <label class="col-md-2 control-label">{{__('Product Price')}}</label>
                                         <div class="col-md-9">
                                             <div class="input-group m-b">
                                                 <span class="input-group-addon">$</span>
                                                 <input
                                                     type="number"
                                                     class="form-control"
-                                                    placeholder="{{__('Enter sale price')}}"
+                                                    placeholder="{{__('Enter price')}}"
                                                     name="sale_price"
                                                     value="{{old('sale_price')}}">
                                                     <span class="input-group-addon">.00</span>
@@ -92,7 +92,7 @@
                                         <label class="col-md-2 control-label">{{__('Volume')}}</label>
                                         <div class="col-md-9">
                                             <input
-                                                    type="number"
+                                                    type="text"
                                                     class="form-control"
                                                     placeholder="{{__('Enter volume')}}"
                                                     name="volume"

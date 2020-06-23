@@ -48,24 +48,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c36f8ef-fa19-44e5-aac6-7d971932992e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/customer/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/customer/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/ahmad.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/ali.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/hedaya.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/hossam.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/hussen.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/sayed.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/customer/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/about.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/customer/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/customer/order.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/order.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/customer/product_details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/product_details.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/customer/products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/products.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/customer/wishlist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/wishlist.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/orders/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/orders/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/products/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/products/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/customer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/customer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/products/Cool-Desktop-Backgrounds-2.jpg.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/products/Desktop-Backgrounds-3D-Nature-Screen.jpg.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/products/Screenshot (865).png.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/products/WhatsApp Image 2020-01-20 at 11.04.40 PM.jpeg.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/products/WhatsApp Image 2020-06-05 at 3.38.47 AM (1).jpeg.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/products/WhatsApp Image 2020-06-05 at 3.38.47 AM (2).jpeg.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/products/WhatsApp Image 2020-06-05 at 3.38.47 AM (3).jpeg.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/products/WhatsApp Image 2020-06-05 at 3.38.47 AM.jpeg.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/products/WhatsApp Image 2020-06-05 at 3.38.48 AM (1).jpeg.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/products/WhatsApp Image 2020-06-05 at 3.38.48 AM (2).jpeg.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/profile_photo/WhatsApp Image 2020-01-20 at 11.04.40 PM.jpeg.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/slides/4k-photo_065230878_309.jpg.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/slides/AUUBD4q.jpg.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/slides/Cool-Desktop-Backgrounds-2.jpg.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/slides/Desktop-Backgrounds-3D-Nature-Screen.jpg.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/slides/Screenshot (866).png.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/slides/WhatsApp Image 2020-06-05 at 3.38.46 AM (1).jpeg.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/slides/WhatsApp Image 2020-06-05 at 3.38.46 AM.jpeg.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/slides/WhatsApp Image 2020-06-05 at 3.38.47 AM (1).jpeg.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/slides/beautiful-desktop-backgrounds_124414819_294.jpg.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/slides/th.jpg.jpeg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,6 +275,12 @@
       <workItem from="1591571887308" duration="700000" />
       <workItem from="1591597280791" duration="120000" />
       <workItem from="1592680942188" duration="8774000" />
+      <workItem from="1592766028232" duration="6226000" />
+      <workItem from="1592814871205" duration="96000" />
+      <workItem from="1592836420406" duration="2678000" />
+      <workItem from="1592840761133" duration="538000" />
+      <workItem from="1592848169626" duration="3090000" />
+      <workItem from="1592864051283" duration="4583000" />
     </task>
     <task id="LOCAL-00001" summary="admin finished">
       <created>1584366313343</created>
@@ -360,10 +371,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="498" y="94" key="ftp.server.browser/0.0.1366.728@0.0.1366.728" timestamp="1591597393029" />
-    <state x="553" y="255" key="publish.login" timestamp="1591475687352">
+    <state x="553" y="255" key="publish.login" timestamp="1592864242688">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="553" y="255" key="publish.login/0.0.1366.728@0.0.1366.728" timestamp="1591475687352" />
+    <state x="553" y="255" key="publish.login/0.0.1366.728@0.0.1366.728" timestamp="1592864242688" />
     <state x="339" y="164" key="run.anything.popup" timestamp="1591264463718">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

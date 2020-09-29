@@ -88,7 +88,7 @@ class OrderController extends Controller
                 'address' => $request['address'],
                 'product_name' =>  $product->name,
                 'product_price' =>  $product->price,
-                'product_image' =>  $product->image1,
+                'image1' =>  $product->image1,
                 'quantity' =>  $cart->quantity,
                 'amount' =>  $cart->quantity * $product->price,
             ]);

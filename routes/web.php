@@ -45,7 +45,13 @@ Route::get('/products/{name}', 'ProductController@index'); // the home page with
 
 Route::get('/product/{product}', 'ProductController@show'); // the home page with filtering by categories
 
-Route::view('/about', 'customer.about');                 // the about page
+Route::get('/about', function(){
+
+    $categories = App\Category::all();
+
+    return view('customer.about',compact('categories',$categories));
+
+});// the about page
 
 Route::GET('profile' ,'customer\CustomerController@index');
 
@@ -79,7 +85,7 @@ Route::delete('/myCart/{id}', 'customer\CartController@destroy');
 Route::prefix('dashboard')->name('dashboard.')->middleware('auth:admin')->group(function(){
     Route::view('', 'dashboard.index', [
         'orders' => App\Order::get(),
-        'recent_orders' => App\Order::take(8)->get()    ,
+        'recent_orders' => App\Order::take(8)->latest()->get()  ,
         'products' => App\Product::get(),
         'customers' => App\Customer::get(),
     ])->name('index');

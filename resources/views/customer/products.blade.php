@@ -1,206 +1,182 @@
 @extends('layouts.customer')
 
 @section('content')
-<!-- CONTENT AREA -->
-<div class="content-area">
-    <!-- BREADCRUMBS -->
-    <section class="page-section breadcrumbs">
-        <div class="container">
-            <div class="page-header">
-                <h1>
-                    {{$category}}
-                </h1>
+    <div class="content-area">
+        <!-- PAGE -->
+
+        <!-- BREADCRUMBS -->
+        <section class="page-section breadcrumbs">
+            <div class="container">
+                <div class="page-header">
+                    <h1>
+                        {{$category}}
+                    </h1>
+                </div>
+                <ul class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li class="active">
+                        {{$category}}
+                    </li>
+                </ul>
             </div>
-            <ul class="breadcrumb">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Shop</a></li>
-                <li class="active">
-                    {{$category}}
-                </li>
-            </ul>
-        </div>
-    </section>
-    <!-- /BREADCRUMBS -->
+        </section>
+        <!-- /BREADCRUMBS -->
 
-    <!-- PAGE WITH SIDEBAR -->
-    <section class="page-section with-sidebar">
-        <div class="container">
-            <div class="row">
-            <!-- CONTENT AREA -->
-            <div class="content-area">
-                <!-- PAGE WITH SIDEBAR -->
-
-                <section class="page-section no-padding-bottom">
-                    <div class="container">
-
-                        <div class="row main-slider-row">
-
-                            <div class="col-md-9 slider">
-                                <div class="main-slider">
-                                    <div class="owl-carousel" id="main-slider">
-                                    @foreach($slides as $slide)
-                                        <!-- Slide 1 -->
-                                            <div class="item slide1">
-                                                <img class="slide-img" src="{{asset($slide->path)}}" alt=""/>
-                                                <div class="caption">
-                                                    <div class="container">
+        <section class="page-section no-padding-bottom">
+            <div class="container">
+                <div class="row main-slider-row">
+                    <div class="col-md-9 slider">
+                        <div class="main-slider">
+                            <div class="owl-carousel" id="main-slider">
+                            @foreach($slides as $slide)
+                                <!-- Slide 1 -->
+                                    <div class="item slide1">
+                                        <img class="slide-img" src="{{asset($slide->path)}}" alt=""/>
+                                        <div class="caption">
+                                            <div class="container">
+                                                <div class="div-table">
+                                                    <div class="div-cell">
                                                     </div>
                                                 </div>
                                             </div>
-                                    @endforeach
-                                    <!-- /Slide 1 -->
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-3 sidebar">
-                                <!-- widget shop categories -->
-                                <div class="widget shop-categories">
-                                    <h4 class="widget-title">Categories</h4>
-                                    <div class="widget-content">
-                                        <ul>
-                                            @foreach($categories as $category)
-                                                <li>
-                                                    <a  href="/products/{{$category->name}}" >{{$category->name}}</a>
-                                                </li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- /widget shop categories -->
+                            @endforeach
+                            <!-- /Slide 1 -->
                             </div>
                         </div>
                     </div>
-                </section>
-                <!-- /PAGE -->
 
-                <br><br><br>
+                    <div class="col-md-3 sidebar">
+                        <!-- widget shop categories -->
+                        <div class="widget shop-categories">
+                            <h4 class="widget-title">Categories</h4>
+                            <div class="widget-content">
+                                <ul>
+                                    @foreach($categories as $Category)
+                                        <li>
+                                            <a  href="/products/{{$Category->name}}" >{{$Category->name}}</a>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /widget shop categories -->
+                    </div>
 
-                <section class="page-section with-sidebar">
-                    <div class="container">
+                </div>
+
+            </div>
+        </section>
+        <!-- /PAGE -->
+
+
+
+        <!-- PAGE -->
+        <section class="page-section">
+            <div class="container">
+                <h2 class="section-title"><span>{{$category}} Products</span></h2>
+                <div class="tab-content">
+
+
+                    <!-- tab 2 -->
+                    <div class="tab-pane fade active in" id="tab-2">
                         <div class="row">
-                            <div class="col-md-12 content" id="content">
-                                <!-- Products grid -->
-                                <div class="row products grid">
+                            @foreach ($products as $product)
 
 
-                    <!-- /widget search -->
-
-                <!-- CONTENT -->
-                <div class="col-md-12 content" id="content">
-
-                    <!-- shop-sorting -->
-                    <br> <br> <br> <hr>
-                    <!-- /shop-sorting -->
-                    <!-- Products grid -->
-                    <div class="row products grid">
-
-                        @foreach( $products as $product)
-                            <div class="col-md-4 col-sm-6">
-                                <div class="thumbnail no-border no-padding">
-                                    <div class="">
-                                        <a class="media-link" href="/product/{{$product->id}}">
-
-                                        <img src='{{asset('storage/products/' . $product->image1)}}' style="height: 258px;width: 262px;" alt=""/>
-
-                                        <span class="icon-view">
-                                            <strong><i class="fa fa-eye"></i></strong>
-                                        </span>
-                                    </a>
-                                </div>
-                                <div class="caption text-center">
-                                    <h4 class="caption-title">{{$product->name}}</h4>
-                                    <div class="rating">
-                                        <span class="star"></span><!--
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="thumbnail no-border no-padding">
+                                        <div class="">
+                                            <a class="media-link" href="/product/{{$product->id}}">
+                                                <img src='{{asset('storage/products/' . $product->image1)}}' style="height: 258px;width: 262px;"/>
+                                                <span class="icon-view"><strong><i class="fa fa-eye"></i></strong></span>
+                                            </a>
+                                        </div>
+                                        <div class="caption text-center">
+                                            <h4 class="caption-title"><a href="product-details.html">{{$product->name}}</a></h4>
+                                            <div class="rating">
+                                                <span class="star"></span><!--
                                         --><span class="star active"></span><!--
                                         --><span class="star active"></span><!--
                                         --><span class="star active"></span><!--
                                         --><span class="star active"></span>
-                                    </div>
-                                    <div class="price"><ins>{{$product->price}}</ins> <del>{{$product->sale_price}}</del></div>
-                                    <div class="buttons">
-                                        @if(Auth::guard('customer')->check())
+                                            </div>
+                                            <div class="price"><ins>{{$product->price}} EGP</ins> <del>{{$product->sale_price}} EGP</del></div>
+                                            <div class="buttons">
+
+                                                @if(Auth::guard('customer')->check())
                                                     <form data-id="{{$product->id}}" name = 'wishlist' style="display:inline">
                                                         @csrf
                                                         <button class="btn btn-theme btn-theme-transparent btn-wish-list" type="submit"><i class="fa fa-heart"></i></button>
-                                                        </form>
+                                                    </form>
 
-
-                                                        <form data-id="{{$product->id}}" data-price="{{$product->price}}" name = 'cart' style="display:inline">
+                                                    <form data-id="{{$product->id}}" data-price="{{$product->price}}" name = 'cart' style="display:inline">
                                                         @csrf
                                                         <button class="btn btn-theme btn-theme-dark btn-icon-left" type="submit" ><i class="fa fa-shopping-cart"></i>Add To Cart</button>
-                                                        </form>
-                                        @else
-                                            <form met0hod="get" action="/login/customer" style="display:inline">
+                                                    </form>
+                                                @else
+                                                    <form method="GET" action="/login/customer" style="display:inline">
+                                                        @csrf
+                                                        <button class="btn btn-theme btn-theme-transparent btn-wish-list" type="submit"><i class="fa fa-heart"></i></button>
+                                                    </form>
 
-                                                <button class="btn btn-theme btn-theme-transparent btn-wish-list" type="submit"><i class="fa fa-heart"></i></button>
-                                            </form>
+                                                    <form method="GET" action="/login/customer" style="display:inline">
+                                                        @csrf
+                                                        <button class="btn btn-theme btn-theme-dark btn-icon-left" type="submit" ><i class="fa fa-shopping-cart"></i>Add To Cart</button>
+                                                    </form>
+                                                @endif
+                                                <br><br>
+                                                <div>
+                                                    <button class="btn btn-theme btn-theme-dark btn-icon-left"  onclick="document.getElementById('pro_quntity{{$product->id}}').value = parseInt(document.getElementById('pro_quntity{{$product->id}}').value) + 1;" type="submit"><i class="fa fa-plus"></i></button>
+                                                    <input id="pro_quntity{{$product->id}}" class="btn btn-theme btn-theme-dark btn-icon-left" style="width:70px;text-align:center" type="number" step="1" min="1" name="quantity" value="1" title="Qty">
+                                                    <button class="btn btn-theme btn-theme-dark btn-icon-left"  onclick="if ( parseInt(document.getElementById('pro_quntity{{$product->id}}').value) > 1) {document.getElementById('pro_quntity{{$product->id}}').value -=1;}" type="submit" ><i class="fa fa-minus"></i></button>
 
+                                                </div>
+                                                <!--
 
-                                            <form method="get" action="/login/customer" style="display:inline">
-
-                                                <button class="btn btn-theme btn-theme-dark btn-icon-left" type="submit" ><i class="fa fa-shopping-cart"></i>Add To Cart</button>
-                                            </form>
-                                        @endif
-                                        <br><br>
-                                        <div>
-                                            <button class="btn btn-theme btn-theme-dark btn-icon-left"  onclick="document.getElementById('pro_quntity{{$product->id}}').value = parseInt(document.getElementById('pro_quntity{{$product->id}}').value) + 1;" type="submit"><i class="fa fa-plus"></i></button>
-                                            <input id="pro_quntity{{$product->id}}" class="btn btn-theme btn-theme-dark btn-icon-left" style="width:70px;text-align:center" type="number" step="1" min="1" name="quantity" value="1" title="Qty">
-                                            <button class="btn btn-theme btn-theme-dark btn-icon-left"  onclick="if ( parseInt(document.getElementById('pro_quntity{{$product->id}}').value) > 1) {document.getElementById('pro_quntity{{$product->id}}').value -=1;}" type="submit" ><i class="fa fa-minus"></i></button>
-
-                                        </div><!--
-
-                                        --><a style="visibility: hidden" class="btn btn-theme btn-theme-transparent btn-compare" href="#"><i class="fa fa-exchange"></i></a>
+                                            --><a style="visibility: hidden" class="btn btn-theme btn-theme-transparent btn-compare" href="#"><i class="fa fa-exchange"></i></a>
+                                            </div>
+                                        </div>
                                     </div>
+                                </div>
+
+                            @endforeach
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </section>
+        <!-- /PAGE -->
+
+        <!-- PAGE -->
+        <section class="page-section no-padding-top">
+            <div class="container">
+                <div class="row blocks shop-info-banners">
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-4">
+                        <div class="block">
+                            <div class="media">
+                                <div class="pull-right"><i class="fa fa-gift"></i></div>
+                                <div class="media-body">
+                                    <p></p>
+                                    <h4 class="media-heading">Buy 3 Get 1</h4>
+                                    <p></p>
                                 </div>
                             </div>
                         </div>
-                        @endforeach
-                    </div>
-                    <!-- /Products grid -->
-                    <!-- Pagination -->
-                    <div class="pagination-wrapper" style="text-align:center">
-                        <h4 style="visibility:hidden">a</h4>
-                        <ul class="pagination">
-                            <li class="disabled"><a href="#"><i class="fa fa-angle-double-left"></i> Previous</a></li>
-                            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">Next <i class="fa fa-angle-double-right"></i></a></li>
-                        </ul>
-                    </div>
-                    <!-- /Pagination -->
-                </div>
-                <!-- /CONTENT -->
-            </div>
-          </div>
-        </div>
-       </div>
-    </section>
-    <!-- /PAGE WITH SIDEBAR -->
-    <!-- PAGE -->
-    <section class="page-section no-padding-top">
-        <div class="container">
-            <div class="row blocks shop-info-banners">
-                <div class="col-md-4">
-                </div>
-                <div class="col-md-4">
-                    <div class="block">
-                        <div class="media">
-                            <div class="pull-right"><i class="fa fa-gift"></i></div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Buy 3 Get 1</h4>
-                                Proin dictum elementum velit. Fusce euismod consequat ante.
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- /PAGE -->
-</div>
-<!-- /CONTENT AREA -->
+        </section>
+        <!-- /PAGE -->
+
+    </div>
 
 @endsection

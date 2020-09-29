@@ -139,7 +139,7 @@
         <div class="container">
             <div class="message-box">
                 <div class="message-box-inner">
-                    <h2>Free shipping on all orders over $45</h2>
+                    <h2>Free shipping on all orders over 400 EGP</h2>
                 </div>
             </div>
         </div>
@@ -171,7 +171,7 @@
                                 --><span class="star active"></span><!--
                                 --><span class="star active"></span>
                             </div>
-                            <div class="price"><ins>{{$product->price}}</ins> <del>{{$product->sale_price}}</del></div>
+                            <div class="price"><ins>{{$product->price}} EGP</ins> <del>{{$product->sale_price}} EGP</del></div>
                             <div class="buttons">
 
                                     <form method="GET" action="/product/{{$product->id}}" style="display:inline">
@@ -208,8 +208,9 @@
                         <div class="media">
                             <div class="pull-right"><i class="fa fa-gift"></i></div>
                             <div class="media-body">
-                                <h4 class="media-heading">Buy 1 Get 1</h4>
-                                Proin dictum elementum velit. Fusce euismod consequat ante.
+                                <p></p>
+                                <h4 class="media-heading">Buy 3 Get 1</h4>
+                                <p></p>
                             </div>
                         </div>
                     </div>

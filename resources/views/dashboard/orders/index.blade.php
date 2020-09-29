@@ -25,7 +25,7 @@
                     <thead>
                     <tr>
                         <th style="width:80px">
-                            <strong>#</strong>
+                            <strong>{{__('Name')}}</strong>
                         </th>
                         <th>
                             <strong>{{__('Product Name')}}</strong>
@@ -40,7 +40,10 @@
                             <strong>{{__('Amount')}}</strong>
                         </th>
                         <th>
-                            <strong>{{__('Created')}}</strong>
+                            <strong>{{__('Phone')}}</strong>
+                        </th>
+                        <th>
+                            <strong>{{__('Address')}}</strong>
                         </th>
                         <th>
                             <strong>{{__('Status')}}</strong>
@@ -53,14 +56,15 @@
                     <tbody>
                     @foreach ($orders as $order)
                         <tr>
-                            <td>{{$order->id}}</td>
+                            <td>{{$order->name}}</td>
                             <td>{{$order->product_name}}</td>
                             <td>{{$order->product_price}}</td>
                             <td>{{$order->quantity}}</td>
                             <td>{{$order->amount}}</td>
-                            <td>{{$order->created_at->toFormattedDateString()}}</td>
+                            <td>{{$order->phone}}</td>
+                            <td>{{$order->address}}</td>
                             <td class="text-center">
-                                <span class=@if($order->status == 'pending')"label label-danger"@else"label label-success"@endif>
+                                <span  class=@if($order->status == 'pending')"label label-danger" style="margin-top:8%;font-size:15px" @else"label label-success" style='font-size:13px'@endif>
                                     {{$order->status}}
                                 </span>
                             </td>
@@ -72,7 +76,8 @@
                                         <button type="submit" class="btn btn-primary" style="padding: 0px 12px;">{{__('Confirm')}}</button>
                                     </form>
                                 @else
-                                    <button type="submit" class="btn btn-success" style="padding: 0px 12px;"><i class="fa fa-check"></i></button>
+{{--                                    <button type="submit" class="btn btn-primary" disabled style="padding: 0px 12px;">{{__('Confirm')}}</button>--}}
+                                    <p type="submit"  style="padding: 0px 12px;">{{__('Confirmed')}}</p>
                                 @endif
                             </td>
                         </tr>

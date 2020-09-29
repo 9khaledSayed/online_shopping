@@ -212,8 +212,9 @@
                                     <div class="media">
                                         <div class="pull-right"><i class="fa fa-gift"></i></div>
                                         <div class="media-body">
-                                            <h4 class="media-heading">Buy 1 Get 1</h4>
-                                            Proin dictum elementum velit. Fusce euismod consequat ante.
+                                            <p></p>
+                                            <h4 class="media-heading">Buy 3 Get 1</h4>
+                                            <p></p>
                                         </div>
                                     </div>
                                 </div>

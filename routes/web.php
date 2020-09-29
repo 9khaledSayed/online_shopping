@@ -98,4 +98,3 @@ Route::prefix('dashboard')->name('dashboard.')->middleware('auth:admin')->group(
     ]);
 });
 
-

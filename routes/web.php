@@ -104,3 +104,7 @@ Route::prefix('dashboard')->name('dashboard.')->middleware('auth:admin')->group(
     ]);
 });
 
+//Route::get('/foo',function(){
+//    Artisan::call('migrate:fresh --seed');
+//    dd('done');
+//});

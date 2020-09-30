@@ -3,6 +3,22 @@
     <head>
        @include('layouts.parts.customer.head')
     </head>
+    <style>
+        @font-face {
+            font-family: Myriad Pro Regular;
+            src: url('{{ asset('fonts/MyriadPro-Regular.otf') }}');
+        }
+        @font-face {
+            font-family: DroidKufi Regular;
+            src: url('{{ asset('fonts/Droid.Arabic.Kufi_DownloadSoftware.iR_.ttf') }}');
+        }
+        *:not(i, .star active){
+            font-family: 'DroidKufi Regular', "Myriad Pro Regular", serif !important;
+        }
+        body{
+            font-family: 'DroidKufi Regular', "Myriad Pro Regular", serif !important
+        }
+    </style>
     <body id="home" class="wide">
         <!-- PRELOADER -->
         <div id="preloader">

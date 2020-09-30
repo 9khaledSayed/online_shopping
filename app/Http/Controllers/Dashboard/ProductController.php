@@ -148,19 +148,19 @@ class ProductController extends Controller
         //process images
         // store them
         if(isset($request->image1)){
-            $imageNames['image1'] = $request->file('image1')->getClientOriginalName() . '.' . $request->file('image1')->extension();
+            $imageNames['image1'] = $request->file('image1')->getClientOriginalName();
             $request->file('image1')->storeAs('public/products/', $imageNames['image1']);
             $product->image1 = $imageNames['image1'];
             $product->save();
         }
         if(isset($request->image2)){
-            $imageNames['image2'] = $request->file('image2')->getClientOriginalName() . '.' . $request->file('image2')->extension();
+            $imageNames['image2'] = $request->file('image2')->getClientOriginalName();
             $request->file('image2')->storeAs('public/products/', $imageNames['image2']);
             $product->image2 = $imageNames['image2'];
             $product->save();
         }
         if(isset($request->image3)){
-            $imageNames['image3'] = $request->file('image3')->getClientOriginalName() . '.' . $request->file('image3')->extension();
+            $imageNames['image3'] = $request->file('image3')->getClientOriginalName();
             $request->file('image3')->storeAs('public/products/', $imageNames['image3']);
             $product->image3 = $imageNames['image3'];
         }   $product->save();

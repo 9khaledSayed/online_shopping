@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="2d9cb1fa-157c-43ec-8065-12c5e3bf5a26" name="herbal pharma" url="http://ftpupload.net">
-        <fileTransfer rootFolder="/herbalpharma.epizy.com/htdocs" host="ftpupload.net" port="21">
+      <webServer id="16b6b6cc-ed06-4e12-9846-07be8a10293f" name="online_shopping" url="http://ftp.veinlab.net">
+        <fileTransfer host="ftp.veinlab.net" port="21">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>

@@ -13,8 +13,8 @@
                     </h1>
                 </div>
                 <ul class="breadcrumb">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">{{__('Home')}}</a></li>
+                    <li><a href="#">{{__('Shop')}}</a></li>
                     <li class="active">
                         {{$category}}
                     </li>
@@ -51,7 +51,7 @@
                     <div class="col-md-3 sidebar">
                         <!-- widget shop categories -->
                         <div class="widget shop-categories">
-                            <h4 class="widget-title">Categories</h4>
+                            <h4 class="widget-title">{{__('Categories')}}</h4>
                             <div class="widget-content">
                                 <ul>
                                     @foreach($categories as $Category)
@@ -76,7 +76,7 @@
         <!-- PAGE -->
         <section class="page-section">
             <div class="container">
-                <h2 class="section-title"><span>{{$category}} Products</span></h2>
+                <h2 class="section-title"><span> {{$category}}</span></h2>
                 <div class="tab-content">
 
 
@@ -103,7 +103,7 @@
                                         --><span class="star active"></span><!--
                                         --><span class="star active"></span>
                                             </div>
-                                            <div class="price"><ins>{{$product->price}} EGP</ins> <del>{{$product->sale_price}} EGP</del></div>
+                                            <div class="price"><ins>{{$product->price}} {{__('SAR')}}</ins> <del>{{$product->sale_price}} {{__('SAR')}}</del></div>
                                             <div class="buttons">
 
                                                 @if(Auth::guard('customer')->check())
@@ -114,7 +114,7 @@
 
                                                     <form data-id="{{$product->id}}" data-price="{{$product->price}}" name = 'cart' style="display:inline">
                                                         @csrf
-                                                        <button class="btn btn-theme btn-theme-dark btn-icon-left" type="submit" ><i class="fa fa-shopping-cart"></i>Add To Cart</button>
+                                                        <button class="btn btn-theme btn-theme-dark btn-icon-left" type="submit" ><i class="fa fa-shopping-cart"></i>{{__('Add To Cart')}}</button>
                                                     </form>
                                                 @else
                                                     <form method="GET" action="/login/customer" style="display:inline">
@@ -124,7 +124,7 @@
 
                                                     <form method="GET" action="/login/customer" style="display:inline">
                                                         @csrf
-                                                        <button class="btn btn-theme btn-theme-dark btn-icon-left" type="submit" ><i class="fa fa-shopping-cart"></i>Add To Cart</button>
+                                                        <button class="btn btn-theme btn-theme-dark btn-icon-left" type="submit" ><i class="fa fa-shopping-cart"></i>{{__('Add To Cart')}}</button>
                                                     </form>
                                                 @endif
                                                 <br><br>
@@ -160,18 +160,18 @@
                 <div class="row blocks shop-info-banners">
                     <div class="col-md-4">
                     </div>
-                    <div class="col-md-4">
-                        <div class="block">
-                            <div class="media">
-                                <div class="pull-right"><i class="fa fa-gift"></i></div>
-                                <div class="media-body">
-                                    <p></p>
-                                    <h4 class="media-heading">Buy 3 Get 1</h4>
-                                    <p></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+{{--                    <div class="col-md-4">--}}
+{{--                        <div class="block">--}}
+{{--                            <div class="media">--}}
+{{--                                <div class="pull-right"><i class="fa fa-gift"></i></div>--}}
+{{--                                <div class="media-body">--}}
+{{--                                    <p></p>--}}
+{{--                                    <h4 class="media-heading">Buy 3 Get 1</h4>--}}
+{{--                                    <p></p>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
                 </div>
             </div>
         </section>

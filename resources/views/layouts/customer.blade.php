@@ -30,7 +30,7 @@
                     <div class="rect4"></div>
                     <div class="rect5"></div>
                 </div>
-                <div id="preloader-title">Loading</div>
+                <div id="preloader-title">{{__('Loading')}}</div>
             </div>
         </div>
         <!-- /PRELOADER -->
@@ -109,22 +109,22 @@
 
                                 <li><a href=""><i class="fa fa-envelope"></i> <span>{{Auth::guard('customer')->user()->email}}</span></a></li>
                                 @else
-                                <li class="icon-user" ><a href="/login/customer"><img src="{{ asset('assets/img/icon-1.png')}}" alt=""/>Login</a></li>
+                                <li class="icon-user" ><a href="/login/customer"><img src="{{ asset('assets/img/icon-1.png')}}" alt=""/>{{__('Login')}}</a></li>
 
-                                <li class="icon-form"><a href="/register/customer"><img src="{{ asset('assets/img/icon-2.png')}}" alt=""/> <span>Not a Member? <span class="colored">Sign Up</span></span></a></li>
+                                <li class="icon-form"><a href="/register/customer"><img src="{{ asset('assets/img/icon-2.png')}}" alt=""/> <span>{{__('Not a Member?')}} <span class="colored">{{__('Sign Up')}}</span></span></a></li>
                             @endif
                         </ul>
                     </div>
                     <div class="top-bar-right">
                         <ul class="list-inline">
-                        @if (Auth::guard('customer')->check()) <li class="hidden-xs"><a href="{{url('profile')}}">My Account</a></li>
-                        <li class="hidden-xs"><a href="/wishlist">My Wishlist</a></li> @endif
-                        <li class="hidden-xs"><a href="{{url('about')}}">About US</a></li>
+                        @if (Auth::guard('customer')->check()) <li class="hidden-xs"><a href="{{url('profile')}}">{{__('My Account')}}</a></li>
+                        <li class="hidden-xs"><a href="/wishlist">{{__("My Wishlist")}}</a></li> @endif
+{{--                        <li class="hidden-xs"><a href="{{url('about')}}">{{__('About US')}}</a></li>--}}
                             <li class="dropdown flags">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="{{ asset('assets/img/flag.gif')}}" alt=""/> Eng<i class="fa fa-angle-down"></i></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img style="margin-top:3px" src="@if(App::getLocale() == 'en') {{ asset('assets/img/Egypt.png')}}@else {{ asset('assets/img/flag.gif')}}@endif" alt=""/></a>
                                 <ul role="menu" class="dropdown-menu">
-                                    <li><a href="#"><img src="{{ asset('assets/img/flag.gif')}}" alt=""/> English</a></li>
-                                    <li><a href="#"><img src="{{ asset('assets/img/Egypt.png')}}" alt=""/> Arabic</a></li>
+                                    <li><a href="{{ route('change_language', 'en')}}"><img src="{{ asset('assets/img/flag.gif')}}" alt=""/> English</a></li>
+                                    <li><a href="{{ route('change_language', 'ar')}}"><img src="{{ asset('assets/img/Egypt.png')}}" alt=""/> Arabic</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -163,13 +163,13 @@
 
                 </div>
             </div>
-            <div class="navigation-wrapper">
+            <div class="navigation-wrapper" >
                 <div class="container">
                     <!-- Navigation -->
-                    <nav class="navigation closed clearfix">
+                    <nav class="navigation closed clearfix" >
                         <a href="#" class="menu-toggle-close btn"><i class="fa fa-times"></i></a>
-                        <ul class="nav sf-menu">
-                            <li class="{{Request::path() == '/' ? 'active' : ''}}" ><a href="/">Home</a></li>
+                        <ul class="nav sf-menu" >
+                            <li class="{{Request::path() == '/' ? 'active' : ''}}" ><a href="/">{{__('Home')}}</a></li>
                             @foreach($categories as $category)
                             <li class="{{Request::path() == $category->name ? 'active' : ''}}"><a href="/products/{{$category->name}}">{{$category->name}}</a></li>
                             @endforeach
@@ -182,9 +182,9 @@
         <!-- /HEADER -->
           @yield('content')
           <!-- FOOTER -->
-          <footer class="footer">
-              <div class="footer-widgets">
-                  <div class="container">
+          <footer class="footer" >
+              <div class="footer-widgets" >
+                  <div class="container" >
                       <div class="row">
 
                           <div class="col-md-3">

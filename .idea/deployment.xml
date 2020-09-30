@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="herbal pharma">
+  <component name="PublishConfigData" serverName="online_shopping">
     <serverData>
-      <paths name="herbal pharma">
+      <paths name="online_shopping">
         <serverdata>
           <mappings>
-            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/shopping" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>

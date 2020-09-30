@@ -13,13 +13,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
-//        Admin::create([
-//            'name' => 'admin',
-//            'username' => 'admin',
-//            'email' => 'admin@example.com',
-//            'password' => Hash::make('74521451'),
-//        ]);
+        //$this->call(UsersTableSeeder::class);
+        Admin::create([
+            'name' => 'admin',
+            'username' => 'admin',
+            'email' => 'admin@example.com',
+            'password' => Hash::make('12345678'),
+        ]);
         Category::create([
             'name' => 'الأجهزة المنزلية',
         ]);

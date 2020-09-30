@@ -95,5 +95,21 @@
     "Add" : "اضف",
     "Next" : "التالي",
     "ARABIC": "الانجليزية",
-    "Logout": "تسجيل الخروج"
+    "Logout": "تسجيل الخروج",
+    "About US": "عن المنشأه",
+    "Arabic": "عـربي",
+    "My Account": "حسابي",
+    "My Wishlist": "قائمه المفضلات",
+    "Not a Member?": "ليس لديك حساب ؟",
+    "Sign Up": "سجل الأن",
+    "Login": "نسجيل دخول",
+    "Home": "الرئيسيه",
+    "Categories": "الفئات" ,
+    "The Newest Products" : "أجدد المنتجات",
+    "Top Rated Products": "الأكثر تقيما",
+    "Free shipping on all orders over 400 SAR": "الشحن مجانا للطلبات التي تتعدي 400 ريال",
+    "Loading": "جاري التحميل",
+    "Add To Cart": "أضف الي السله",
+    "Shop": "المتجر",
+    "Products": "منتجات"
 }

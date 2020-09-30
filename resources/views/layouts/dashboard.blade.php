@@ -6,13 +6,24 @@
 
 </head>
 <style>
+    @font-face {
+        font-family: Myriad Pro Regular;
+        src: url('{{ asset('fonts/MyriadPro-Regular.otf') }}');
+    }
+    @font-face {
+        font-family: DroidKufi Regular;
+        src: url('{{ asset('fonts/Droid.Arabic.Kufi_DownloadSoftware.iR_.ttf') }}');
+    }
+    *:not(i, fa arrow){
+        font-family: 'DroidKufi Regular', "Myriad Pro Regular", serif !important;
+    }
     * {
         box-sizing: border-box;
     }
 
     body {
         margin: 0;
-        font-family: Arial;
+        font-family: 'DroidKufi Regular', "Myriad Pro Regular", serif !important;
     }
 
     /* The grid: Four equal columns that floats next to each other */
@@ -48,6 +59,10 @@
         text-align: center;
     }
 
+    .navbar-aside .nav > li > a ,  .nav-header span, h1, h2, h3, h4, h5, h6 , .navbar-brand{
+        font-family: 'DroidKufi Regular', "Myriad Pro Regular", serif !important;
+        font-weight: 600;
+    }
 </style>
 <body>
 @include('layouts.parts.admin.header')

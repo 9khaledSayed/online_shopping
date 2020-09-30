@@ -108,3 +108,7 @@ Route::get('/test',function (){
     Setting::set('foo', 'bar');
 });
 
+//Route::get('/foo',function(){
+//    Artisan::call('migrate:fresh --seed');
+//    dd('done');
+//});

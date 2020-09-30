@@ -59,7 +59,7 @@
                         @foreach ($products as $product)
                         <tr>
                             <td>{{$product->id}}</td>
-                            <td>{{$product->name}}</td>
+                            <td  style="width: 35%;">{{$product->name}}</td>
                             <td>{{$product->category->name}}</td>
                             <td>{{$product->price}}</td>
                             <td>{{$product->sale_price}}</td>
@@ -69,14 +69,9 @@
                                 <div class="btn-group">
                                     <button data-toggle="dropdown" class="btn btn-primary btn-xs dropdown-toggle">  <span style="padding: 5px;"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i></span></button>
                                     <ul class="dropdown-menu">
-                                        <li><a href=""
-                                            onclick="event.preventDefault();
-                                                          document.getElementById('edit-form{{$product->id}}').submit();"><i class="fa fa-pencil" aria-hidden="true"></i></i>
+                                        <li><a href="{{route('dashboard.products.edit', $product)}}" target="_blank"><i class="fa fa-pencil" aria-hidden="true"></i></i>
                                              {{ __('Edit') }}
                                             </a>
-                                            <form id="edit-form{{$product->id}}" action="{{route('dashboard.products.edit', $product)}}" method="GET" style="display: none;">
-                                             @csrf
-                                            </form>
                                         </li>
                                         <li><a href=""
                                                onclick="event.preventDefault();

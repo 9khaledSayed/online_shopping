@@ -104,4 +104,7 @@ Route::prefix('dashboard')->name('dashboard.')->middleware('auth:admin')->group(
     ]);
 });
 
+Route::get('/test',function (){
+    Setting::set('foo', 'bar');
+});
 

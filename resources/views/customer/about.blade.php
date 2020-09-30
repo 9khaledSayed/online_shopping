@@ -30,7 +30,7 @@
                             <div class="col-md-4">
                                 <div class="thumbnail thumbnail-team no-border no-padding">
                                     <div class="media">
-                                        <img class="img-circle" src="assets/img/gamal.jpeg" alt=""/>
+                                        <img class="img-circle" src="{{asset('assets/img/gamal.jpeg')}}" alt=""/>
                                     </div>
                                     <div class="caption">
                                         <h4 class="caption-title"><b>Dr. Gamal Nosair</b><small> <br>General Manager</small></h4>
@@ -44,7 +44,7 @@
                             <div class="col-md-4">
                                 <div class="thumbnail thumbnail-team no-border no-padding">
                                     <div class="media">
-                                        <img class="img-circle" src="assets/img/ahmed.png" alt=""/>
+                                        <img class="img-circle" src="{{asset('assets/img/ahmed.png')}}" alt=""/>
                                     </div>
                                     <div class="caption">
                                         <h4 class="caption-title"><b>Dr. Ahmed Nosair</b><small><br>CEO and Marketing Manager</small></h4>
